@@ -31,6 +31,8 @@ Use the code in the following table in your git command and the magic will appen
 git commit -am "Add magnificient emoji in your commit :heart_eyes:`
 ```
 
+If you want some standarization in your commit messages there is [gitmoji](https://gitmoji.carloscuesta.me). It provides an easy way of identifying the purpose or intention of a commit with only looking at the emojis used
+
 |	Emoji	|	Code
 |	:--:	|	:--
 |	:smile:	|	`:smile:`
