@@ -3,7 +3,7 @@ This sheet if for you !
 
 You'll get magnificient pipelines & commits such like this one :
 
-![pipeline](https://raw.githubusercontent.com/yodamad/gitlab-emoji/master/github/pipeline.png)
+![pipeline](https://github.com/yodamad/gitlab-emoji/raw/master/pipeline.png)
 ___
 
 ## Emoji in pipelines
@@ -160,7 +160,6 @@ git commit -am "Add magnificient emoji in your commit :heart_eyes:`
 |	:person_with_pouting_face:	|	`:person_with_pouting_face:`
 |	:person_frowning:	|	`:person_frowning:`
 |	:bow:	|	`:bow:`
-|	:couplekiss:	|	`:couplekiss:`
 |	:couple_with_heart:	|	`:couple_with_heart:`
 |	:massage:	|	`:massage:`
 |	:haircut:	|	`:haircut:`
