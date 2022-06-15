@@ -33,288 +33,1438 @@ git commit -am "Add magnificient emoji in your commit :heart_eyes:`
 
 If you want some standarization in your commit messages there is [gitmoji](https://gitmoji.carloscuesta.me). It provides an easy way of identifying the purpose or intention of a commit with only looking at the emojis used
 
-|	Emoji	|	Code |	Emoji	|	Code	|	Emoji	|	Code |		
-|	:--:	|	:-- |	:--:	|	:--	|	:--:	|	:-- |		
-|	:smile:	|	`:smile:`	|	:milky_way:	|	`:milky_way:`	|	:tokyo_tower:	|	`:tokyo_tower:`	
-|	:laughing:	|	`:laughing:`	|	:partly_sunny:	|	`:partly_sunny:`	|	:japan:	|	`:japan:`	
-|	:blush:	|	`:blush:`	|	:bamboo:	|	`:bamboo:`	|	:mount_fuji:	|	`:mount_fuji:`	
-|	:smiley:	|	`:smiley:`	|	:gift_heart:	|	`:gift_heart:`	|	:sunrise_over_mountains:	|	`:sunrise_over_mountains:`	
-|	:relaxed:	|	`:relaxed:`	|	:dolls:	|	`:dolls:`	|	:sunrise:	|	`:sunrise:`	
-|	:smirk:	|	`:smirk:`	|	:school_satchel:	|	`:school_satchel:`	|	:stars:	|	`:stars:`	
-|	:heart_eyes:	|	`:heart_eyes:`	|	:mortar_board:	|	`:mortar_board:`	|	:statue_of_liberty:	|	`:statue_of_liberty:`	
-|	:kissing_heart:	|	`:kissing_heart:`	|	:flags:	|	`:flags:`	|	:bridge_at_night:	|	`:bridge_at_night:`	
-|	:kissing_closed_eyes:	|	`:kissing_closed_eyes:`	|	:fireworks:	|	`:fireworks:`	|	:carousel_horse:	|	`:carousel_horse:`	
-|	:flushed:	|	`:flushed:`	|	:sparkler:	|	`:sparkler:`	|	:rainbow:	|	`:rainbow:`	
-|	:relieved:	|	`:relieved:`	|	:wind_chime:	|	`:wind_chime:`	|	:ferris_wheel:	|	`:ferris_wheel:`	
-|	:satisfied:	|	`:satisfied:`	|	:rice_scene:	|	`:rice_scene:`	|	:fountain:	|	`:fountain:`	
-|	:grin:	|	`:grin:`	|	:jack_o_lantern:	|	`:jack_o_lantern:`	|	:roller_coaster:	|	`:roller_coaster:`	
-|	:wink:	|	`:wink:`	|	:ghost:	|	`:ghost:`	|	:ship:	|	`:ship:`	
-|	:stuck_out_tongue_winking_eye:	|	`:stuck_out_tongue_winking_eye:`	|	:santa:	|	`:santa:`	|	:speedboat:	|	`:speedboat:`	
-|	:stuck_out_tongue_closed_eyes:	|	`:stuck_out_tongue_closed_eyes:`	|	:christmas_tree:	|	`:christmas_tree:`	|	:sailboat:	|	`:sailboat:`	
-|	:grinning:	|	`:grinning:`	|	:gift:	|	`:gift:`	|	:rowboat:	|	`:rowboat:`	
-|	:kissing:	|	`:kissing:`	|	:bell:	|	`:bell:`	|	:anchor:	|	`:anchor:`	
-|	:kissing_smiling_eyes:	|	`:kissing_smiling_eyes:`	|	:no_bell:	|	`:no_bell:`	|	:rocket:	|	`:rocket:`	
-|	:stuck_out_tongue:	|	`:stuck_out_tongue:`	|	:tanabata_tree:	|	`:tanabata_tree:`	|	:airplane:	|	`:airplane:`	
-|	:sleeping:	|	`:sleeping:`	|	:tada:	|	`:tada:`	|	:helicopter:	|	`:helicopter:`	
-|	:worried:	|	`:worried:`	|	:confetti_ball:	|	`:confetti_ball:`	|	:steam_locomotive:	|	`:steam_locomotive:`	
-|	:frowning:	|	`:frowning:`	|	:balloon:	|	`:balloon:`	|	:tram:	|	`:tram:`	
-|	:anguished:	|	`:anguished:`	|	:crystal_ball:	|	`:crystal_ball:`	|	:mountain_railway:	|	`:mountain_railway:`	
-|	:open_mouth:	|	`:open_mouth:`	|	:cd:	|	`:cd:`	|	:bike:	|	`:bike:`	
-|	:grimacing:	|	`:grimacing:`	|	:dvd:	|	`:dvd:`	|	:aerial_tramway:	|	`:aerial_tramway:`	
-|	:confused:	|	`:confused:`	|	:floppy_disk:	|	`:floppy_disk:`	|	:suspension_railway:	|	`:suspension_railway:`	
-|	:hushed:	|	`:hushed:`	|	:camera:	|	`:camera:`	|	:mountain_cableway:	|	`:mountain_cableway:`	
-|	:expressionless:	|	`:expressionless:`	|	:video_camera:	|	`:video_camera:`	|	:tractor:	|	`:tractor:`	
-|	:unamused:	|	`:unamused:`	|	:movie_camera:	|	`:movie_camera:`	|	:blue_car:	|	`:blue_car:`	
-|	:sweat_smile:	|	`:sweat_smile:`	|	:computer:	|	`:computer:`	|	:oncoming_automobile:	|	`:oncoming_automobile:`	
-|	:sweat:	|	`:sweat:`	|	:tv:	|	`:tv:`	|	:red_car:	|	`:red_car:`	
-|	:disappointed_relieved:	|	`:disappointed_relieved:`	|	:iphone:	|	`:iphone:`	|	:taxi:	|	`:taxi:`	
-|	:weary:	|	`:weary:`	|	:telephone:	|	`:telephone:`	|	:oncoming_taxi:	|	`:oncoming_taxi:`	
-|	:pensive:	|	`:pensive:`	|	:telephone_receiver:	|	`:telephone_receiver:`	|	:articulated_lorry:	|	`:articulated_lorry:`	
-|	:disappointed:	|	`:disappointed:`	|	:pager:	|	`:pager:`	|	:bus:	|	`:bus:`	
-|	:confounded:	|	`:confounded:`	|	:fax:	|	`:fax:`	|	:oncoming_bus:	|	`:oncoming_bus:`	
-|	:fearful:	|	`:fearful:`	|	:minidisc:	|	`:minidisc:`	|	:rotating_light:	|	`:rotating_light:`	
-|	:cold_sweat:	|	`:cold_sweat:`	|	:vhs:	|	`:vhs:`	|	:police_car:	|	`:police_car:`	
-|	:persevere:	|	`:persevere:`	|	:sound:	|	`:sound:`	|	:oncoming_police_car:	|	`:oncoming_police_car:`	
-|	:cry:	|	`:cry:`	|	:speaker:	|	`:speaker:`	|	:fire_engine:	|	`:fire_engine:`	
-|	:sob:	|	`:sob:`	|	:mute:	|	`:mute:`	|	:ambulance:	|	`:ambulance:`	
-|	:joy:	|	`:joy:`	|	:loudspeaker:	|	`:loudspeaker:`	|	:minibus:	|	`:minibus:`	
-|	:astonished:	|	`:astonished:`	|	:mega:	|	`:mega:`	|	:truck:	|	`:truck:`	
-|	:scream:	|	`:scream:`	|	:hourglass:	|	`:hourglass:`	|	:train:	|	`:train:`	
-|	:tired_face:	|	`:tired_face:`	|	:hourglass_flowing_sand:	|	`:hourglass_flowing_sand:`	|	:station:	|	`:station:`	
-|	:angry:	|	`:angry:`	|	:alarm_clock:	|	`:alarm_clock:`	|	:train2:	|	`:train2:`	
-|	:rage:	|	`:rage:`	|	:watch:	|	`:watch:`	|	:bullettrain_front:	|	`:bullettrain_front:`	
-|	:triumph:	|	`:triumph:`	|	:radio:	|	`:radio:`	|	:bullettrain_side:	|	`:bullettrain_side:`	
-|	:sleepy:	|	`:sleepy:`	|	:satellite:	|	`:satellite:`	|	:light_rail:	|	`:light_rail:`	
-|	:yum:	|	`:yum:`	|	:loop:	|	`:loop:`	|	:monorail:	|	`:monorail:`	
-|	:mask:	|	`:mask:`	|	:mag:	|	`:mag:`	|	:railway_car:	|	`:railway_car:`	
-|	:sunglasses:	|	`:sunglasses:`	|	:mag_right:	|	`:mag_right:`	|	:trolleybus:	|	`:trolleybus:`	
-|	:dizzy_face:	|	`:dizzy_face:`	|	:unlock:	|	`:unlock:`	|	:ticket:	|	`:ticket:`	
-|	:imp:	|	`:imp:`	|	:lock:	|	`:lock:`	|	:fuelpump:	|	`:fuelpump:`	
-|	:smiling_imp:	|	`:smiling_imp:`	|	:lock_with_ink_pen:	|	`:lock_with_ink_pen:`	|	:vertical_traffic_light:	|	`:vertical_traffic_light:`	
-|	:neutral_face:	|	`:neutral_face:`	|	:closed_lock_with_key:	|	`:closed_lock_with_key:`	|	:traffic_light:	|	`:traffic_light:`	
-|	:no_mouth:	|	`:no_mouth:`	|	:key:	|	`:key:`	|	:warning:	|	`:warning:`	
-|	:innocent:	|	`:innocent:`	|	:bulb:	|	`:bulb:`	|	:construction:	|	`:construction:`	
-|	:alien:	|	`:alien:`	|	:flashlight:	|	`:flashlight:`	|	:beginner:	|	`:beginner:`	
-|	:yellow_heart:	|	`:yellow_heart:`	|	:high_brightness:	|	`:high_brightness:`	|	:atm:	|	`:atm:`	
-|	:blue_heart:	|	`:blue_heart:`	|	:low_brightness:	|	`:low_brightness:`	|	:slot_machine:	|	`:slot_machine:`	
-|	:purple_heart:	|	`:purple_heart:`	|	:electric_plug:	|	`:electric_plug:`	|	:busstop:	|	`:busstop:`	
-|	:heart:	|	`:heart:`	|	:battery:	|	`:battery:`	|	:barber:	|	`:barber:`	
-|	:green_heart:	|	`:green_heart:`	|	:calling:	|	`:calling:`	|	:hotsprings:	|	`:hotsprings:`	
-|	:broken_heart:	|	`:broken_heart:`	|	:email:	|	`:email:`	|	:checkered_flag:	|	`:checkered_flag:`	
-|	:heartbeat:	|	`:heartbeat:`	|	:mailbox:	|	`:mailbox:`	|	:crossed_flags:	|	`:crossed_flags:`	
-|	:heartpulse:	|	`:heartpulse:`	|	:postbox:	|	`:postbox:`	|	:izakaya_lantern:	|	`:izakaya_lantern:`	
-|	:two_hearts:	|	`:two_hearts:`	|	:bath:	|	`:bath:`	|	:moyai:	|	`:moyai:`	
-|	:revolving_hearts:	|	`:revolving_hearts:`	|	:bathtub:	|	`:bathtub:`	|	:circus_tent:	|	`:circus_tent:`	
-|	:cupid:	|	`:cupid:`	|	:shower:	|	`:shower:`	|	:performing_arts:	|	`:performing_arts:`	
-|	:sparkling_heart:	|	`:sparkling_heart:`	|	:toilet:	|	`:toilet:`	|	:round_pushpin:	|	`:round_pushpin:`	
-|	:sparkles:	|	`:sparkles:`	|	:wrench:	|	`:wrench:`	|	:triangular_flag_on_post:	|	`:triangular_flag_on_post:`	
-|	:star:	|	`:star:`	|	:nut_and_bolt:	|	`:nut_and_bolt:`	|	:jp:	|	`:jp:`	
-|	:star2:	|	`:star2:`	|	:hammer:	|	`:hammer:`	|	:kr:	|	`:kr:`	
-|	:dizzy:	|	`:dizzy:`	|	:seat:	|	`:seat:`	|	:cn:	|	`:cn:`	
-|	:boom:	|	`:boom:`	|	:moneybag:	|	`:moneybag:`	|	:us:	|	`:us:`	
-|	:anger:	|	`:anger:`	|	:yen:	|	`:yen:`	|	:fr:	|	`:fr:`	
-|	:exclamation:	|	`:exclamation:`	|	:dollar:	|	`:dollar:`	|	:es:	|	`:es:`	
-|	:question:	|	`:question:`	|	:pound:	|	`:pound:`	|	:it:	|	`:it:`	
-|	:grey_exclamation:	|	`:grey_exclamation:`	|	:euro:	|	`:euro:`	|	:ru:	|	`:ru:`	
-|	:grey_question:	|	`:grey_question:`	|	:credit_card:	|	`:credit_card:`	|	:gb:	|	`:gb:`	
-|	:zzz:	|	`:zzz:`	|	:money_with_wings:	|	`:money_with_wings:`	|	:de:	|	`:de:`	
-|	:dash:	|	`:dash:`	|	:e-mail:	|	`:e-mail:`	|	:one:	|	`:one:`	
-|	:sweat_drops:	|	`:sweat_drops:`	|	:inbox_tray:	|	`:inbox_tray:`	|	:two:	|	`:two:`	
-|	:notes:	|	`:notes:`	|	:outbox_tray:	|	`:outbox_tray:`	|	:three:	|	`:three:`	
-|	:musical_note:	|	`:musical_note:`	|	:envelope:	|	`:envelope:`	|	:four:	|	`:four:`	
-|	:fire:	|	`:fire:`	|	:incoming_envelope:	|	`:incoming_envelope:`	|	:five:	|	`:five:`	
-|	:hankey:	|	`:hankey:`	|	:postal_horn:	|	`:postal_horn:`	|	:six:	|	`:six:`	
-|	:poop:	|	`:poop:`	|	:mailbox_closed:	|	`:mailbox_closed:`	|	:seven:	|	`:seven:`	
-|	:shit:	|	`:shit:`	|	:mailbox_with_mail:	|	`:mailbox_with_mail:`	|	:eight:	|	`:eight:`	
-|	:+1:	|	`:+1:`	|	:mailbox_with_no_mail:	|	`:mailbox_with_no_mail:`	|	:nine:	|	`:nine:`	
-|	:thumbsup:	|	`:thumbsup:`	|	:package:	|	`:package:`	|	:1234:	|	`:1234:`	
-|	:-1:	|	`:-1:`	|	:door:	|	`:door:`	|	:zero:	|	`:zero:`	
-|	:thumbsdown:	|	`:thumbsdown:`	|	:smoking:	|	`:smoking:`	|	:hash:	|	`:hash:`	
-|	:ok_hand:	|	`:ok_hand:`	|	:bomb:	|	`:bomb:`	|	:symbols:	|	`:symbols:`	
-|	:punch:	|	`:punch:`	|	:gun:	|	`:gun:`	|	:arrow_backward:	|	`:arrow_backward:`	
-|	:fist:	|	`:fist:`	|	:pill:	|	`:pill:`	|	:arrow_down:	|	`:arrow_down:`	
-|	:v:	|	`:v:`	|	:syringe:	|	`:syringe:`	|	:arrow_forward:	|	`:arrow_forward:`	
-|	:wave:	|	`:wave:`	|	:page_facing_up:	|	`:page_facing_up:`	|	:arrow_left:	|	`:arrow_left:`	
-|	:raised_hand:	|	`:raised_hand:`	|	:page_with_curl:	|	`:page_with_curl:`	|	:capital_abcd:	|	`:capital_abcd:`	
-|	:open_hands:	|	`:open_hands:`	|	:bookmark_tabs:	|	`:bookmark_tabs:`	|	:abcd:	|	`:abcd:`	
-|	:point_up:	|	`:point_up:`	|	:bar_chart:	|	`:bar_chart:`	|	:abc:	|	`:abc:`	
-|	:point_down:	|	`:point_down:`	|	:chart_with_upwards_trend:	|	`:chart_with_upwards_trend:`	|	:arrow_lower_left:	|	`:arrow_lower_left:`	
-|	:point_left:	|	`:point_left:`	|	:chart_with_downwards_trend:	|	`:chart_with_downwards_trend:`	|	:arrow_lower_right:	|	`:arrow_lower_right:`	
-|	:point_right:	|	`:point_right:`	|	:scroll:	|	`:scroll:`	|	:arrow_right:	|	`:arrow_right:`	
-|	:raised_hands:	|	`:raised_hands:`	|	:clipboard:	|	`:clipboard:`	|	:arrow_up:	|	`:arrow_up:`	
-|	:pray:	|	`:pray:`	|	:calendar:	|	`:calendar:`	|	:arrow_upper_left:	|	`:arrow_upper_left:`	
-|	:point_up_2:	|	`:point_up_2:`	|	:date:	|	`:date:`	|	:arrow_upper_right:	|	`:arrow_upper_right:`	
-|	:clap:	|	`:clap:`	|	:card_index:	|	`:card_index:`	|	:arrow_double_down:	|	`:arrow_double_down:`	
-|	:muscle:	|	`:muscle:`	|	:file_folder:	|	`:file_folder:`	|	:arrow_double_up:	|	`:arrow_double_up:`	
-|	:metal:	|	`:metal:`	|	:open_file_folder:	|	`:open_file_folder:`	|	:arrow_down_small:	|	`:arrow_down_small:`	
-|	:runner:	|	`:runner:`	|	:scissors:	|	`:scissors:`	|	:arrow_heading_down:	|	`:arrow_heading_down:`	
-|	:couple:	|	`:couple:`	|	:pushpin:	|	`:pushpin:`	|	:arrow_heading_up:	|	`:arrow_heading_up:`	
-|	:family:	|	`:family:`	|	:paperclip:	|	`:paperclip:`	|	:leftwards_arrow_with_hook:	|	`:leftwards_arrow_with_hook:`	
-|	:two_men_holding_hands:	|	`:two_men_holding_hands:`	|	:black_nib:	|	`:black_nib:`	|	:arrow_right_hook:	|	`:arrow_right_hook:`	
-|	:two_women_holding_hands:	|	`:two_women_holding_hands:`	|	:pencil2:	|	`:pencil2:`	|	:left_right_arrow:	|	`:left_right_arrow:`	
-|	:dancer:	|	`:dancer:`	|	:straight_ruler:	|	`:straight_ruler:`	|	:arrow_up_down:	|	`:arrow_up_down:`	
-|	:dancers:	|	`:dancers:`	|	:triangular_ruler:	|	`:triangular_ruler:`	|	:arrow_up_small:	|	`:arrow_up_small:`	
-|	:ok_woman:	|	`:ok_woman:`	|	:closed_book:	|	`:closed_book:`	|	:arrows_clockwise:	|	`:arrows_clockwise:`	
-|	:no_good:	|	`:no_good:`	|	:green_book:	|	`:green_book:`	|	:arrows_counterclockwise:	|	`:arrows_counterclockwise:`	
-|	:information_desk_person:	|	`:information_desk_person:`	|	:blue_book:	|	`:blue_book:`	|	:rewind:	|	`:rewind:`	
-|	:raising_hand:	|	`:raising_hand:`	|	:orange_book:	|	`:orange_book:`	|	:fast_forward:	|	`:fast_forward:`	
-|	:bride_with_veil:	|	`:bride_with_veil:`	|	:notebook:	|	`:notebook:`	|	:information_source:	|	`:information_source:`	
-|	:person_with_pouting_face:	|	`:person_with_pouting_face:`	|	:notebook_with_decorative_cover:	|	`:notebook_with_decorative_cover:`	|	:ok:	|	`:ok:`	
-|	:person_frowning:	|	`:person_frowning:`	|	:ledger:	|	`:ledger:`	|	:twisted_rightwards_arrows:	|	`:twisted_rightwards_arrows:`	
-|	:bow:	|	`:bow:`	|	:books:	|	`:books:`	|	:repeat:	|	`:repeat:`	
-|	:couple_with_heart:	|	`:couple_with_heart:`	|	:bookmark:	|	`:bookmark:`	|	:repeat_one:	|	`:repeat_one:`	
-|	:massage:	|	`:massage:`	|	:name_badge:	|	`:name_badge:`	|	:new:	|	`:new:`	
-|	:haircut:	|	`:haircut:`	|	:microscope:	|	`:microscope:`	|	:top:	|	`:top:`	
-|	:nail_care:	|	`:nail_care:`	|	:telescope:	|	`:telescope:`	|	:up:	|	`:up:`	
-|	:boy:	|	`:boy:`	|	:newspaper:	|	`:newspaper:`	|	:cool:	|	`:cool:`	
-|	:girl:	|	`:girl:`	|	:football:	|	`:football:`	|	:free:	|	`:free:`	
-|	:woman:	|	`:woman:`	|	:basketball:	|	`:basketball:`	|	:ng:	|	`:ng:`	
-|	:man:	|	`:man:`	|	:soccer:	|	`:soccer:`	|	:cinema:	|	`:cinema:`	
-|	:baby:	|	`:baby:`	|	:baseball:	|	`:baseball:`	|	:koko:	|	`:koko:`	
-|	:older_woman:	|	`:older_woman:`	|	:tennis:	|	`:tennis:`	|	:signal_strength:	|	`:signal_strength:`	
-|	:older_man:	|	`:older_man:`	|	:8ball:	|	`:8ball:`	|	:u5272:	|	`:u5272:`	
-|	:person_with_blond_hair:	|	`:person_with_blond_hair:`	|	:rugby_football:	|	`:rugby_football:`	|	:u5408:	|	`:u5408:`	
-|	:man_with_gua_pi_mao:	|	`:man_with_gua_pi_mao:`	|	:bowling:	|	`:bowling:`	|	:u55b6:	|	`:u55b6:`	
-|	:man_with_turban:	|	`:man_with_turban:`	|	:golf:	|	`:golf:`	|	:u6307:	|	`:u6307:`	
-|	:construction_worker:	|	`:construction_worker:`	|	:mountain_bicyclist:	|	`:mountain_bicyclist:`	|	:u6708:	|	`:u6708:`	
-|	:cop:	|	`:cop:`	|	:bicyclist:	|	`:bicyclist:`	|	:u6709:	|	`:u6709:`	
-|	:angel:	|	`:angel:`	|	:horse_racing:	|	`:horse_racing:`	|	:u6e80:	|	`:u6e80:`	
-|	:princess:	|	`:princess:`	|	:snowboarder:	|	`:snowboarder:`	|	:u7121:	|	`:u7121:`	
-|	:smiley_cat:	|	`:smiley_cat:`	|	:swimmer:	|	`:swimmer:`	|	:u7533:	|	`:u7533:`	
-|	:smile_cat:	|	`:smile_cat:`	|	:surfer:	|	`:surfer:`	|	:u7a7a:	|	`:u7a7a:`	
-|	:heart_eyes_cat:	|	`:heart_eyes_cat:`	|	:ski:	|	`:ski:`	|	:u7981:	|	`:u7981:`	
-|	:kissing_cat:	|	`:kissing_cat:`	|	:spades:	|	`:spades:`	|	:sa:	|	`:sa:`	
-|	:smirk_cat:	|	`:smirk_cat:`	|	:hearts:	|	`:hearts:`	|	:restroom:	|	`:restroom:`	
-|	:scream_cat:	|	`:scream_cat:`	|	:clubs:	|	`:clubs:`	|	:mens:	|	`:mens:`	
-|	:crying_cat_face:	|	`:crying_cat_face:`	|	:diamonds:	|	`:diamonds:`	|	:womens:	|	`:womens:`	
-|	:joy_cat:	|	`:joy_cat:`	|	:gem:	|	`:gem:`	|	:baby_symbol:	|	`:baby_symbol:`	
-|	:pouting_cat:	|	`:pouting_cat:`	|	:ring:	|	`:ring:`	|	:no_smoking:	|	`:no_smoking:`	
-|	:japanese_ogre:	|	`:japanese_ogre:`	|	:trophy:	|	`:trophy:`	|	:parking:	|	`:parking:`	
-|	:japanese_goblin:	|	`:japanese_goblin:`	|	:musical_score:	|	`:musical_score:`	|	:wheelchair:	|	`:wheelchair:`	
-|	:see_no_evil:	|	`:see_no_evil:`	|	:musical_keyboard:	|	`:musical_keyboard:`	|	:metro:	|	`:metro:`	
-|	:hear_no_evil:	|	`:hear_no_evil:`	|	:violin:	|	`:violin:`	|	:baggage_claim:	|	`:baggage_claim:`	
-|	:speak_no_evil:	|	`:speak_no_evil:`	|	:space_invader:	|	`:space_invader:`	|	:accept:	|	`:accept:`	
-|	:guardsman:	|	`:guardsman:`	|	:video_game:	|	`:video_game:`	|	:wc:	|	`:wc:`	
-|	:skull:	|	`:skull:`	|	:black_joker:	|	`:black_joker:`	|	:potable_water:	|	`:potable_water:`	
-|	:feet:	|	`:feet:`	|	:flower_playing_cards:	|	`:flower_playing_cards:`	|	:put_litter_in_its_place:	|	`:put_litter_in_its_place:`	
-|	:lips:	|	`:lips:`	|	:game_die:	|	`:game_die:`	|	:secret:	|	`:secret:`	
-|	:kiss:	|	`:kiss:`	|	:dart:	|	`:dart:`	|	:congratulations:	|	`:congratulations:`	
-|	:droplet:	|	`:droplet:`	|	:mahjong:	|	`:mahjong:`	|	:m:	|	`:m:`	
-|	:ear:	|	`:ear:`	|	:clapper:	|	`:clapper:`	|	:passport_control:	|	`:passport_control:`	
-|	:eyes:	|	`:eyes:`	|	:memo:	|	`:memo:`	|	:left_luggage:	|	`:left_luggage:`	
-|	:nose:	|	`:nose:`	|	:pencil:	|	`:pencil:`	|	:customs:	|	`:customs:`	
-|	:tongue:	|	`:tongue:`	|	:book:	|	`:book:`	|	:ideograph_advantage:	|	`:ideograph_advantage:`	
-|	:love_letter:	|	`:love_letter:`	|	:art:	|	`:art:`	|	:cl:	|	`:cl:`	
-|	:bust_in_silhouette:	|	`:bust_in_silhouette:`	|	:microphone:	|	`:microphone:`	|	:sos:	|	`:sos:`	
-|	:busts_in_silhouette:	|	`:busts_in_silhouette:`	|	:headphones:	|	`:headphones:`	|	:id:	|	`:id:`	
-|	:speech_balloon:	|	`:speech_balloon:`	|	:trumpet:	|	`:trumpet:`	|	:no_entry_sign:	|	`:no_entry_sign:`	
-|	:thought_balloon:	|	`:thought_balloon:`	|	:saxophone:	|	`:saxophone:`	|	:underage:	|	`:underage:`	
-|	:sunny:	|	`:sunny:`	|	:guitar:	|	`:guitar:`	|	:no_mobile_phones:	|	`:no_mobile_phones:`	
-|	:umbrella:	|	`:umbrella:`	|	:sandal:	|	`:sandal:`	|	:do_not_litter:	|	`:do_not_litter:`	
-|	:cloud:	|	`:cloud:`	|	:high_heel:	|	`:high_heel:`	|	:non-potable_water:	|	`:non-potable_water:`	
-|	:snowflake:	|	`:snowflake:`	|	:lipstick:	|	`:lipstick:`	|	:no_bicycles:	|	`:no_bicycles:`	
-|	:snowman:	|	`:snowman:`	|	:boot:	|	`:boot:`	|	:no_pedestrians:	|	`:no_pedestrians:`	
-|	:zap:	|	`:zap:`	|	:shirt:	|	`:shirt:`	|	:children_crossing:	|	`:children_crossing:`	
-|	:cyclone:	|	`:cyclone:`	|	:necktie:	|	`:necktie:`	|	:no_entry:	|	`:no_entry:`	
-|	:foggy:	|	`:foggy:`	|	:womans_clothes:	|	`:womans_clothes:`	|	:eight_spoked_asterisk:	|	`:eight_spoked_asterisk:`	
-|	:ocean:	|	`:ocean:`	|	:dress:	|	`:dress:`	|	:sparkle:	|	`:sparkle:`	
-|	:cat:	|	`:cat:`	|	:running_shirt_with_sash:	|	`:running_shirt_with_sash:`	|	:eight_pointed_black_star:	|	`:eight_pointed_black_star:`	
-|	:dog:	|	`:dog:`	|	:jeans:	|	`:jeans:`	|	:heart_decoration:	|	`:heart_decoration:`	
-|	:mouse:	|	`:mouse:`	|	:kimono:	|	`:kimono:`	|	:vs:	|	`:vs:`	
-|	:hamster:	|	`:hamster:`	|	:bikini:	|	`:bikini:`	|	:vibration_mode:	|	`:vibration_mode:`	
-|	:rabbit:	|	`:rabbit:`	|	:ribbon:	|	`:ribbon:`	|	:mobile_phone_off:	|	`:mobile_phone_off:`	
-|	:wolf:	|	`:wolf:`	|	:tophat:	|	`:tophat:`	|	:chart:	|	`:chart:`	
-|	:frog:	|	`:frog:`	|	:crown:	|	`:crown:`	|	:currency_exchange:	|	`:currency_exchange:`	
-|	:tiger:	|	`:tiger:`	|	:womans_hat:	|	`:womans_hat:`	|	:aries:	|	`:aries:`	
-|	:koala:	|	`:koala:`	|	:mans_shoe:	|	`:mans_shoe:`	|	:taurus:	|	`:taurus:`	
-|	:bear:	|	`:bear:`	|	:closed_umbrella:	|	`:closed_umbrella:`	|	:gemini:	|	`:gemini:`	
-|	:pig:	|	`:pig:`	|	:briefcase:	|	`:briefcase:`	|	:cancer:	|	`:cancer:`	
-|	:pig_nose:	|	`:pig_nose:`	|	:handbag:	|	`:handbag:`	|	:leo:	|	`:leo:`	
-|	:cow:	|	`:cow:`	|	:pouch:	|	`:pouch:`	|	:virgo:	|	`:virgo:`	
-|	:boar:	|	`:boar:`	|	:purse:	|	`:purse:`	|	:libra:	|	`:libra:`	
-|	:monkey_face:	|	`:monkey_face:`	|	:eyeglasses:	|	`:eyeglasses:`	|	:scorpius:	|	`:scorpius:`	
-|	:monkey:	|	`:monkey:`	|	:fishing_pole_and_fish:	|	`:fishing_pole_and_fish:`	|	:sagittarius:	|	`:sagittarius:`	
-|	:horse:	|	`:horse:`	|	:coffee:	|	`:coffee:`	|	:capricorn:	|	`:capricorn:`	
-|	:racehorse:	|	`:racehorse:`	|	:tea:	|	`:tea:`	|	:aquarius:	|	`:aquarius:`	
-|	:camel:	|	`:camel:`	|	:sake:	|	`:sake:`	|	:pisces:	|	`:pisces:`	
-|	:sheep:	|	`:sheep:`	|	:baby_bottle:	|	`:baby_bottle:`	|	:ophiuchus:	|	`:ophiuchus:`	
-|	:elephant:	|	`:elephant:`	|	:beer:	|	`:beer:`	|	:six_pointed_star:	|	`:six_pointed_star:`	
-|	:panda_face:	|	`:panda_face:`	|	:beers:	|	`:beers:`	|	:negative_squared_cross_mark:	|	`:negative_squared_cross_mark:`	
-|	:snake:	|	`:snake:`	|	:cocktail:	|	`:cocktail:`	|	:a:	|	`:a:`	
-|	:bird:	|	`:bird:`	|	:tropical_drink:	|	`:tropical_drink:`	|	:b:	|	`:b:`	
-|	:baby_chick:	|	`:baby_chick:`	|	:wine_glass:	|	`:wine_glass:`	|	:ab:	|	`:ab:`	
-|	:hatched_chick:	|	`:hatched_chick:`	|	:fork_and_knife:	|	`:fork_and_knife:`	|	:o2:	|	`:o2:`	
-|	:hatching_chick:	|	`:hatching_chick:`	|	:pizza:	|	`:pizza:`	|	:diamond_shape_with_a_dot_inside:	|	`:diamond_shape_with_a_dot_inside:`	
-|	:chicken:	|	`:chicken:`	|	:hamburger:	|	`:hamburger:`	|	:recycle:	|	`:recycle:`	
-|	:penguin:	|	`:penguin:`	|	:fries:	|	`:fries:`	|	:end:	|	`:end:`	
-|	:turtle:	|	`:turtle:`	|	:poultry_leg:	|	`:poultry_leg:`	|	:back:	|	`:back:`	
-|	:bug:	|	`:bug:`	|	:meat_on_bone:	|	`:meat_on_bone:`	|	:on:	|	`:on:`	
-|	:ant:	|	`:ant:`	|	:spaghetti:	|	`:spaghetti:`	|	:soon:	|	`:soon:`	
-|	:beetle:	|	`:beetle:`	|	:curry:	|	`:curry:`	|	:clock1:	|	`:clock1:`	
-|	:snail:	|	`:snail:`	|	:fried_shrimp:	|	`:fried_shrimp:`	|	:clock130:	|	`:clock130:`	
-|	:octopus:	|	`:octopus:`	|	:bento:	|	`:bento:`	|	:clock10:	|	`:clock10:`	
-|	:tropical_fish:	|	`:tropical_fish:`	|	:sushi:	|	`:sushi:`	|	:clock1030:	|	`:clock1030:`	
-|	:fish:	|	`:fish:`	|	:fish_cake:	|	`:fish_cake:`	|	:clock11:	|	`:clock11:`	
-|	:whale:	|	`:whale:`	|	:rice_ball:	|	`:rice_ball:`	|	:clock1130:	|	`:clock1130:`	
-|	:whale2:	|	`:whale2:`	|	:rice_cracker:	|	`:rice_cracker:`	|	:clock12:	|	`:clock12:`	
-|	:dolphin:	|	`:dolphin:`	|	:rice:	|	`:rice:`	|	:clock1230:	|	`:clock1230:`	
-|	:cow2:	|	`:cow2:`	|	:ramen:	|	`:ramen:`	|	:clock2:	|	`:clock2:`	
-|	:ram:	|	`:ram:`	|	:stew:	|	`:stew:`	|	:clock230:	|	`:clock230:`	
-|	:rat:	|	`:rat:`	|	:oden:	|	`:oden:`	|	:clock3:	|	`:clock3:`	
-|	:water_buffalo:	|	`:water_buffalo:`	|	:dango:	|	`:dango:`	|	:clock330:	|	`:clock330:`	
-|	:tiger2:	|	`:tiger2:`	|	:egg:	|	`:egg:`	|	:clock4:	|	`:clock4:`	
-|	:rabbit2:	|	`:rabbit2:`	|	:bread:	|	`:bread:`	|	:clock430:	|	`:clock430:`	
-|	:dragon:	|	`:dragon:`	|	:doughnut:	|	`:doughnut:`	|	:clock5:	|	`:clock5:`	
-|	:goat:	|	`:goat:`	|	:custard:	|	`:custard:`	|	:clock530:	|	`:clock530:`	
-|	:rooster:	|	`:rooster:`	|	:icecream:	|	`:icecream:`	|	:clock6:	|	`:clock6:`	
-|	:dog2:	|	`:dog2:`	|	:ice_cream:	|	`:ice_cream:`	|	:clock630:	|	`:clock630:`	
-|	:pig2:	|	`:pig2:`	|	:shaved_ice:	|	`:shaved_ice:`	|	:clock7:	|	`:clock7:`	
-|	:mouse2:	|	`:mouse2:`	|	:birthday:	|	`:birthday:`	|	:clock730:	|	`:clock730:`	
-|	:ox:	|	`:ox:`	|	:cake:	|	`:cake:`	|	:clock8:	|	`:clock8:`	
-|	:dragon_face:	|	`:dragon_face:`	|	:cookie:	|	`:cookie:`	|	:clock830:	|	`:clock830:`	
-|	:blowfish:	|	`:blowfish:`	|	:chocolate_bar:	|	`:chocolate_bar:`	|	:clock9:	|	`:clock9:`	
-|	:crocodile:	|	`:crocodile:`	|	:candy:	|	`:candy:`	|	:clock930:	|	`:clock930:`	
-|	:dromedary_camel:	|	`:dromedary_camel:`	|	:lollipop:	|	`:lollipop:`	|	:heavy_dollar_sign:	|	`:heavy_dollar_sign:`	
-|	:leopard:	|	`:leopard:`	|	:honey_pot:	|	`:honey_pot:`	|	:copyright:	|	`:copyright:`	
-|	:cat2:	|	`:cat2:`	|	:apple:	|	`:apple:`	|	:registered:	|	`:registered:`	
-|	:poodle:	|	`:poodle:`	|	:green_apple:	|	`:green_apple:`	|	:tm:	|	`:tm:`	
-|	:bouquet:	|	`:bouquet:`	|	:tangerine:	|	`:tangerine:`	|	:x:	|	`:x:`	
-|	:cherry_blossom:	|	`:cherry_blossom:`	|	:lemon:	|	`:lemon:`	|	:bangbang:	|	`:bangbang:`	
-|	:tulip:	|	`:tulip:`	|	:cherries:	|	`:cherries:`	|	:interrobang:	|	`:interrobang:`	
-|	:four_leaf_clover:	|	`:four_leaf_clover:`	|	:grapes:	|	`:grapes:`	|	:o:	|	`:o:`	
-|	:rose:	|	`:rose:`	|	:watermelon:	|	`:watermelon:`	|	:heavy_multiplication_x:	|	`:heavy_multiplication_x:`	
-|	:sunflower:	|	`:sunflower:`	|	:strawberry:	|	`:strawberry:`	|	:heavy_plus_sign:	|	`:heavy_plus_sign:`	
-|	:hibiscus:	|	`:hibiscus:`	|	:peach:	|	`:peach:`	|	:heavy_minus_sign:	|	`:heavy_minus_sign:`	
-|	:maple_leaf:	|	`:maple_leaf:`	|	:melon:	|	`:melon:`	|	:heavy_division_sign:	|	`:heavy_division_sign:`	
-|	:leaves:	|	`:leaves:`	|	:banana:	|	`:banana:`	|	:white_flower:	|	`:white_flower:`	
-|	:fallen_leaf:	|	`:fallen_leaf:`	|	:pear:	|	`:pear:`	|	:100:	|	`:100:`	
-|	:herb:	|	`:herb:`	|	:pineapple:	|	`:pineapple:`	|	:heavy_check_mark:	|	`:heavy_check_mark:`	
-|	:mushroom:	|	`:mushroom:`	|	:sweet_potato:	|	`:sweet_potato:`	|	:ballot_box_with_check:	|	`:ballot_box_with_check:`	
-|	:cactus:	|	`:cactus:`	|	:eggplant:	|	`:eggplant:`	|	:radio_button:	|	`:radio_button:`	
-|	:palm_tree:	|	`:palm_tree:`	|	:tomato:	|	`:tomato:`	|	:link:	|	`:link:`	
-|	:evergreen_tree:	|	`:evergreen_tree:`	|	:corn:	|	`:corn:`	|	:curly_loop:	|	`:curly_loop:`	
-|	:deciduous_tree:	|	`:deciduous_tree:`	|	:house:	|	`:house:`	|	:wavy_dash:	|	`:wavy_dash:`	
-|	:chestnut:	|	`:chestnut:`	|	:house_with_garden:	|	`:house_with_garden:`	|	:part_alternation_mark:	|	`:part_alternation_mark:`	
-|	:seedling:	|	`:seedling:`	|	:school:	|	`:school:`	|	:trident:	|	`:trident:`	
-|	:blossom:	|	`:blossom:`	|	:office:	|	`:office:`	|	:black_small_square:	|	`:black_small_square:`	
-|	:ear_of_rice:	|	`:ear_of_rice:`	|	:post_office:	|	`:post_office:`	|	:white_small_square:	|	`:white_small_square:`	
-|	:shell:	|	`:shell:`	|	:hospital:	|	`:hospital:`	|	:black_medium_small_square:	|	`:black_medium_small_square:`	
-|	:globe_with_meridians:	|	`:globe_with_meridians:`	|	:bank:	|	`:bank:`	|	:white_medium_small_square:	|	`:white_medium_small_square:`	
-|	:sun_with_face:	|	`:sun_with_face:`	|	:convenience_store:	|	`:convenience_store:`	|	:black_medium_square:	|	`:black_medium_square:`	
-|	:full_moon_with_face:	|	`:full_moon_with_face:`	|	:love_hotel:	|	`:love_hotel:`	|	:white_medium_square:	|	`:white_medium_square:`	
-|	:new_moon_with_face:	|	`:new_moon_with_face:`	|	:hotel:	|	`:hotel:`	|	:black_large_square:	|	`:black_large_square:`	
-|	:new_moon:	|	`:new_moon:`	|	:wedding:	|	`:wedding:`	|	:white_large_square:	|	`:white_large_square:`	
-|	:waxing_crescent_moon:	|	`:waxing_crescent_moon:`	|	:church:	|	`:church:`	|	:white_check_mark:	|	`:white_check_mark:`	
-|	:first_quarter_moon:	|	`:first_quarter_moon:`	|	:department_store:	|	`:department_store:`	|	:black_square_button:	|	`:black_square_button:`	
-|	:waxing_gibbous_moon:	|	`:waxing_gibbous_moon:`	|	:european_post_office:	|	`:european_post_office:`	|	:white_square_button:	|	`:white_square_button:`	
-|	:full_moon:	|	`:full_moon:`	|	:city_sunrise:	|	`:city_sunrise:`	|	:black_circle:	|	`:black_circle:`	
-|	:waning_gibbous_moon:	|	`:waning_gibbous_moon:`	|	:city_sunset:	|	`:city_sunset:`	|	:white_circle:	|	`:white_circle:`	
-|	:last_quarter_moon:	|	`:last_quarter_moon:`	|	:japanese_castle:	|	`:japanese_castle:`	|	:red_circle:	|	`:red_circle:`	
-|	:waning_crescent_moon:	|	`:waning_crescent_moon:`	|	:european_castle:	|	`:european_castle:`	|	:large_blue_circle:	|	`:large_blue_circle:`	
-|	:last_quarter_moon_with_face:	|	`:last_quarter_moon_with_face:`	|	:tent:	|	`:tent:`	|	:large_blue_diamond:	|	`:large_blue_diamond:`	
-|	:first_quarter_moon_with_face:	|	`:first_quarter_moon_with_face:`	|	:factory:	|	`:factory:`	|	:large_orange_diamond:	|	`:large_orange_diamond:`	
-|	:crescent_moon:	|	`:crescent_moon:`					|	:small_blue_diamond:	|	`:small_blue_diamond:`	
-|	:earth_africa:	|	`:earth_africa:`					|	:small_orange_diamond:	|	`:small_orange_diamond:`	
-|	:earth_americas:	|	`:earth_americas:`					|	:small_red_triangle:	|	`:small_red_triangle:`	
-|	:earth_asia:	|	`:earth_asia:`					|	:small_red_triangle_down:	|	`:small_red_triangle_down:`	
-|	:volcano:	|	`:volcano:`									
+|	Emoji	|	Code |	Emoji	|	Code	|
+|	:--:	|	:-- |	:--:	|	:--	|
+| 💯 | `:100:` | 🎅🏾 | `:santa_tone4:` |
+| 🔢 | `:1234:` | 🎅🏿 | `:santa_tone5:` |
+| 🎱 | `:8ball:` | 📡 | `:satellite:` |
+| 🅰 | `:a:` | 🛰 | `:satellite_orbital:` |
+| 🆎 | `:ab:` | 🎷 | `:saxophone:` |
+| 🔤 | `:abc:` | ⚖ | `:scales:` |
+| 🔡 | `:abcd:` | 🏫 | `:school:` |
+| 🉑 | `:accept:` | 🎒 | `:school_satchel:` |
+| 🚡 | `:aerial_tramway:` | ✂ | `:scissors:` |
+| ✈ | `:airplane:` | 🛴 | `:scooter:` |
+| 🛬 | `:airplane_arriving:` | 🦂 | `:scorpion:` |
+| 🛫 | `:airplane_departure:` | ♏ | `:scorpius:` |
+| 🛩 | `:airplane_small:` | 😱 | `:scream:` |
+| ⏰ | `:alarm_clock:` | 🙀 | `:scream_cat:` |
+| ⚗ | `:alembic:` | 📜 | `:scroll:` |
+| 👽 | `:alien:` | 💺 | `:seat:` |
+| 🚑 | `:ambulance:` | 🥈 | `:second_place:` |
+| 🏺 | `:amphora:` | ㊙ | `:secret:` |
+| ⚓ | `:anchor:` | 🙈 | `:see_no_evil:` |
+| 👼 | `:angel:` | 🌱 | `:seedling:` |
+| 👼🏻 | `:angel_tone1:` | 🤳 | `:selfie:` |
+| 👼🏼 | `:angel_tone2:` | 🤳🏻 | `:selfie_tone1:` |
+| 👼🏽 | `:angel_tone3:` | 🤳🏼 | `:selfie_tone2:` |
+| 👼🏾 | `:angel_tone4:` | 🤳🏽 | `:selfie_tone3:` |
+| 👼🏿 | `:angel_tone5:` | 🤳🏾 | `:selfie_tone4:` |
+| 💢 | `:anger:` | 🤳🏿 | `:selfie_tone5:` |
+| 🗯 | `:anger_right:` | 7️⃣ | `:seven:` |
+| 😠 | `:angry:` | 🥘 | `:shallow_pan_of_food:` |
+| 😧 | `:anguished:` | ☘ | `:shamrock:` |
+| 🐜 | `:ant:` | 🦈 | `:shark:` |
+| 🍎 | `:apple:` | 🍧 | `:shaved_ice:` |
+| ♒ | `:aquarius:` | 🐑 | `:sheep:` |
+| ♈ | `:aries:` | 🐚 | `:shell:` |
+| ◀ | `:arrow_backward:` | 🛡 | `:shield:` |
+| ⏬ | `:arrow_double_down:` | ⛩ | `:shinto_shrine:` |
+| ⏫ | `:arrow_double_up:` | 🚢 | `:ship:` |
+| ⬇ | `:arrow_down:` | 👕 | `:shirt:` |
+| 🔽 | `:arrow_down_small:` | 🛍 | `:shopping_bags:` |
+| ▶ | `:arrow_forward:` | 🛒 | `:shopping_cart:` |
+| ⤵ | `:arrow_heading_down:` | 🚿 | `:shower:` |
+| ⤴ | `:arrow_heading_up:` | 🦐 | `:shrimp:` |
+| ⬅ | `:arrow_left:` | 🤷 | `:shrug:` |
+| ↙ | `:arrow_lower_left:` | 🤷🏻 | `:shrug_tone1:` |
+| ↘ | `:arrow_lower_right:` | 🤷🏼 | `:shrug_tone2:` |
+| ➡ | `:arrow_right:` | 🤷🏽 | `:shrug_tone3:` |
+| ↪ | `:arrow_right_hook:` | 🤷🏾 | `:shrug_tone4:` |
+| ⬆ | `:arrow_up:` | 🤷🏿 | `:shrug_tone5:` |
+| ↕ | `:arrow_up_down:` | 📶 | `:signal_strength:` |
+| 🔼 | `:arrow_up_small:` | 6️⃣ | `:six:` |
+| ↖ | `:arrow_upper_left:` | 🔯 | `:six_pointed_star:` |
+| ↗ | `:arrow_upper_right:` | 🎿 | `:ski:` |
+| 🔃 | `:arrows_clockwise:` | ⛷ | `:skier:` |
+| 🔄 | `:arrows_counterclockwise:` | 💀 | `:skull:` |
+| 🎨 | `:art:` | ☠ | `:skull_crossbones:` |
+| 🚛 | `:articulated_lorry:` | 😴 | `:sleeping:` |
+| *⃣ | `:asterisk:` | 🛌 | `:sleeping_accommodation:` |
+| 😲 | `:astonished:` | 😪 | `:sleepy:` |
+| 👟 | `:athletic_shoe:` | 🙁 | `:slight_frown:` |
+| 🏧 | `:atm:` | 🙂 | `:slight_smile:` |
+| ⚛ | `:atom:` | 🎰 | `:slot_machine:` |
+| 🥑 | `:avocado:` | 🔹 | `:small_blue_diamond:` |
+| 🅱 | `:b:` | 🔸 | `:small_orange_diamond:` |
+| 👶 | `:baby:` | 🔺 | `:small_red_triangle:` |
+| 🍼 | `:baby_bottle:` | 🔻 | `:small_red_triangle_down:` |
+| 🐤 | `:baby_chick:` | 😄 | `:smile:` |
+| 🚼 | `:baby_symbol:` | 😸 | `:smile_cat:` |
+| 👶🏻 | `:baby_tone1:` | 😃 | `:smiley:` |
+| 👶🏼 | `:baby_tone2:` | 😺 | `:smiley_cat:` |
+| 👶🏽 | `:baby_tone3:` | 😈 | `:smiling_imp:` |
+| 👶🏾 | `:baby_tone4:` | 😏 | `:smirk:` |
+| 👶🏿 | `:baby_tone5:` | 😼 | `:smirk_cat:` |
+| 🔙 | `:back:` | 🚬 | `:smoking:` |
+| 🥓 | `:bacon:` | 🐌 | `:snail:` |
+| 🏸 | `:badminton:` | 🐍 | `:snake:` |
+| 🛄 | `:baggage_claim:` | 🤧 | `:sneezing_face:` |
+| 🎈 | `:balloon:` | 🏂 | `:snowboarder:` |
+| 🗳 | `:ballot_box:` | ❄ | `:snowflake:` |
+| ☑ | `:ballot_box_with_check:` | ⛄ | `:snowman:` |
+| 🎍 | `:bamboo:` | ☃ | `:snowman2:` |
+| 🍌 | `:banana:` | 😭 | `:sob:` |
+| ‼ | `:bangbang:` | ⚽ | `:soccer:` |
+| 🏦 | `:bank:` | 🔜 | `:soon:` |
+| 📊 | `:bar_chart:` | 🆘 | `:sos:` |
+| 💈 | `:barber:` | 🔉 | `:sound:` |
+| ⚾ | `:baseball:` | 👾 | `:space_invader:` |
+| 🏀 | `:basketball:` | ♠ | `:spades:` |
+| ⛹ | `:basketball_player:` | 🍝 | `:spaghetti:` |
+| ⛹🏻 | `:basketball_player_tone1:` | ❇ | `:sparkle:` |
+| ⛹🏼 | `:basketball_player_tone2:` | 🎇 | `:sparkler:` |
+| ⛹🏽 | `:basketball_player_tone3:` | ✨ | `:sparkles:` |
+| ⛹🏾 | `:basketball_player_tone4:` | 💖 | `:sparkling_heart:` |
+| ⛹🏿 | `:basketball_player_tone5:` | 🙊 | `:speak_no_evil:` |
+| 🦇 | `:bat:` | 🔈 | `:speaker:` |
+| 🛀 | `:bath:` | 🗣 | `:speaking_head:` |
+| 🛀🏻 | `:bath_tone1:` | 💬 | `:speech_balloon:` |
+| 🛀🏼 | `:bath_tone2:` | 🗨 | `:speech_left:` |
+| 🛀🏽 | `:bath_tone3:` | 🚤 | `:speedboat:` |
+| 🛀🏾 | `:bath_tone4:` | 🕷 | `:spider:` |
+| 🛀🏿 | `:bath_tone5:` | 🕸 | `:spider_web:` |
+| 🛁 | `:bathtub:` | 🥄 | `:spoon:` |
+| 🔋 | `:battery:` | 🕵 | `:spy:` |
+| 🏖 | `:beach:` | 🕵🏻 | `:spy_tone1:` |
+| ⛱ | `:beach_umbrella:` | 🕵🏼 | `:spy_tone2:` |
+| 🐻 | `:bear:` | 🕵🏽 | `:spy_tone3:` |
+| 🛏 | `:bed:` | 🕵🏾 | `:spy_tone4:` |
+| 🐝 | `:bee:` | 🕵🏿 | `:spy_tone5:` |
+| 🍺 | `:beer:` | 🦑 | `:squid:` |
+| 🍻 | `:beers:` | 🏟 | `:stadium:` |
+| 🐞 | `:beetle:` | ⭐ | `:star:` |
+| 🔰 | `:beginner:` | 🌟 | `:star2:` |
+| 🔔 | `:bell:` | ☪ | `:star_and_crescent:` |
+| 🛎 | `:bellhop:` | ✡ | `:star_of_david:` |
+| 🍱 | `:bento:` | 🌠 | `:stars:` |
+| 🚴 | `:bicyclist:` | 🚉 | `:station:` |
+| 🚴🏻 | `:bicyclist_tone1:` | 🗽 | `:statue_of_liberty:` |
+| 🚴🏼 | `:bicyclist_tone2:` | 🚂 | `:steam_locomotive:` |
+| 🚴🏽 | `:bicyclist_tone3:` | 🍲 | `:stew:` |
+| 🚴🏾 | `:bicyclist_tone4:` | ⏹ | `:stop_button:` |
+| 🚴🏿 | `:bicyclist_tone5:` | ⏱ | `:stopwatch:` |
+| 🚲 | `:bike:` | 📏 | `:straight_ruler:` |
+| 👙 | `:bikini:` | 🍓 | `:strawberry:` |
+| ☣ | `:biohazard:` | 😛 | `:stuck_out_tongue:` |
+| 🐦 | `:bird:` | 😝 | `:stuck_out_tongue_closed_eyes:` |
+| 🎂 | `:birthday:` | 😜 | `:stuck_out_tongue_winking_eye:` |
+| ⚫ | `:black_circle:` | 🥙 | `:stuffed_flatbread:` |
+| 🖤 | `:black_heart:` | 🌞 | `:sun_with_face:` |
+| 🃏 | `:black_joker:` | 🌻 | `:sunflower:` |
+| ⬛ | `:black_large_square:` | 😎 | `:sunglasses:` |
+| ◾ | `:black_medium_small_square:` | ☀ | `:sunny:` |
+| ◼ | `:black_medium_square:` | 🌅 | `:sunrise:` |
+| ✒ | `:black_nib:` | 🌄 | `:sunrise_over_mountains:` |
+| ▪ | `:black_small_square:` | 🏄 | `:surfer:` |
+| 🔲 | `:black_square_button:` | 🏄🏻 | `:surfer_tone1:` |
+| 🌼 | `:blossom:` | 🏄🏼 | `:surfer_tone2:` |
+| 🐡 | `:blowfish:` | 🏄🏽 | `:surfer_tone3:` |
+| 📘 | `:blue_book:` | 🏄🏾 | `:surfer_tone4:` |
+| 🚙 | `:blue_car:` | 🏄🏿 | `:surfer_tone5:` |
+| 💙 | `:blue_heart:` | 🍣 | `:sushi:` |
+| 😊 | `:blush:` | 🚟 | `:suspension_railway:` |
+| 🐗 | `:boar:` | 😓 | `:sweat:` |
+| 💣 | `:bomb:` | 💦 | `:sweat_drops:` |
+| 📖 | `:book:` | 😅 | `:sweat_smile:` |
+| 🔖 | `:bookmark:` | 🍠 | `:sweet_potato:` |
+| 📑 | `:bookmark_tabs:` | 🏊 | `:swimmer:` |
+| 📚 | `:books:` | 🏊🏻 | `:swimmer_tone1:` |
+| 💥 | `:boom:` | 🏊🏼 | `:swimmer_tone2:` |
+| 👢 | `:boot:` | 🏊🏽 | `:swimmer_tone3:` |
+| 💐 | `:bouquet:` | 🏊🏾 | `:swimmer_tone4:` |
+| 🙇 | `:bow:` | 🏊🏿 | `:swimmer_tone5:` |
+| 🏹 | `:bow_and_arrow:` | 🔣 | `:symbols:` |
+| 🙇🏻 | `:bow_tone1:` | 🕍 | `:synagogue:` |
+| 🙇🏼 | `:bow_tone2:` | 💉 | `:syringe:` |
+| 🙇🏽 | `:bow_tone3:` | 🌮 | `:taco:` |
+| 🙇🏾 | `:bow_tone4:` | 🎉 | `:tada:` |
+| 🙇🏿 | `:bow_tone5:` | 🎋 | `:tanabata_tree:` |
+| 🎳 | `:bowling:` | 🍊 | `:tangerine:` |
+| 🥊 | `:boxing_glove:` | ♉ | `:taurus:` |
+| 👦 | `:boy:` | 🚕 | `:taxi:` |
+| 👦🏻 | `:boy_tone1:` | 🍵 | `:tea:` |
+| 👦🏼 | `:boy_tone2:` | ☎ | `:telephone:` |
+| 👦🏽 | `:boy_tone3:` | 📞 | `:telephone_receiver:` |
+| 👦🏾 | `:boy_tone4:` | 🔭 | `:telescope:` |
+| 👦🏿 | `:boy_tone5:` | 🔟 | `:ten:` |
+| 🍞 | `:bread:` | 🎾 | `:tennis:` |
+| 👰 | `:bride_with_veil:` | ⛺ | `:tent:` |
+| 👰🏻 | `:bride_with_veil_tone1:` | 🌡 | `:thermometer:` |
+| 👰🏼 | `:bride_with_veil_tone2:` | 🤒 | `:thermometer_face:` |
+| 👰🏽 | `:bride_with_veil_tone3:` | 🤔 | `:thinking:` |
+| 👰🏾 | `:bride_with_veil_tone4:` | 🥉 | `:third_place:` |
+| 👰🏿 | `:bride_with_veil_tone5:` | 💭 | `:thought_balloon:` |
+| 🌉 | `:bridge_at_night:` | 3️⃣ | `:three:` |
+| 💼 | `:briefcase:` | 👎 | `:thumbsdown:` |
+| 💔 | `:broken_heart:` | 👎🏻 | `:thumbsdown_tone1:` |
+| 🐛 | `:bug:` | 👎🏼 | `:thumbsdown_tone2:` |
+| 💡 | `:bulb:` | 👎🏽 | `:thumbsdown_tone3:` |
+| 🚅 | `:bullettrain_front:` | 👎🏾 | `:thumbsdown_tone4:` |
+| 🚄 | `:bullettrain_side:` | 👎🏿 | `:thumbsdown_tone5:` |
+| 🌯 | `:burrito:` | 👍 | `:thumbsup:` |
+| 🚌 | `:bus:` | 👍🏻 | `:thumbsup_tone1:` |
+| 🚏 | `:busstop:` | 👍🏼 | `:thumbsup_tone2:` |
+| 👤 | `:bust_in_silhouette:` | 👍🏽 | `:thumbsup_tone3:` |
+| 👥 | `:busts_in_silhouette:` | 👍🏾 | `:thumbsup_tone4:` |
+| 🦋 | `:butterfly:` | 👍🏿 | `:thumbsup_tone5:` |
+| 🌵 | `:cactus:` | ⛈ | `:thunder_cloud_rain:` |
+| 🍰 | `:cake:` | 🎫 | `:ticket:` |
+| 📆 | `:calendar:` | 🎟 | `:tickets:` |
+| 🗓 | `:calendar_spiral:` | 🐯 | `:tiger:` |
+| 🤙 | `:call_me:` | 🐅 | `:tiger2:` |
+| 🤙🏻 | `:call_me_tone1:` | ⏲ | `:timer:` |
+| 🤙🏼 | `:call_me_tone2:` | 😫 | `:tired_face:` |
+| 🤙🏽 | `:call_me_tone3:` | ™ | `:tm:` |
+| 🤙🏾 | `:call_me_tone4:` | 🚽 | `:toilet:` |
+| 🤙🏿 | `:call_me_tone5:` | 🗼 | `:tokyo_tower:` |
+| 📲 | `:calling:` | 🍅 | `:tomato:` |
+| 🐫 | `:camel:` | 🏻 | `:tone1:` |
+| 📷 | `:camera:` | 🏼 | `:tone2:` |
+| 📸 | `:camera_with_flash:` | 🏽 | `:tone3:` |
+| 🏕 | `:camping:` | 🏾 | `:tone4:` |
+| ♋ | `:cancer:` | 🏿 | `:tone5:` |
+| 🕯 | `:candle:` | 👅 | `:tongue:` |
+| 🍬 | `:candy:` | 🛠 | `:tools:` |
+| 🛶 | `:canoe:` | 🔝 | `:top:` |
+| 🔠 | `:capital_abcd:` | 🎩 | `:tophat:` |
+| ♑ | `:capricorn:` | ⏭ | `:track_next:` |
+| 🗃 | `:card_box:` | ⏮ | `:track_previous:` |
+| 📇 | `:card_index:` | 🖲 | `:trackball:` |
+| 🎠 | `:carousel_horse:` | 🚜 | `:tractor:` |
+| 🥕 | `:carrot:` | 🚥 | `:traffic_light:` |
+| 🤸 | `:cartwheel:` | 🚋 | `:train:` |
+| 🤸🏻 | `:cartwheel_tone1:` | 🚆 | `:train2:` |
+| 🤸🏼 | `:cartwheel_tone2:` | 🚊 | `:tram:` |
+| 🤸🏽 | `:cartwheel_tone3:` | 🚩 | `:triangular_flag_on_post:` |
+| 🤸🏾 | `:cartwheel_tone4:` | 📐 | `:triangular_ruler:` |
+| 🤸🏿 | `:cartwheel_tone5:` | 🔱 | `:trident:` |
+| 🐱 | `:cat:` | 😤 | `:triumph:` |
+| 🐈 | `:cat2:` | 🚎 | `:trolleybus:` |
+| 💿 | `:cd:` | 🏆 | `:trophy:` |
+| ⛓ | `:chains:` | 🍹 | `:tropical_drink:` |
+| 🍾 | `:champagne:` | 🐠 | `:tropical_fish:` |
+| 🥂 | `:champagne_glass:` | 🚚 | `:truck:` |
+| 💹 | `:chart:` | 🎺 | `:trumpet:` |
+| 📉 | `:chart_with_downwards_trend:` | 🌷 | `:tulip:` |
+| 📈 | `:chart_with_upwards_trend:` | 🥃 | `:tumbler_glass:` |
+| 🏁 | `:checkered_flag:` | 🦃 | `:turkey:` |
+| 🧀 | `:cheese:` | 🐢 | `:turtle:` |
+| 🍒 | `:cherries:` | 📺 | `:tv:` |
+| 🌸 | `:cherry_blossom:` | 🔀 | `:twisted_rightwards_arrows:` |
+| 🌰 | `:chestnut:` | 2️⃣ | `:two:` |
+| 🐔 | `:chicken:` | 💕 | `:two_hearts:` |
+| 🚸 | `:children_crossing:` | 👬 | `:two_men_holding_hands:` |
+| 🐿 | `:chipmunk:` | 👭 | `:two_women_holding_hands:` |
+| 🍫 | `:chocolate_bar:` | 🈹 | `:u5272:` |
+| 🎄 | `:christmas_tree:` | 🈴 | `:u5408:` |
+| ⛪ | `:church:` | 🈺 | `:u55b6:` |
+| 🎦 | `:cinema:` | 🈯 | `:u6307:` |
+| 🎪 | `:circus_tent:` | 🈷 | `:u6708:` |
+| 🌆 | `:city_dusk:` | 🈶 | `:u6709:` |
+| 🌇 | `:city_sunset:` | 🈵 | `:u6e80:` |
+| 🏙 | `:cityscape:` | 🈚 | `:u7121:` |
+| 🆑 | `:cl:` | 🈸 | `:u7533:` |
+| 👏 | `:clap:` | 🈲 | `:u7981:` |
+| 👏🏻 | `:clap_tone1:` | 🈳 | `:u7a7a:` |
+| 👏🏼 | `:clap_tone2:` | ☔ | `:umbrella:` |
+| 👏🏽 | `:clap_tone3:` | ☂ | `:umbrella2:` |
+| 👏🏾 | `:clap_tone4:` | 😒 | `:unamused:` |
+| 👏🏿 | `:clap_tone5:` | 🔞 | `:underage:` |
+| 🎬 | `:clapper:` | 🦄 | `:unicorn:` |
+| 🏛 | `:classical_building:` | 🔓 | `:unlock:` |
+| 📋 | `:clipboard:` | 🆙 | `:up:` |
+| 🕰 | `:clock:` | 🙃 | `:upside_down:` |
+| 🕐 | `:clock1:` | ⚱ | `:urn:` |
+| 🕙 | `:clock10:` | ✌ | `:v:` |
+| 🕥 | `:clock1030:` | ✌🏻 | `:v_tone1:` |
+| 🕚 | `:clock11:` | ✌🏼 | `:v_tone2:` |
+| 🕦 | `:clock1130:` | ✌🏽 | `:v_tone3:` |
+| 🕛 | `:clock12:` | ✌🏾 | `:v_tone4:` |
+| 🕧 | `:clock1230:` | ✌🏿 | `:v_tone5:` |
+| 🕜 | `:clock130:` | 🚦 | `:vertical_traffic_light:` |
+| 🕑 | `:clock2:` | 📼 | `:vhs:` |
+| 🕝 | `:clock230:` | 📳 | `:vibration_mode:` |
+| 🕒 | `:clock3:` | 📹 | `:video_camera:` |
+| 🕞 | `:clock330:` | 🎮 | `:video_game:` |
+| 🕓 | `:clock4:` | 🎻 | `:violin:` |
+| 🕟 | `:clock430:` | ♍ | `:virgo:` |
+| 🕔 | `:clock5:` | 🌋 | `:volcano:` |
+| 🕠 | `:clock530:` | 🏐 | `:volleyball:` |
+| 🕕 | `:clock6:` | 🆚 | `:vs:` |
+| 🕡 | `:clock630:` | 🖖 | `:vulcan:` |
+| 🕖 | `:clock7:` | 🖖🏻 | `:vulcan_tone1:` |
+| 🕢 | `:clock730:` | 🖖🏼 | `:vulcan_tone2:` |
+| 🕗 | `:clock8:` | 🖖🏽 | `:vulcan_tone3:` |
+| 🕣 | `:clock830:` | 🖖🏾 | `:vulcan_tone4:` |
+| 🕘 | `:clock9:` | 🖖🏿 | `:vulcan_tone5:` |
+| 🕤 | `:clock930:` | 🚶 | `:walking:` |
+| 📕 | `:closed_book:` | 🚶🏻 | `:walking_tone1:` |
+| 🔐 | `:closed_lock_with_key:` | 🚶🏼 | `:walking_tone2:` |
+| 🌂 | `:closed_umbrella:` | 🚶🏽 | `:walking_tone3:` |
+| ☁ | `:cloud:` | 🚶🏾 | `:walking_tone4:` |
+| 🌩 | `:cloud_lightning:` | 🚶🏿 | `:walking_tone5:` |
+| 🌧 | `:cloud_rain:` | 🌘 | `:waning_crescent_moon:` |
+| 🌨 | `:cloud_snow:` | 🌖 | `:waning_gibbous_moon:` |
+| 🌪 | `:cloud_tornado:` | ⚠ | `:warning:` |
+| 🤡 | `:clown:` | 🗑 | `:wastebasket:` |
+| ♣ | `:clubs:` | ⌚ | `:watch:` |
+| 🍸 | `:cocktail:` | 🐃 | `:water_buffalo:` |
+| ☕ | `:coffee:` | 🤽 | `:water_polo:` |
+| ⚰ | `:coffin:` | 🤽🏻 | `:water_polo_tone1:` |
+| 😰 | `:cold_sweat:` | 🤽🏼 | `:water_polo_tone2:` |
+| ☄ | `:comet:` | 🤽🏽 | `:water_polo_tone3:` |
+| 🗜 | `:compression:` | 🤽🏾 | `:water_polo_tone4:` |
+| 💻 | `:computer:` | 🤽🏿 | `:water_polo_tone5:` |
+| 🎊 | `:confetti_ball:` | 🍉 | `:watermelon:` |
+| 😖 | `:confounded:` | 👋 | `:wave:` |
+| 😕 | `:confused:` | 👋🏻 | `:wave_tone1:` |
+| ㊗ | `:congratulations:` | 👋🏼 | `:wave_tone2:` |
+| 🚧 | `:construction:` | 👋🏽 | `:wave_tone3:` |
+| 🏗 | `:construction_site:` | 👋🏾 | `:wave_tone4:` |
+| 👷 | `:construction_worker:` | 👋🏿 | `:wave_tone5:` |
+| 👷🏻 | `:construction_worker_tone1:` | 〰 | `:wavy_dash:` |
+| 👷🏼 | `:construction_worker_tone2:` | 🌒 | `:waxing_crescent_moon:` |
+| 👷🏽 | `:construction_worker_tone3:` | 🌔 | `:waxing_gibbous_moon:` |
+| 👷🏾 | `:construction_worker_tone4:` | 🚾 | `:wc:` |
+| 👷🏿 | `:construction_worker_tone5:` | 😩 | `:weary:` |
+| 🎛 | `:control_knobs:` | 💒 | `:wedding:` |
+| 🏪 | `:convenience_store:` | 🐳 | `:whale:` |
+| 🍪 | `:cookie:` | 🐋 | `:whale2:` |
+| 🍳 | `:cooking:` | ☸ | `:wheel_of_dharma:` |
+| 🆒 | `:cool:` | ♿ | `:wheelchair:` |
+| 👮 | `:cop:` | ✅ | `:white_check_mark:` |
+| 👮🏻 | `:cop_tone1:` | ⚪ | `:white_circle:` |
+| 👮🏼 | `:cop_tone2:` | 💮 | `:white_flower:` |
+| 👮🏽 | `:cop_tone3:` | ⬜ | `:white_large_square:` |
+| 👮🏾 | `:cop_tone4:` | ◽ | `:white_medium_small_square:` |
+| 👮🏿 | `:cop_tone5:` | ◻ | `:white_medium_square:` |
+| © | `:copyright:` | ▫ | `:white_small_square:` |
+| 🌽 | `:corn:` | 🔳 | `:white_square_button:` |
+| 🛋 | `:couch:` | 🌥 | `:white_sun_cloud:` |
+| 👫 | `:couple:` | 🌦 | `:white_sun_rain_cloud:` |
+| 👨‍❤️‍👨 | `:couple_mm:` | 🌤 | `:white_sun_small_cloud:` |
+| 💑 | `:couple_with_heart:` | 🥀 | `:wilted_rose:` |
+| 👩‍❤️‍👩 | `:couple_ww:` | 🌬 | `:wind_blowing_face:` |
+| 💏 | `:couplekiss:` | 🎐 | `:wind_chime:` |
+| 🐮 | `:cow:` | 🍷 | `:wine_glass:` |
+| 🐄 | `:cow2:` | 😉 | `:wink:` |
+| 🤠 | `:cowboy:` | 🐺 | `:wolf:` |
+| 🦀 | `:crab:` | 👩 | `:woman:` |
+| 🖍 | `:crayon:` | 👩🏻 | `:woman_tone1:` |
+| 💳 | `:credit_card:` | 👩🏼 | `:woman_tone2:` |
+| 🌙 | `:crescent_moon:` | 👩🏽 | `:woman_tone3:` |
+| 🦗 | `:cricket:` | 👩🏾 | `:woman_tone4:` |
+| 🐊 | `:crocodile:` | 👩🏿 | `:woman_tone5:` |
+| 🥐 | `:croissant:` | 👚 | `:womans_clothes:` |
+| ✝ | `:cross:` | 👒 | `:womans_hat:` |
+| 🎌 | `:crossed_flags:` | 🚺 | `:womens:` |
+| ⚔ | `:crossed_swords:` | 😟 | `:worried:` |
+| 👑 | `:crown:` | 🔧 | `:wrench:` |
+| 🛳 | `:cruise_ship:` | 🤼 | `:wrestlers:` |
+| 😢 | `:cry:` | ✍ | `:writing_hand:` |
+| 😿 | `:crying_cat_face:` | ✍🏻 | `:writing_hand_tone1:` |
+| 🔮 | `:crystal_ball:` | ✍🏼 | `:writing_hand_tone2:` |
+| 🥒 | `:cucumber:` | ✍🏽 | `:writing_hand_tone3:` |
+| 💘 | `:cupid:` | ✍🏾 | `:writing_hand_tone4:` |
+| ➰ | `:curly_loop:` | ✍🏿 | `:writing_hand_tone5:` |
+| 💱 | `:currency_exchange:` | ❌ | `:x:` |
+| 🍛 | `:curry:` | 💛 | `:yellow_heart:` |
+| 🍮 | `:custard:` | 💴 | `:yen:` |
+| 🛃 | `:customs:` | ☯ | `:yin_yang:` |
+| 🌀 | `:cyclone:` | 😋 | `:yum:` |
+| 🗡 | `:dagger:` | ⚡ | `:zap:` |
+| 💃 | `:dancer:` | 0️⃣ | `:zero:` |
+| 💃🏻 | `:dancer_tone1:` | 🤐 | `:zipper_mouth:` |
+| 💃🏼 | `:dancer_tone2:` | 💤 | `:zzz:` |
+| 💃🏽 | `:dancer_tone3:` | ☹️ | `:frowning_face:` |
+| 💃🏾 | `:dancer_tone4:` | 👱‍♀️ | `:blonde_woman:` |
+| 💃🏿 | `:dancer_tone5:` | 👳‍♀️ | `:woman_with_turban:` |
+| 👯 | `:dancers:` | 👮‍♀️ | `:policewoman:` |
+| 🍡 | `:dango:` | 👷‍♀️ | `:construction_worker_woman:` |
+| 🕶 | `:dark_sunglasses:` | 💂‍♀️ | `:guardswoman:` |
+| 🎯 | `:dart:` | 🕵️‍♀️ | `:female_detective:` |
+| 💨 | `:dash:` | 🕵️ | `:male_detective:` |
+| 📅 | `:date:` | 👩‍⚕️ | `:woman_health_worker:` |
+| 🌳 | `:deciduous_tree:` | 👨‍⚕️ | `:man_health_worker:` |
+| 🦌 | `:deer:` | 👩‍🌾 | `:woman_farmer:` |
+| 🏬 | `:department_store:` | 👨‍🌾 | `:man_farmer:` |
+| 🏜 | `:desert:` | 👩‍🍳 | `:woman_cook:` |
+| 🖥 | `:desktop:` | 👨‍🍳 | `:man_cook:` |
+| 💠 | `:diamond_shape_with_a_dot_inside:` | 👩‍🎓 | `:woman_student:` |
+| ♦ | `:diamonds:` | 👨‍🎓 | `:man_student:` |
+| 😞 | `:disappointed:` | 👩‍🎤 | `:woman_singer:` |
+| 😥 | `:disappointed_relieved:` | 👨‍🎤 | `:man_singer:` |
+| 🗂 | `:dividers:` | 👩‍🏫 | `:woman_teacher:` |
+| 💫 | `:dizzy:` | 👨‍🏫 | `:man_teacher:` |
+| 😵 | `:dizzy_face:` | 👩‍🏭 | `:woman_factory_worker:` |
+| 🚯 | `:do_not_litter:` | 👨‍🏭 | `:man_factory_worker:` |
+| 🐶 | `:dog:` | 👩‍💻 | `:woman_technologist:` |
+| 🐕 | `:dog2:` | 👨‍💻 | `:man_technologist:` |
+| 💵 | `:dollar:` | 👩‍💼 | `:woman_office_worker:` |
+| 🎎 | `:dolls:` | 👨‍💼 | `:man_office_worker:` |
+| 🐬 | `:dolphin:` | 👩‍🔧 | `:woman_mechanic:` |
+| 🚪 | `:door:` | 👨‍🔧 | `:man_mechanic:` |
+| 🍩 | `:doughnut:` | 👩‍🔬 | `:woman_scientist:` |
+| 🕊 | `:dove:` | 👨‍🔬 | `:man_scientist:` |
+| 🐉 | `:dragon:` | 👩‍🎨 | `:woman_artist:` |
+| 🐲 | `:dragon_face:` | 👨‍🎨 | `:man_artist:` |
+| 👗 | `:dress:` | 👩‍🚒 | `:woman_firefighter:` |
+| 🐪 | `:dromedary_camel:` | 👨‍🚒 | `:man_firefighter:` |
+| 🤤 | `:drooling_face:` | 👩‍✈️ | `:woman_pilot:` |
+| 💧 | `:droplet:` | 👨‍✈️ | `:man_pilot:` |
+| 🥁 | `:drum:` | 👩‍🚀 | `:woman_astronaut:` |
+| 🦆 | `:duck:` | 👨‍🚀 | `:man_astronaut:` |
+| 📀 | `:dvd:` | 👩‍⚖️ | `:woman_judge:` |
+| 📧 | `:e-mail:` | 👨‍⚖️ | `:man_judge:` |
+| 🦅 | `:eagle:` | 🙇‍♀️ | `:bowing_woman:` |
+| 👂 | `:ear:` | 💁‍♂️ | `:tipping_hand_man:` |
+| 🌾 | `:ear_of_rice:` | 🙅‍♂️ | `:no_good_man:` |
+| 👂🏻 | `:ear_tone1:` | 🙆‍♂️ | `:ok_man:` |
+| 👂🏼 | `:ear_tone2:` | 🙋‍♂️ | `:raising_hand_man:` |
+| 👂🏽 | `:ear_tone3:` | 🤦‍♀️ | `:woman_facepalming:` |
+| 👂🏾 | `:ear_tone4:` | 🤦‍♂️ | `:man_facepalming:` |
+| 👂🏿 | `:ear_tone5:` | 🤷‍♀️ | `:woman_shrugging:` |
+| 🌍 | `:earth_africa:` | 🤷‍♂️ | `:man_shrugging:` |
+| 🌎 | `:earth_americas:` | 🙎‍♂️ | `:pouting_man:` |
+| 🌏 | `:earth_asia:` | 🙍‍♂️ | `:frowning_man:` |
+| 🥚 | `:egg:` | 💇‍♂️ | `:haircut_man:` |
+| 🍆 | `:eggplant:` | 💆‍♂️ | `:massage_man:` |
+| 8️⃣ | `:eight:` | 👯‍♂️ | `:dancing_men:` |
+| ✴ | `:eight_pointed_black_star:` | 🚶‍♀️ | `:walking_woman:` |
+| ✳ | `:eight_spoked_asterisk:` | 🏃‍♀️ | `:running_woman:` |
+| ⏏ | `:eject:` | 👩‍👦 | `:family_woman_boy:` |
+| 🔌 | `:electric_plug:` | 👩‍👧 | `:family_woman_girl:` |
+| 🐘 | `:elephant:` | 👩‍👧‍👦 | `:family_woman_girl_boy:` |
+| 🔚 | `:end:` | 👩‍👦‍👦 | `:family_woman_boy_boy:` |
+| ✉ | `:envelope:` | 👩‍👧‍👧 | `:family_woman_girl_girl:` |
+| 📩 | `:envelope_with_arrow:` | 👨‍👦 | `:family_man_boy:` |
+| 💶 | `:euro:` | 👨‍👧 | `:family_man_girl:` |
+| 🏰 | `:european_castle:` | 👨‍👧‍👦 | `:family_man_girl_boy:` |
+| 🏤 | `:european_post_office:` | 👨‍👦‍👦 | `:family_man_boy_boy:` |
+| 🌲 | `:evergreen_tree:` | 👨‍👧‍👧 | `:family_man_girl_girl:` |
+| ❗ | `:exclamation:` | ☂️ | `:open_umbrella:` |
+| 😑 | `:expressionless:` | ☃️ | `:snowman_with_snow:` |
+| 👁 | `:eye:` | 🏋️‍♀️ | `:weight_lifting_woman:` |
+| 👁‍🗨 | `:eye_in_speech_bubble:` | 🏋️ | `:weight_lifting_man:` |
+| 👓 | `:eyeglasses:` | 🤼‍♀️ | `:women_wrestling:` |
+| 👀 | `:eyes:` | 🤼‍♂️ | `:men_wrestling:` |
+| 🤦 | `:face_palm:` | 🤸‍♀️ | `:woman_cartwheeling:` |
+| 🤦🏻 | `:face_palm_tone1:` | 🤸‍♂️ | `:man_cartwheeling:` |
+| 🤦🏼 | `:face_palm_tone2:` | ⛹️‍♀️ | `:basketball_woman:` |
+| 🤦🏽 | `:face_palm_tone3:` | ⛹️ | `:basketball_man:` |
+| 🤦🏾 | `:face_palm_tone4:` | 🤾‍♀️ | `:woman_playing_handball:` |
+| 🤦🏿 | `:face_palm_tone5:` | 🤾‍♂️ | `:man_playing_handball:` |
+| 🏭 | `:factory:` | 🏌️‍♀️ | `:golfing_woman:` |
+| 🍂 | `:fallen_leaf:` | 🏌️ | `:golfing_man:` |
+| 👪 | `:family:` | 🏄‍♀️ | `:surfing_woman:` |
+| 👨‍👨‍👦 | `:family_mmb:` | 🏊‍♀️ | `:swimming_woman:` |
+| 👨‍👨‍👦‍👦 | `:family_mmbb:` | 🤽‍♀️ | `:woman_playing_water_polo:` |
+| 👨‍👨‍👧 | `:family_mmg:` | 🤽‍♂️ | `:man_playing_water_polo:` |
+| 👨‍👨‍👧‍👦 | `:family_mmgb:` | 🚣‍♀️ | `:rowing_woman:` |
+| 👨‍👨‍👧‍👧 | `:family_mmgg:` | 🚴‍♀️ | `:biking_woman:` |
+| 👨‍👩‍👦‍👦 | `:family_mwbb:` | 🚵‍♀️ | `:mountain_biking_woman:` |
+| 👨‍👩‍👧 | `:family_mwg:` | 🤹‍♀️ | `:woman_juggling:` |
+| 👨‍👩‍👧‍👦 | `:family_mwgb:` | 🤹‍♂️ | `:man_juggling:` |
+| 👨‍👩‍👧‍👧 | `:family_mwgg:` | ⛵️ | `:boat:` |
+| 👩‍👩‍👦 | `:family_wwb:` | ☎️ | `:phone:` |
+| 👩‍👩‍👦‍👦 | `:family_wwbb:` | ⚖️ | `:balance_scale:` |
+| 👩‍👩‍👧 | `:family_wwg:` | ❣️ | `:heavy_heart_exclamation:` |
+| 👩‍👩‍👧‍👦 | `:family_wwgb:` | ⚜️ | `:fleur_de_lis:` |
+| 👩‍👩‍👧‍👧 | `:family_wwgg:` | 🏳️ | `:white_flag:` |
+| ⏩ | `:fast_forward:` | 🧡 | `:orange_heart:` |
+| 📠 | `:fax:` | ♾️ | `:infinity:` |
+| 😨 | `:fearful:` | 0️⃣ | `:digit_zero:` |
+| 🐾 | `:feet:` | 1️⃣ | `:digit_one:` |
+| 🤺 | `:fencer:` | 2️⃣ | `:digit_two:` |
+| 🎡 | `:ferris_wheel:` | 3️⃣ | `:digit_three:` |
+| ⛴ | `:ferry:` | 4️⃣ | `:digit_four:` |
+| 🏑 | `:field_hockey:` | 5️⃣ | `:digit_five:` |
+| 🗄 | `:file_cabinet:` | 6️⃣ | `:digit_six:` |
+| 📁 | `:file_folder:` | 7️⃣ | `:digit_seven:` |
+| 🎞 | `:film_frames:` | 8️⃣ | `:digit_eight:` |
+| 🤞 | `:fingers_crossed:` | 9️⃣ | `:digit_nine:` |
+| 🤞🏻 | `:fingers_crossed_tone1:` | #️⃣ | `:pound_symbol:` |
+| 🤞🏼 | `:fingers_crossed_tone2:` | *️⃣ | `:asterisk_symbol:` |
+| 🤞🏽 | `:fingers_crossed_tone3:` | ♀ | `:female_sign:` |
+| 🤞🏾 | `:fingers_crossed_tone4:` | ♂ | `:male_sign:` |
+| 🤞🏿 | `:fingers_crossed_tone5:` | ⚕ | `:medical_symbol:` |
+| 🔥 | `:fire:` | 🥎 | `:softball:` |
+| 🚒 | `:fire_engine:` | 🥍 | `:lacrosse:` |
+| 🎆 | `:fireworks:` | 🥏 | `:flying_disc:` |
+| 🥇 | `:first_place:` | 🛹 | `:skateboard:` |
+| 🌓 | `:first_quarter_moon:` | 🥌 | `:curling_stone:` |
+| 🌛 | `:first_quarter_moon_with_face:` | 🛷 | `:sled:` |
+| 🐟 | `:fish:` | 🏂🏻 | `:snowboarder_tone1:` |
+| 🍥 | `:fish_cake:` | 🏂🏼 | `:snowboarder_tone2:` |
+| 🎣 | `:fishing_pole_and_fish:` | 🏂🏽 | `:snowboarder_tone3:` |
+| ✊ | `:fist:` | 🏂🏾 | `:snowboarder_tone4:` |
+| ✊🏻 | `:fist_tone1:` | 🏂🏿 | `:snowboarder_tone5:` |
+| ✊🏼 | `:fist_tone2:` | 🏋️‍♀️ | `:woman_lifting_weights:` |
+| ✊🏽 | `:fist_tone3:` | 🏋🏻‍♀️ | `:woman_lifting_weights_tone1:` |
+| ✊🏾 | `:fist_tone4:` | 🏋🏼‍♀️ | `:woman_lifting_weights_tone2:` |
+| ✊🏿 | `:fist_tone5:` | 🏋🏽‍♀️ | `:woman_lifting_weights_tone3:` |
+| 5️⃣ | `:five:` | 🏋🏾‍♀️ | `:woman_lifting_weights_tone4:` |
+| 🇦🇨 | `:flag_ac:` | 🏋🏿‍♀️ | `:woman_lifting_weights_tone5:` |
+| 🇦🇩 | `:flag_ad:` | 🏋️‍♂️ | `:man_lifting_weights:` |
+| 🇦🇪 | `:flag_ae:` | 🏋🏻‍♂️ | `:man_lifting_weights_tone1:` |
+| 🇦🇫 | `:flag_af:` | 🏋🏼‍♂️ | `:man_lifting_weights_tone2:` |
+| 🇦🇬 | `:flag_ag:` | 🏋🏽‍♂️ | `:man_lifting_weights_tone3:` |
+| 🇦🇮 | `:flag_ai:` | 🏋🏾‍♂️ | `:man_lifting_weights_tone4:` |
+| 🇦🇱 | `:flag_al:` | 🏋🏿‍♂️ | `:man_lifting_weights_tone5:` |
+| 🇦🇲 | `:flag_am:` | 🤸🏻‍♀️ | `:woman_cartwheeling_tone1:` |
+| 🇦🇴 | `:flag_ao:` | 🤸🏼‍♀️ | `:woman_cartwheeling_tone2:` |
+| 🇦🇶 | `:flag_aq:` | 🤸🏽‍♀️ | `:woman_cartwheeling_tone3:` |
+| 🇦🇷 | `:flag_ar:` | 🤸🏾‍♀️ | `:woman_cartwheeling_tone4:` |
+| 🇦🇸 | `:flag_as:` | 🤸🏿‍♀️ | `:woman_cartwheeling_tone5:` |
+| 🇦🇹 | `:flag_at:` | 🤸🏻‍♂️ | `:man_cartwheeling_tone1:` |
+| 🇦🇺 | `:flag_au:` | 🤸🏼‍♂️ | `:man_cartwheeling_tone2:` |
+| 🇦🇼 | `:flag_aw:` | 🤸🏽‍♂️ | `:man_cartwheeling_tone3:` |
+| 🇦🇽 | `:flag_ax:` | 🤸🏾‍♂️ | `:man_cartwheeling_tone4:` |
+| 🇦🇿 | `:flag_az:` | 🤸🏿‍♂️ | `:man_cartwheeling_tone5:` |
+| 🇧🇦 | `:flag_ba:` | ⛹️‍♀️ | `:woman_bouncing_ball:` |
+| 🇧🇧 | `:flag_bb:` | ⛹🏻‍♀️ | `:woman_bouncing_ball_tone1:` |
+| 🇧🇩 | `:flag_bd:` | ⛹🏼‍♀️ | `:woman_bouncing_ball_tone2:` |
+| 🇧🇪 | `:flag_be:` | ⛹🏽‍♀️ | `:woman_bouncing_ball_tone3:` |
+| 🇧🇫 | `:flag_bf:` | ⛹🏾‍♀️ | `:woman_bouncing_ball_tone4:` |
+| 🇧🇬 | `:flag_bg:` | ⛹🏿‍♀️ | `:woman_bouncing_ball_tone5:` |
+| 🇧🇭 | `:flag_bh:` | ⛹️‍♂️ | `:man_bouncing_ball:` |
+| 🇧🇮 | `:flag_bi:` | ⛹🏻‍♂️ | `:man_bouncing_ball_tone1:` |
+| 🇧🇯 | `:flag_bj:` | ⛹🏼‍♂️ | `:man_bouncing_ball_tone2:` |
+| 🇧🇱 | `:flag_bl:` | ⛹🏽‍♂️ | `:man_bouncing_ball_tone3:` |
+| 🏴 | `:flag_black:` | ⛹🏾‍♂️ | `:man_bouncing_ball_tone4:` |
+| 🇧🇲 | `:flag_bm:` | ⛹🏿‍♂️ | `:man_bouncing_ball_tone5:` |
+| 🇧🇳 | `:flag_bn:` | 🤾🏻‍♀️ | `:woman_playing_handball_tone1:` |
+| 🇧🇴 | `:flag_bo:` | 🤾🏼‍♀️ | `:woman_playing_handball_tone2:` |
+| 🇧🇶 | `:flag_bq:` | 🤾🏽‍♀️ | `:woman_playing_handball_tone3:` |
+| 🇧🇷 | `:flag_br:` | 🤾🏾‍♀️ | `:woman_playing_handball_tone4:` |
+| 🇧🇸 | `:flag_bs:` | 🤾🏿‍♀️ | `:woman_playing_handball_tone5:` |
+| 🇧🇹 | `:flag_bt:` | 🤾🏻‍♂️ | `:man_playing_handball_tone1:` |
+| 🇧🇻 | `:flag_bv:` | 🤾🏼‍♂️ | `:man_playing_handball_tone2:` |
+| 🇧🇼 | `:flag_bw:` | 🤾🏽‍♂️ | `:man_playing_handball_tone3:` |
+| 🇧🇾 | `:flag_by:` | 🤾🏾‍♂️ | `:man_playing_handball_tone4:` |
+| 🇧🇿 | `:flag_bz:` | 🤾🏿‍♂️ | `:man_playing_handball_tone5:` |
+| 🇨🇦 | `:flag_ca:` | 🏌🏻 | `:person_golfing_tone1:` |
+| 🇨🇨 | `:flag_cc:` | 🏌🏼 | `:person_golfing_tone2:` |
+| 🇨🇩 | `:flag_cd:` | 🏌🏽 | `:person_golfing_tone3:` |
+| 🇨🇫 | `:flag_cf:` | 🏌🏾 | `:person_golfing_tone4:` |
+| 🇨🇬 | `:flag_cg:` | 🏌🏿 | `:person_golfing_tone5:` |
+| 🇨🇭 | `:flag_ch:` | 🏌️‍♀️ | `:woman_golfing:` |
+| 🇨🇮 | `:flag_ci:` | 🏌🏻‍♀️ | `:woman_golfing_tone1:` |
+| 🇨🇰 | `:flag_ck:` | 🏌🏼‍♀️ | `:woman_golfing_tone2:` |
+| 🇨🇱 | `:flag_cl:` | 🏌🏽‍♀️ | `:woman_golfing_tone3:` |
+| 🇨🇲 | `:flag_cm:` | 🏌🏾‍♀️ | `:woman_golfing_tone4:` |
+| 🇨🇳 | `:flag_cn:` | 🏌🏿‍♀️ | `:woman_golfing_tone5:` |
+| 🇨🇴 | `:flag_co:` | 🏌️‍♂️ | `:man_golfing:` |
+| 🇨🇵 | `:flag_cp:` | 🏌🏻‍♂️ | `:man_golfing_tone1:` |
+| 🇨🇷 | `:flag_cr:` | 🏌🏼‍♂️ | `:man_golfing_tone2:` |
+| 🇨🇺 | `:flag_cu:` | 🏌🏽‍♂️ | `:man_golfing_tone3:` |
+| 🇨🇻 | `:flag_cv:` | 🏌🏾‍♂️ | `:man_golfing_tone4:` |
+| 🇨🇼 | `:flag_cw:` | 🏌🏿‍♂️ | `:man_golfing_tone5:` |
+| 🇨🇽 | `:flag_cx:` | 🧘 | `:person_in_lotus_position:` |
+| 🇨🇾 | `:flag_cy:` | 🧘🏻 | `:person_in_lotus_position_tone1:` |
+| 🇨🇿 | `:flag_cz:` | 🧘🏼 | `:person_in_lotus_position_tone2:` |
+| 🇩🇪 | `:flag_de:` | 🧘🏽 | `:person_in_lotus_position_tone3:` |
+| 🇩🇬 | `:flag_dg:` | 🧘🏾 | `:person_in_lotus_position_tone4:` |
+| 🇩🇯 | `:flag_dj:` | 🧘🏿 | `:person_in_lotus_position_tone5:` |
+| 🇩🇰 | `:flag_dk:` | 🧘‍♀️ | `:woman_in_lotus_position:` |
+| 🇩🇲 | `:flag_dm:` | 🧘🏻‍♀️ | `:woman_in_lotus_position_tone1:` |
+| 🇩🇴 | `:flag_do:` | 🧘🏼‍♀️ | `:woman_in_lotus_position_tone2:` |
+| 🇩🇿 | `:flag_dz:` | 🧘🏽‍♀️ | `:woman_in_lotus_position_tone3:` |
+| 🇪🇦 | `:flag_ea:` | 🧘🏾‍♀️ | `:woman_in_lotus_position_tone4:` |
+| 🇪🇨 | `:flag_ec:` | 🧘🏿‍♀️ | `:woman_in_lotus_position_tone5:` |
+| 🇪🇪 | `:flag_ee:` | 🧘‍♂️ | `:man_in_lotus_position:` |
+| 🇪🇬 | `:flag_eg:` | 🧘🏻‍♂️ | `:man_in_lotus_position_tone1:` |
+| 🇪🇭 | `:flag_eh:` | 🧘🏼‍♂️ | `:man_in_lotus_position_tone2:` |
+| 🇪🇷 | `:flag_er:` | 🧘🏽‍♂️ | `:man_in_lotus_position_tone3:` |
+| 🇪🇸 | `:flag_es:` | 🧘🏾‍♂️ | `:man_in_lotus_position_tone4:` |
+| 🇪🇹 | `:flag_et:` | 🧘🏿‍♂️ | `:man_in_lotus_position_tone5:` |
+| 🇪🇺 | `:flag_eu:` | 🏄‍♀️ | `:woman_surfing:` |
+| 🇫🇮 | `:flag_fi:` | 🏄🏻‍♀️ | `:woman_surfing_tone1:` |
+| 🇫🇯 | `:flag_fj:` | 🏄🏼‍♀️ | `:woman_surfing_tone2:` |
+| 🇫🇰 | `:flag_fk:` | 🏄🏽‍♀️ | `:woman_surfing_tone3:` |
+| 🇫🇲 | `:flag_fm:` | 🏄🏾‍♀️ | `:woman_surfing_tone4:` |
+| 🇫🇴 | `:flag_fo:` | 🏄🏿‍♀️ | `:woman_surfing_tone5:` |
+| 🇫🇷 | `:flag_fr:` | 🏄‍♂️ | `:man_surfing:` |
+| 🇬🇦 | `:flag_ga:` | 🏄🏻‍♂️ | `:man_surfing_tone1:` |
+| 🇬🇧 | `:flag_gb:` | 🏄🏼‍♂️ | `:man_surfing_tone2:` |
+| 🇬🇩 | `:flag_gd:` | 🏄🏽‍♂️ | `:man_surfing_tone3:` |
+| 🇬🇪 | `:flag_ge:` | 🏄🏾‍♂️ | `:man_surfing_tone4:` |
+| 🇬🇫 | `:flag_gf:` | 🏄🏿‍♂️ | `:man_surfing_tone5:` |
+| 🇬🇬 | `:flag_gg:` | 🏊‍♀️ | `:woman_swimming:` |
+| 🇬🇭 | `:flag_gh:` | 🏊🏻‍♀️ | `:woman_swimming_tone1:` |
+| 🇬🇮 | `:flag_gi:` | 🏊🏼‍♀️ | `:woman_swimming_tone2:` |
+| 🇬🇱 | `:flag_gl:` | 🏊🏽‍♀️ | `:woman_swimming_tone3:` |
+| 🇬🇲 | `:flag_gm:` | 🏊🏾‍♀️ | `:woman_swimming_tone4:` |
+| 🇬🇳 | `:flag_gn:` | 🏊🏿‍♀️ | `:woman_swimming_tone5:` |
+| 🇬🇵 | `:flag_gp:` | 🏊‍♂️ | `:man_swimming:` |
+| 🇬🇶 | `:flag_gq:` | 🏊🏻‍♂️ | `:man_swimming_tone1:` |
+| 🇬🇷 | `:flag_gr:` | 🏊🏼‍♂️ | `:man_swimming_tone2:` |
+| 🇬🇸 | `:flag_gs:` | 🏊🏽‍♂️ | `:man_swimming_tone3:` |
+| 🇬🇹 | `:flag_gt:` | 🏊🏾‍♂️ | `:man_swimming_tone4:` |
+| 🇬🇺 | `:flag_gu:` | 🏊🏿‍♂️ | `:man_swimming_tone5:` |
+| 🇬🇼 | `:flag_gw:` | 🤽🏻‍♀️ | `:woman_playing_water_polo_tone1:` |
+| 🇬🇾 | `:flag_gy:` | 🤽🏼‍♀️ | `:woman_playing_water_polo_tone2:` |
+| 🇭🇰 | `:flag_hk:` | 🤽🏽‍♀️ | `:woman_playing_water_polo_tone3:` |
+| 🇭🇲 | `:flag_hm:` | 🤽🏾‍♀️ | `:woman_playing_water_polo_tone4:` |
+| 🇭🇳 | `:flag_hn:` | 🤽🏿‍♀️ | `:woman_playing_water_polo_tone5:` |
+| 🇭🇷 | `:flag_hr:` | 🤽🏻‍♂️ | `:man_playing_water_polo_tone1:` |
+| 🇭🇹 | `:flag_ht:` | 🤽🏼‍♂️ | `:man_playing_water_polo_tone2:` |
+| 🇭🇺 | `:flag_hu:` | 🤽🏽‍♂️ | `:man_playing_water_polo_tone3:` |
+| 🇮🇨 | `:flag_ic:` | 🤽🏾‍♂️ | `:man_playing_water_polo_tone4:` |
+| 🇮🇩 | `:flag_id:` | 🤽🏿‍♂️ | `:man_playing_water_polo_tone5:` |
+| 🇮🇪 | `:flag_ie:` | 🚣‍♀️ | `:woman_rowing_boat:` |
+| 🇮🇱 | `:flag_il:` | 🚣🏻‍♀️ | `:woman_rowing_boat_tone1:` |
+| 🇮🇲 | `:flag_im:` | 🚣🏼‍♀️ | `:woman_rowing_boat_tone2:` |
+| 🇮🇳 | `:flag_in:` | 🚣🏽‍♀️ | `:woman_rowing_boat_tone3:` |
+| 🇮🇴 | `:flag_io:` | 🚣🏾‍♀️ | `:woman_rowing_boat_tone4:` |
+| 🇮🇶 | `:flag_iq:` | 🚣🏿‍♀️ | `:woman_rowing_boat_tone5:` |
+| 🇮🇷 | `:flag_ir:` | 🚣‍♂️ | `:man_rowing_boat:` |
+| 🇮🇸 | `:flag_is:` | 🚣🏻‍♂️ | `:man_rowing_boat_tone1:` |
+| 🇮🇹 | `:flag_it:` | 🚣🏼‍♂️ | `:man_rowing_boat_tone2:` |
+| 🇯🇪 | `:flag_je:` | 🚣🏽‍♂️ | `:man_rowing_boat_tone3:` |
+| 🇯🇲 | `:flag_jm:` | 🚣🏾‍♂️ | `:man_rowing_boat_tone4:` |
+| 🇯🇴 | `:flag_jo:` | 🚣🏿‍♂️ | `:man_rowing_boat_tone5:` |
+| 🇯🇵 | `:flag_jp:` | 🧗 | `:person_climbing:` |
+| 🇰🇪 | `:flag_ke:` | 🧗🏻 | `:person_climbing_tone1:` |
+| 🇰🇬 | `:flag_kg:` | 🧗🏼 | `:person_climbing_tone2:` |
+| 🇰🇭 | `:flag_kh:` | 🧗🏽 | `:person_climbing_tone3:` |
+| 🇰🇮 | `:flag_ki:` | 🧗🏾 | `:person_climbing_tone4:` |
+| 🇰🇲 | `:flag_km:` | 🧗🏿 | `:person_climbing_tone5:` |
+| 🇰🇳 | `:flag_kn:` | 🧗‍♀️ | `:woman_climbing:` |
+| 🇰🇵 | `:flag_kp:` | 🧗🏻‍♀️ | `:woman_climbing_tone1:` |
+| 🇰🇷 | `:flag_kr:` | 🧗🏼‍♀️ | `:woman_climbing_tone2:` |
+| 🇰🇼 | `:flag_kw:` | 🧗🏽‍♀️ | `:woman_climbing_tone3:` |
+| 🇰🇾 | `:flag_ky:` | 🧗🏾‍♀️ | `:woman_climbing_tone4:` |
+| 🇰🇿 | `:flag_kz:` | 🧗🏿‍♀️ | `:woman_climbing_tone5:` |
+| 🇱🇦 | `:flag_la:` | 🧗‍♂️ | `:man_climbing:` |
+| 🇱🇧 | `:flag_lb:` | 🧗🏻‍♂️ | `:man_climbing_tone1:` |
+| 🇱🇨 | `:flag_lc:` | 🧗🏼‍♂️ | `:man_climbing_tone2:` |
+| 🇱🇮 | `:flag_li:` | 🧗🏽‍♂️ | `:man_climbing_tone3:` |
+| 🇱🇰 | `:flag_lk:` | 🧗🏾‍♂️ | `:man_climbing_tone4:` |
+| 🇱🇷 | `:flag_lr:` | 🧗🏿‍♂️ | `:man_climbing_tone5:` |
+| 🇱🇸 | `:flag_ls:` | 🚵‍♀️ | `:woman_mountain_biking:` |
+| 🇱🇹 | `:flag_lt:` | 🚵🏻‍♀️ | `:woman_mountain_biking_tone1:` |
+| 🇱🇺 | `:flag_lu:` | 🚵🏼‍♀️ | `:woman_mountain_biking_tone2:` |
+| 🇱🇻 | `:flag_lv:` | 🚵🏽‍♀️ | `:woman_mountain_biking_tone3:` |
+| 🇱🇾 | `:flag_ly:` | 🚵🏾‍♀️ | `:woman_mountain_biking_tone4:` |
+| 🇲🇦 | `:flag_ma:` | 🚵🏿‍♀️ | `:woman_mountain_biking_tone5:` |
+| 🇲🇨 | `:flag_mc:` | 🚵‍♂️ | `:man_mountain_biking:` |
+| 🇲🇩 | `:flag_md:` | 🚵🏻‍♂️ | `:man_mountain_biking_tone1:` |
+| 🇲🇪 | `:flag_me:` | 🚵🏼‍♂️ | `:man_mountain_biking_tone2:` |
+| 🇲🇫 | `:flag_mf:` | 🚵🏽‍♂️ | `:man_mountain_biking_tone3:` |
+| 🇲🇬 | `:flag_mg:` | 🚵🏾‍♂️ | `:man_mountain_biking_tone4:` |
+| 🇲🇭 | `:flag_mh:` | 🚵🏿‍♂️ | `:man_mountain_biking_tone5:` |
+| 🇲🇰 | `:flag_mk:` | 🚴‍♀️ | `:woman_biking:` |
+| 🇲🇱 | `:flag_ml:` | 🚴🏻‍♀️ | `:woman_biking_tone1:` |
+| 🇲🇲 | `:flag_mm:` | 🚴🏼‍♀️ | `:woman_biking_tone2:` |
+| 🇲🇳 | `:flag_mn:` | 🚴🏽‍♀️ | `:woman_biking_tone3:` |
+| 🇲🇴 | `:flag_mo:` | 🚴🏾‍♀️ | `:woman_biking_tone4:` |
+| 🇲🇵 | `:flag_mp:` | 🚴🏿‍♀️ | `:woman_biking_tone5:` |
+| 🇲🇶 | `:flag_mq:` | 🚴‍♂️ | `:man_biking:` |
+| 🇲🇷 | `:flag_mr:` | 🚴🏻‍♂️ | `:man_biking_tone1:` |
+| 🇲🇸 | `:flag_ms:` | 🚴🏼‍♂️ | `:man_biking_tone2:` |
+| 🇲🇹 | `:flag_mt:` | 🚴🏽‍♂️ | `:man_biking_tone3:` |
+| 🇲🇺 | `:flag_mu:` | 🚴🏾‍♂️ | `:man_biking_tone4:` |
+| 🇲🇻 | `:flag_mv:` | 🚴🏿‍♂️ | `:man_biking_tone5:` |
+| 🇲🇼 | `:flag_mw:` | 🤹🏻‍♀️ | `:woman_juggling_tone1:` |
+| 🇲🇽 | `:flag_mx:` | 🤹🏼‍♀️ | `:woman_juggling_tone2:` |
+| 🇲🇾 | `:flag_my:` | 🤹🏽‍♀️ | `:woman_juggling_tone3:` |
+| 🇲🇿 | `:flag_mz:` | 🤹🏾‍♀️ | `:woman_juggling_tone4:` |
+| 🇳🇦 | `:flag_na:` | 🤹🏿‍♀️ | `:woman_juggling_tone5:` |
+| 🇳🇨 | `:flag_nc:` | 🤹🏻‍♂️ | `:man_juggling_tone1:` |
+| 🇳🇪 | `:flag_ne:` | 🤹🏼‍♂️ | `:man_juggling_tone2:` |
+| 🇳🇫 | `:flag_nf:` | 🤹🏽‍♂️ | `:man_juggling_tone3:` |
+| 🇳🇬 | `:flag_ng:` | 🤹🏾‍♂️ | `:man_juggling_tone4:` |
+| 🇳🇮 | `:flag_ni:` | 🤹🏿‍♂️ | `:man_juggling_tone5:` |
+| 🇳🇱 | `:flag_nl:` | ♟️ | `:chess_pawn:` |
+| 🇳🇴 | `:flag_no:` | 🧩 | `:jigsaw:` |
+| 🇳🇵 | `:flag_np:` | 🧭 | `:compass:` |
+| 🇳🇷 | `:flag_nr:` | 🧲 | `:magnet:` |
+| 🇳🇺 | `:flag_nu:` | 🧯 | `:fire_extinguisher:` |
+| 🇳🇿 | `:flag_nz:` | 🧿 | `:nazar_amulet:` |
+| 🇴🇲 | `:flag_om:` | 🧱 | `:bricks:` |
+| 🇵🇦 | `:flag_pa:` | 🧰 | `:toolbox:` |
+| 🇵🇪 | `:flag_pe:` | 🧪 | `:test_tube:` |
+| 🇵🇫 | `:flag_pf:` | 🧫 | `:petri_dish:` |
+| 🇵🇬 | `:flag_pg:` | 🧬 | `:dna:` |
+| 🇵🇭 | `:flag_ph:` | 🧮 | `:abacus:` |
+| 🇵🇰 | `:flag_pk:` | 🧹 | `:broom:` |
+| 🇵🇱 | `:flag_pl:` | 🧺 | `:basket:` |
+| 🇵🇲 | `:flag_pm:` | 🧻 | `:roll_of_paper:` |
+| 🇵🇳 | `:flag_pn:` | 🧼 | `:soap:` |
+| 🇵🇷 | `:flag_pr:` | 🧽 | `:sponge:` |
+| 🇵🇸 | `:flag_ps:` | 🧴 | `:squeeze_bottle:` |
+| 🇵🇹 | `:flag_pt:` | 🧵 | `:thread:` |
+| 🇵🇼 | `:flag_pw:` | 🧶 | `:yarn:` |
+| 🇵🇾 | `:flag_py:` | 🛌🏻 | `:person_in_bed_tone1:` |
+| 🇶🇦 | `:flag_qa:` | 🛌🏼 | `:person_in_bed_tone2:` |
+| 🇷🇪 | `:flag_re:` | 🛌🏽 | `:person_in_bed_tone3:` |
+| 🇷🇴 | `:flag_ro:` | 🛌🏾 | `:person_in_bed_tone4:` |
+| 🇷🇸 | `:flag_rs:` | 🛌🏿 | `:person_in_bed_tone5:` |
+| 🇷🇺 | `:flag_ru:` | 🧸 | `:teddy_bear:` |
+| 🇷🇼 | `:flag_rw:` | 🧧 | `:red_envelope:` |
+| 🇸🇦 | `:flag_sa:` | 🧾 | `:receipt:` |
+| 🇸🇧 | `:flag_sb:` | 🧷 | `:safety_pin:` |
+| 🇸🇨 | `:flag_sc:` | 🦝 | `:raccoon:` |
+| 🇸🇩 | `:flag_sd:` | 🦘 | `:kangaroo:` |
+| 🇸🇪 | `:flag_se:` | 🦡 | `:badger:` |
+| 🇸🇬 | `:flag_sg:` | 🦢 | `:swan:` |
+| 🇸🇭 | `:flag_sh:` | 🦜 | `:parrot:` |
+| 🇸🇮 | `:flag_si:` | 🦚 | `:peacock:` |
+| 🇸🇯 | `:flag_sj:` | 🦟 | `:mosquito:` |
+| 🇸🇰 | `:flag_sk:` | 🦠 | `:microbe:` |
+| 🇸🇱 | `:flag_sl:` | 🦖 | `:t_rex:` |
+| 🇸🇲 | `:flag_sm:` | 🦕 | `:sauropod:` |
+| 🇸🇳 | `:flag_sn:` | 🦞 | `:lobster:` |
+| 🇸🇴 | `:flag_so:` | 🦓 | `:zebra:` |
+| 🇸🇷 | `:flag_sr:` | 🦛 | `:hippopotamus:` |
+| 🇸🇸 | `:flag_ss:` | 🦒 | `:giraffe:` |
+| 🇸🇹 | `:flag_st:` | 🦙 | `:llama:` |
+| 🇸🇻 | `:flag_sv:` | 🦔 | `:hedgehog:` |
+| 🇸🇽 | `:flag_sx:` | 🥭 | `:mango:` |
+| 🇸🇾 | `:flag_sy:` | 🥥 | `:coconut:` |
+| 🇸🇿 | `:flag_sz:` | 🥦 | `:broccoli:` |
+| 🇹🇦 | `:flag_ta:` | 🥬 | `:leafy_green:` |
+| 🇹🇨 | `:flag_tc:` | 🥨 | `:pretzel:` |
+| 🇹🇩 | `:flag_td:` | 🥯 | `:bagel:` |
+| 🇹🇫 | `:flag_tf:` | 🥩 | `:cut_of_meat:` |
+| 🇹🇬 | `:flag_tg:` | 🥪 | `:sandwich:` |
+| 🇹🇭 | `:flag_th:` | 🥫 | `:canned_food:` |
+| 🇹🇯 | `:flag_tj:` | 🥠 | `:fortune_cookie:` |
+| 🇹🇰 | `:flag_tk:` | 🥧 | `:pie:` |
+| 🇹🇱 | `:flag_tl:` | 🥮 | `:moon_cake:` |
+| 🇹🇲 | `:flag_tm:` | 🧁 | `:cupcake:` |
+| 🇹🇳 | `:flag_tn:` | 🧂 | `:salt:` |
+| 🇹🇴 | `:flag_to:` | 🥟 | `:dumpling:` |
+| 🇹🇷 | `:flag_tr:` | 🥤 | `:cup_with_straw:` |
+| 🇹🇹 | `:flag_tt:` | 🥣 | `:bowl_with_spoon:` |
+| 🇹🇻 | `:flag_tv:` | 🥡 | `:takeout_box:` |
+| 🇹🇼 | `:flag_tw:` | 🥢 | `:chopsticks:` |
+| 🇹🇿 | `:flag_tz:` | 🥰 | `:smiling_face_with_3_hearts:` |
+| 🇺🇦 | `:flag_ua:` | 🤪 | `:zany_face:` |
+| 🇺🇬 | `:flag_ug:` | 🤨 | `:face_with_raised_eyebrow:` |
+| 🇺🇲 | `:flag_um:` | 🧐 | `:face_with_monocle:` |
+| 🇺🇸 | `:flag_us:` | 🤩 | `:star_struck:` |
+| 🇺🇾 | `:flag_uy:` | 🥳 | `:partying_face:` |
+| 🇺🇿 | `:flag_uz:` | 🤬 | `:face_with_symbols_over_mouth:` |
+| 🇻🇦 | `:flag_va:` | 🤯 | `:exploding_head:` |
+| 🇻🇨 | `:flag_vc:` | 🥵 | `:hot_face:` |
+| 🇻🇪 | `:flag_ve:` | 🥶 | `:cold_face:` |
+| 🇻🇬 | `:flag_vg:` | 🥺 | `:pleading_face:` |
+| 🇻🇮 | `:flag_vi:` | 🤭 | `:face_with_hand_over_mouth:` |
+| 🇻🇳 | `:flag_vn:` | 🤫 | `:shushing_face:` |
+| 🇻🇺 | `:flag_vu:` | 🥴 | `:woozy_face:` |
+| 🇼🇫 | `:flag_wf:` | 🤮 | `:face_vomiting:` |
+| 🏳 | `:flag_white:` | 🤲 | `:palms_up_together:` |
+| 🇼🇸 | `:flag_ws:` | 🤲🏻 | `:palms_up_together_tone1:` |
+| 🇽🇰 | `:flag_xk:` | 🤲🏼 | `:palms_up_together_tone2:` |
+| 🇾🇪 | `:flag_ye:` | 🤲🏽 | `:palms_up_together_tone3:` |
+| 🇾🇹 | `:flag_yt:` | 🤲🏾 | `:palms_up_together_tone4:` |
+| 🇿🇦 | `:flag_za:` | 🤲🏿 | `:palms_up_together_tone5:` |
+| 🇿🇲 | `:flag_zm:` | 🤟 | `:love_you_gesture:` |
+| 🇿🇼 | `:flag_zw:` | 🤟🏻 | `:love_you_gesture_tone1:` |
+| 🎏 | `:flags:` | 🤟🏼 | `:love_you_gesture_tone2:` |
+| 🔦 | `:flashlight:` | 🤟🏽 | `:love_you_gesture_tone3:` |
+| ⚜ | `:fleur-de-lis:` | 🤟🏾 | `:love_you_gesture_tone4:` |
+| 💾 | `:floppy_disk:` | 🤟🏿 | `:love_you_gesture_tone5:` |
+| 🎴 | `:flower_playing_cards:` | 🦵 | `:leg:` |
+| 😳 | `:flushed:` | 🦵🏻 | `:leg_tone1:` |
+| 🌫 | `:fog:` | 🦵🏼 | `:leg_tone2:` |
+| 🌁 | `:foggy:` | 🦵🏽 | `:leg_tone3:` |
+| 🏈 | `:football:` | 🦵🏾 | `:leg_tone4:` |
+| 👣 | `:footprints:` | 🦵🏿 | `:leg_tone5:` |
+| 🍴 | `:fork_and_knife:` | 🦶 | `:foot:` |
+| 🍽 | `:fork_knife_plate:` | 🦶🏻 | `:foot_tone1:` |
+| ⛲ | `:fountain:` | 🦶🏼 | `:foot_tone2:` |
+| 4️⃣ | `:four:` | 🦶🏽 | `:foot_tone3:` |
+| 🍀 | `:four_leaf_clover:` | 🦶🏾 | `:foot_tone4:` |
+| 🦊 | `:fox:` | 🦶🏿 | `:foot_tone5:` |
+| 🖼 | `:frame_photo:` | 🧠 | `:brain:` |
+| 🆓 | `:free:` | 🦴 | `:bone:` |
+| 🥖 | `:french_bread:` | 🦷 | `:tooth:` |
+| 🍤 | `:fried_shrimp:` | 🧒 | `:child:` |
+| 🍟 | `:fries:` | 🧒🏻 | `:child_tone1:` |
+| 🐸 | `:frog:` | 🧒🏼 | `:child_tone2:` |
+| 😦 | `:frowning:` | 🧒🏽 | `:child_tone3:` |
+| ☹ | `:frowning2:` | 🧒🏾 | `:child_tone4:` |
+| ⛽ | `:fuelpump:` | 🧒🏿 | `:child_tone5:` |
+| 🌕 | `:full_moon:` | 🧑 | `:adult:` |
+| 🌝 | `:full_moon_with_face:` | 🧑🏻 | `:adult_tone1:` |
+| 🎲 | `:game_die:` | 🧑🏼 | `:adult_tone2:` |
+| ⚙ | `:gear:` | 🧑🏽 | `:adult_tone3:` |
+| 💎 | `:gem:` | 🧑🏾 | `:adult_tone4:` |
+| 🏳🌈 | `:gay_pride_flag:` | 🧑🏿 | `:adult_tone5:` |
+| ♊ | `:gemini:` | 👱‍♀️ | `:blond-haired_woman:` |
+| 👻 | `:ghost:` | 👱🏻‍♀️ | `:blond-haired_woman_tone1:` |
+| 🎁 | `:gift:` | 👱🏼‍♀️ | `:blond-haired_woman_tone2:` |
+| 💝 | `:gift_heart:` | 👱🏽‍♀️ | `:blond-haired_woman_tone3:` |
+| 👧 | `:girl:` | 👱🏾‍♀️ | `:blond-haired_woman_tone4:` |
+| 👧🏻 | `:girl_tone1:` | 👱🏿‍♀️ | `:blond-haired_woman_tone5:` |
+| 👧🏼 | `:girl_tone2:` | 👱‍♂️ | `:blond-haired_man:` |
+| 👧🏽 | `:girl_tone3:` | 👱🏻‍♂️ | `:blond-haired_man_tone1:` |
+| 👧🏾 | `:girl_tone4:` | 👱🏼‍♂️ | `:blond-haired_man_tone2:` |
+| 👧🏿 | `:girl_tone5:` | 👱🏽‍♂️ | `:blond-haired_man_tone3:` |
+| 🌐 | `:globe_with_meridians:` | 👱🏾‍♂️ | `:blond-haired_man_tone4:` |
+| 🥅 | `:goal:` | 👱🏿‍♂️ | `:blond-haired_man_tone5:` |
+| 🐐 | `:goat:` | 👩‍🦰 | `:woman_red_haired:` |
+| ⛳ | `:golf:` | 👩🏻‍🦰 | `:woman_red_haired_tone1:` |
+| 🏌 | `:golfer:` | 👩🏼‍🦰 | `:woman_red_haired_tone2:` |
+| 🦍 | `:gorilla:` | 👩🏽‍🦰 | `:woman_red_haired_tone3:` |
+| 🍇 | `:grapes:` | 👩🏾‍🦰 | `:woman_red_haired_tone4:` |
+| 🍏 | `:green_apple:` | 👩🏿‍🦰 | `:woman_red_haired_tone5:` |
+| 📗 | `:green_book:` | 👨‍🦰 | `:man_red_haired:` |
+| 💚 | `:green_heart:` | 👨🏻‍🦰 | `:man_red_haired_tone1:` |
+| ❕ | `:grey_exclamation:` | 👨🏼‍🦰 | `:man_red_haired_tone2:` |
+| ❔ | `:grey_question:` | 👨🏽‍🦰 | `:man_red_haired_tone3:` |
+| 😬 | `:grimacing:` | 👨🏾‍🦰 | `:man_red_haired_tone4:` |
+| 😁 | `:grin:` | 👨🏿‍🦰 | `:man_red_haired_tone5:` |
+| 😀 | `:grinning:` | 👩‍🦱 | `:woman_curly_haired:` |
+| 💂 | `:guardsman:` | 👩🏻‍🦱 | `:woman_curly_haired_tone1:` |
+| 💂🏻 | `:guardsman_tone1:` | 👩🏼‍🦱 | `:woman_curly_haired_tone2:` |
+| 💂🏼 | `:guardsman_tone2:` | 👩🏽‍🦱 | `:woman_curly_haired_tone3:` |
+| 💂🏽 | `:guardsman_tone3:` | 👩🏾‍🦱 | `:woman_curly_haired_tone4:` |
+| 💂🏾 | `:guardsman_tone4:` | 👩🏿‍🦱 | `:woman_curly_haired_tone5:` |
+| 💂🏿 | `:guardsman_tone5:` | 👨‍🦱 | `:man_curly_haired:` |
+| 🎸 | `:guitar:` | 👨🏻‍🦱 | `:man_curly_haired_tone1:` |
+| 🔫 | `:gun:` | 👨🏼‍🦱 | `:man_curly_haired_tone2:` |
+| 💇 | `:haircut:` | 👨🏽‍🦱 | `:man_curly_haired_tone3:` |
+| 💇🏻 | `:haircut_tone1:` | 👨🏾‍🦱 | `:man_curly_haired_tone4:` |
+| 💇🏼 | `:haircut_tone2:` | 👨🏿‍🦱 | `:man_curly_haired_tone5:` |
+| 💇🏽 | `:haircut_tone3:` | 👩‍🦳 | `:woman_white_haired:` |
+| 💇🏾 | `:haircut_tone4:` | 👩🏻‍🦳 | `:woman_white_haired_tone1:` |
+| 💇🏿 | `:haircut_tone5:` | 👩🏼‍🦳 | `:woman_white_haired_tone2:` |
+| 🍔 | `:hamburger:` | 👩🏽‍🦳 | `:woman_white_haired_tone3:` |
+| 🔨 | `:hammer:` | 👩🏾‍🦳 | `:woman_white_haired_tone4:` |
+| ⚒ | `:hammer_pick:` | 👩🏿‍🦳 | `:woman_white_haired_tone5:` |
+| 🐹 | `:hamster:` | 👨‍🦳 | `:man_white_haired:` |
+| 🖐 | `:hand_splayed:` | 👨🏻‍🦳 | `:man_white_haired_tone1:` |
+| 🖐🏻 | `:hand_splayed_tone1:` | 👨🏼‍🦳 | `:man_white_haired_tone2:` |
+| 🖐🏼 | `:hand_splayed_tone2:` | 👨🏽‍🦳 | `:man_white_haired_tone3:` |
+| 🖐🏽 | `:hand_splayed_tone3:` | 👨🏾‍🦳 | `:man_white_haired_tone4:` |
+| 🖐🏾 | `:hand_splayed_tone4:` | 👨🏿‍🦳 | `:man_white_haired_tone5:` |
+| 🖐🏿 | `:hand_splayed_tone5:` | 👩‍🦲 | `:woman_bald:` |
+| 👜 | `:handbag:` | 👩🏻‍🦲 | `:woman_bald_tone1:` |
+| 🤾 | `:handball:` | 👩🏼‍🦲 | `:woman_bald_tone2:` |
+| 🤾🏻 | `:handball_tone1:` | 👩🏽‍🦲 | `:woman_bald_tone3:` |
+| 🤾🏼 | `:handball_tone2:` | 👩🏾‍🦲 | `:woman_bald_tone4:` |
+| 🤾🏽 | `:handball_tone3:` | 👩🏿‍🦲 | `:woman_bald_tone5:` |
+| 🤾🏾 | `:handball_tone4:` | 👨‍🦲 | `:man_bald:` |
+| 🤾🏿 | `:handball_tone5:` | 👨🏻‍🦲 | `:man_bald_tone1:` |
+| 🤝 | `:handshake:` | 👨🏼‍🦲 | `:man_bald_tone2:` |
+| #⃣ | `:hash:` | 👨🏽‍🦲 | `:man_bald_tone3:` |
+| 🐥 | `:hatched_chick:` | 👨🏾‍🦲 | `:man_bald_tone4:` |
+| 🐣 | `:hatching_chick:` | 👨🏿‍🦲 | `:man_bald_tone5:` |
+| 🤕 | `:head_bandage:` | 🧔 | `:bearded_person:` |
+| 🎧 | `:headphones:` | 🧔🏻 | `:bearded_person_tone1:` |
+| 🙉 | `:hear_no_evil:` | 🧔🏼 | `:bearded_person_tone2:` |
+| ❤ | `:heart:` | 🧔🏽 | `:bearded_person_tone3:` |
+| 💟 | `:heart_decoration:` | 🧔🏾 | `:bearded_person_tone4:` |
+| ❣ | `:heart_exclamation:` | 🧔🏿 | `:bearded_person_tone5:` |
+| 😍 | `:heart_eyes:` | 🧓 | `:older_adult:` |
+| 😻 | `:heart_eyes_cat:` | 🧓🏻 | `:older_adult_tone1:` |
+| 💓 | `:heartbeat:` | 🧓🏼 | `:older_adult_tone2:` |
+| 💗 | `:heartpulse:` | 🧓🏽 | `:older_adult_tone3:` |
+| ♥ | `:hearts:` | 🧓🏾 | `:older_adult_tone4:` |
+| ✔ | `:heavy_check_mark:` | 🧓🏿 | `:older_adult_tone5:` |
+| ➗ | `:heavy_division_sign:` | 👳‍♀️ | `:woman_wearing_turban:` |
+| 💲 | `:heavy_dollar_sign:` | 👳🏻‍♀️ | `:woman_wearing_turban_tone1:` |
+| ➖ | `:heavy_minus_sign:` | 👳🏼‍♀️ | `:woman_wearing_turban_tone2:` |
+| ✖ | `:heavy_multiplication_x:` | 👳🏽‍♀️ | `:woman_wearing_turban_tone3:` |
+| ➕ | `:heavy_plus_sign:` | 👳🏾‍♀️ | `:woman_wearing_turban_tone4:` |
+| 🚁 | `:helicopter:` | 👳🏿‍♀️ | `:woman_wearing_turban_tone5:` |
+| ⛑ | `:helmet_with_cross:` | 👳‍♂️ | `:man_wearing_turban:` |
+| 🌿 | `:herb:` | 👳🏻‍♂️ | `:man_wearing_turban_tone1:` |
+| 🌺 | `:hibiscus:` | 👳🏼‍♂️ | `:man_wearing_turban_tone2:` |
+| 🔆 | `:high_brightness:` | 👳🏽‍♂️ | `:man_wearing_turban_tone3:` |
+| 👠 | `:high_heel:` | 👳🏾‍♂️ | `:man_wearing_turban_tone4:` |
+| 🏒 | `:hockey:` | 👳🏿‍♂️ | `:man_wearing_turban_tone5:` |
+| 🕳 | `:hole:` | 🧕 | `:woman_with_headscarf:` |
+| 🏘 | `:homes:` | 🧕🏻 | `:woman_with_headscarf_tone1:` |
+| 🍯 | `:honey_pot:` | 🧕🏼 | `:woman_with_headscarf_tone2:` |
+| 🐴 | `:horse:` | 🧕🏽 | `:woman_with_headscarf_tone3:` |
+| 🏇 | `:horse_racing:` | 🧕🏾 | `:woman_with_headscarf_tone4:` |
+| 🏇🏻 | `:horse_racing_tone1:` | 🧕🏿 | `:woman_with_headscarf_tone5:` |
+| 🏇🏼 | `:horse_racing_tone2:` | 👮‍♀️ | `:woman_police_officer:` |
+| 🏇🏽 | `:horse_racing_tone3:` | 👮🏻‍♀️ | `:woman_police_officer_tone1:` |
+| 🏇🏾 | `:horse_racing_tone4:` | 👮🏼‍♀️ | `:woman_police_officer_tone2:` |
+| 🏇🏿 | `:horse_racing_tone5:` | 👮🏽‍♀️ | `:woman_police_officer_tone3:` |
+| 🏥 | `:hospital:` | 👮🏾‍♀️ | `:woman_police_officer_tone4:` |
+| 🌶 | `:hot_pepper:` | 👮🏿‍♀️ | `:woman_police_officer_tone5:` |
+| 🌭 | `:hotdog:` | 👮‍♂️ | `:man_police_officer:` |
+| 🏨 | `:hotel:` | 👮🏻‍♂️ | `:man_police_officer_tone1:` |
+| ♨ | `:hotsprings:` | 👮🏼‍♂️ | `:man_police_officer_tone2:` |
+| ⌛ | `:hourglass:` | 👮🏽‍♂️ | `:man_police_officer_tone3:` |
+| ⏳ | `:hourglass_flowing_sand:` | 👮🏾‍♂️ | `:man_police_officer_tone4:` |
+| 🏠 | `:house:` | 👮🏿‍♂️ | `:man_police_officer_tone5:` |
+| 🏚 | `:house_abandoned:` | 👷‍♀️ | `:woman_construction_worker:` |
+| 🏡 | `:house_with_garden:` | 👷🏻‍♀️ | `:woman_construction_worker_tone1:` |
+| 🤗 | `:hugging:` | 👷🏼‍♀️ | `:woman_construction_worker_tone2:` |
+| 😯 | `:hushed:` | 👷🏽‍♀️ | `:woman_construction_worker_tone3:` |
+| 🍨 | `:ice_cream:` | 👷🏾‍♀️ | `:woman_construction_worker_tone4:` |
+| ⛸ | `:ice_skate:` | 👷🏿‍♀️ | `:woman_construction_worker_tone5:` |
+| 🍦 | `:icecream:` | 👷‍♂️ | `:man_construction_worker:` |
+| 🆔 | `:id:` | 👷🏻‍♂️ | `:man_construction_worker_tone1:` |
+| 🉐 | `:ideograph_advantage:` | 👷🏼‍♂️ | `:man_construction_worker_tone2:` |
+| 👿 | `:imp:` | 👷🏽‍♂️ | `:man_construction_worker_tone3:` |
+| 📥 | `:inbox_tray:` | 👷🏾‍♂️ | `:man_construction_worker_tone4:` |
+| 📨 | `:incoming_envelope:` | 👷🏿‍♂️ | `:man_construction_worker_tone5:` |
+| 💁 | `:information_desk_person:` | 💂‍♀️ | `:woman_guard:` |
+| 💁🏻 | `:information_desk_person_tone1:` | 💂🏻‍♀️ | `:woman_guard_tone1:` |
+| 💁🏼 | `:information_desk_person_tone2:` | 💂🏼‍♀️ | `:woman_guard_tone2:` |
+| 💁🏽 | `:information_desk_person_tone3:` | 💂🏽‍♀️ | `:woman_guard_tone3:` |
+| 💁🏾 | `:information_desk_person_tone4:` | 💂🏾‍♀️ | `:woman_guard_tone4:` |
+| 💁🏿 | `:information_desk_person_tone5:` | 💂🏿‍♀️ | `:woman_guard_tone5:` |
+| ℹ | `:information_source:` | 💂‍♂️ | `:man_guard:` |
+| 😇 | `:innocent:` | 💂🏻‍♂️ | `:man_guard_tone1:` |
+| ⁉ | `:interrobang:` | 💂🏼‍♂️ | `:man_guard_tone2:` |
+| 📱 | `:iphone:` | 💂🏽‍♂️ | `:man_guard_tone3:` |
+| 🏝 | `:island:` | 💂🏾‍♂️ | `:man_guard_tone4:` |
+| 🏮 | `:izakaya_lantern:` | 💂🏿‍♂️ | `:man_guard_tone5:` |
+| 🎃 | `:jack_o_lantern:` | 🕵️‍♀️ | `:woman_detective:` |
+| 🗾 | `:japan:` | 🕵🏻‍♀️ | `:woman_detective_tone1:` |
+| 🏯 | `:japanese_castle:` | 🕵🏼‍♀️ | `:woman_detective_tone2:` |
+| 👺 | `:japanese_goblin:` | 🕵🏽‍♀️ | `:woman_detective_tone3:` |
+| 👹 | `:japanese_ogre:` | 🕵🏾‍♀️ | `:woman_detective_tone4:` |
+| 👖 | `:jeans:` | 🕵🏿‍♀️ | `:woman_detective_tone5:` |
+| 😂 | `:joy:` | 🕵️‍♂️ | `:man_detective:` |
+| 😹 | `:joy_cat:` | 🕵🏻‍♂️ | `:man_detective_tone1:` |
+| 🕹 | `:joystick:` | 🕵🏼‍♂️ | `:man_detective_tone2:` |
+| 🤹 | `:juggling:` | 🕵🏽‍♂️ | `:man_detective_tone3:` |
+| 🤹🏻 | `:juggling_tone1:` | 🕵🏾‍♂️ | `:man_detective_tone4:` |
+| 🤹🏼 | `:juggling_tone2:` | 🕵🏿‍♂️ | `:man_detective_tone5:` |
+| 🤹🏽 | `:juggling_tone3:` | 👩🏻‍⚕️ | `:woman_health_worker_tone1:` |
+| 🤹🏾 | `:juggling_tone4:` | 👩🏼‍⚕️ | `:woman_health_worker_tone2:` |
+| 🤹🏿 | `:juggling_tone5:` | 👩🏽‍⚕️ | `:woman_health_worker_tone3:` |
+| 🕋 | `:kaaba:` | 👩🏾‍⚕️ | `:woman_health_worker_tone4:` |
+| 🔑 | `:key:` | 👩🏿‍⚕️ | `:woman_health_worker_tone5:` |
+| 🗝 | `:key2:` | 👨🏻‍⚕️ | `:man_health_worker_tone1:` |
+| ⌨ | `:keyboard:` | 👨🏼‍⚕️ | `:man_health_worker_tone2:` |
+| 👘 | `:kimono:` | 👨🏽‍⚕️ | `:man_health_worker_tone3:` |
+| 💋 | `:kiss:` | 👨🏾‍⚕️ | `:man_health_worker_tone4:` |
+| 👨‍❤️‍💋‍👨 | `:kiss_mm:` | 👨🏿‍⚕️ | `:man_health_worker_tone5:` |
+| 👩‍❤️‍💋‍👩 | `:kiss_ww:` | 👩🏻‍🌾 | `:woman_farmer_tone1:` |
+| 😗 | `:kissing:` | 👩🏼‍🌾 | `:woman_farmer_tone2:` |
+| 😽 | `:kissing_cat:` | 👩🏽‍🌾 | `:woman_farmer_tone3:` |
+| 😚 | `:kissing_closed_eyes:` | 👩🏾‍🌾 | `:woman_farmer_tone4:` |
+| 😘 | `:kissing_heart:` | 👩🏿‍🌾 | `:woman_farmer_tone5:` |
+| 😙 | `:kissing_smiling_eyes:` | 👨🏻‍🌾 | `:man_farmer_tone1:` |
+| 🥝 | `:kiwi:` | 👨🏼‍🌾 | `:man_farmer_tone2:` |
+| 🔪 | `:knife:` | 👨🏽‍🌾 | `:man_farmer_tone3:` |
+| 🐨 | `:koala:` | 👨🏾‍🌾 | `:man_farmer_tone4:` |
+| 🈁 | `:koko:` | 👨🏿‍🌾 | `:man_farmer_tone5:` |
+| 🏷 | `:label:` | 👩🏻‍🍳 | `:woman_cook_tone1:` |
+| 🔵 | `:blue_circle:` | 👩🏼‍🍳 | `:woman_cook_tone2:` |
+| 🔷 | `:large_blue_diamond:` | 👩🏽‍🍳 | `:woman_cook_tone3:` |
+| 🔶 | `:large_orange_diamond:` | 👩🏾‍🍳 | `:woman_cook_tone4:` |
+| 🌗 | `:last_quarter_moon:` | 👩🏿‍🍳 | `:woman_cook_tone5:` |
+| 🌜 | `:last_quarter_moon_with_face:` | 👨🏻‍🍳 | `:man_cook_tone1:` |
+| 😆 | `:laughing:` | 👨🏼‍🍳 | `:man_cook_tone2:` |
+| 🍃 | `:leaves:` | 👨🏽‍🍳 | `:man_cook_tone3:` |
+| 📒 | `:ledger:` | 👨🏾‍🍳 | `:man_cook_tone4:` |
+| 🤛 | `:left_facing_fist:` | 👨🏿‍🍳 | `:man_cook_tone5:` |
+| 🤛🏻 | `:left_facing_fist_tone1:` | 👩🏻‍🎓 | `:woman_student_tone1:` |
+| 🤛🏼 | `:left_facing_fist_tone2:` | 👩🏼‍🎓 | `:woman_student_tone2:` |
+| 🤛🏽 | `:left_facing_fist_tone3:` | 👩🏽‍🎓 | `:woman_student_tone3:` |
+| 🤛🏾 | `:left_facing_fist_tone4:` | 👩🏾‍🎓 | `:woman_student_tone4:` |
+| 🤛🏿 | `:left_facing_fist_tone5:` | 👩🏿‍🎓 | `:woman_student_tone5:` |
+| 🛅 | `:left_luggage:` | 👨🏻‍🎓 | `:man_student_tone1:` |
+| ↔ | `:left_right_arrow:` | 👨🏼‍🎓 | `:man_student_tone2:` |
+| ↩ | `:leftwards_arrow_with_hook:` | 👨🏽‍🎓 | `:man_student_tone3:` |
+| 🍋 | `:lemon:` | 👨🏾‍🎓 | `:man_student_tone4:` |
+| ♌ | `:leo:` | 👨🏿‍🎓 | `:man_student_tone5:` |
+| 🐆 | `:leopard:` | 👩🏻‍🎤 | `:woman_singer_tone1:` |
+| 🎚 | `:level_slider:` | 👩🏼‍🎤 | `:woman_singer_tone2:` |
+| 🕴 | `:levitate:` | 👩🏽‍🎤 | `:woman_singer_tone3:` |
+| ♎ | `:libra:` | 👩🏾‍🎤 | `:woman_singer_tone4:` |
+| 🏋 | `:lifter:` | 👩🏿‍🎤 | `:woman_singer_tone5:` |
+| 🏋🏻 | `:lifter_tone1:` | 👨🏻‍🎤 | `:man_singer_tone1:` |
+| 🏋🏼 | `:lifter_tone2:` | 👨🏼‍🎤 | `:man_singer_tone2:` |
+| 🏋🏽 | `:lifter_tone3:` | 👨🏽‍🎤 | `:man_singer_tone3:` |
+| 🏋🏾 | `:lifter_tone4:` | 👨🏾‍🎤 | `:man_singer_tone4:` |
+| 🏋🏿 | `:lifter_tone5:` | 👨🏿‍🎤 | `:man_singer_tone5:` |
+| 🚈 | `:light_rail:` | 👩🏻‍🏫 | `:woman_teacher_tone1:` |
+| 🔗 | `:link:` | 👩🏼‍🏫 | `:woman_teacher_tone2:` |
+| 🦁 | `:lion_face:` | 👩🏽‍🏫 | `:woman_teacher_tone3:` |
+| 👄 | `:lips:` | 👩🏾‍🏫 | `:woman_teacher_tone4:` |
+| 💄 | `:lipstick:` | 👩🏿‍🏫 | `:woman_teacher_tone5:` |
+| 🦎 | `:lizard:` | 👨🏻‍🏫 | `:man_teacher_tone1:` |
+| 🔒 | `:lock:` | 👨🏼‍🏫 | `:man_teacher_tone2:` |
+| 🔏 | `:lock_with_ink_pen:` | 👨🏽‍🏫 | `:man_teacher_tone3:` |
+| 🍭 | `:lollipop:` | 👨🏾‍🏫 | `:man_teacher_tone4:` |
+| ➿ | `:loop:` | 👨🏿‍🏫 | `:man_teacher_tone5:` |
+| 🔊 | `:loud_sound:` | 👩🏻‍🏭 | `:woman_factory_worker_tone1:` |
+| 📢 | `:loudspeaker:` | 👩🏼‍🏭 | `:woman_factory_worker_tone2:` |
+| 🏩 | `:love_hotel:` | 👩🏽‍🏭 | `:woman_factory_worker_tone3:` |
+| 💌 | `:love_letter:` | 👩🏾‍🏭 | `:woman_factory_worker_tone4:` |
+| 🔅 | `:low_brightness:` | 👩🏿‍🏭 | `:woman_factory_worker_tone5:` |
+| 🤥 | `:lying_face:` | 👨🏻‍🏭 | `:man_factory_worker_tone1:` |
+| Ⓜ | `:m:` | 👨🏼‍🏭 | `:man_factory_worker_tone2:` |
+| 🔍 | `:mag:` | 👨🏽‍🏭 | `:man_factory_worker_tone3:` |
+| 🔎 | `:mag_right:` | 👨🏾‍🏭 | `:man_factory_worker_tone4:` |
+| 🀄 | `:mahjong:` | 👨🏿‍🏭 | `:man_factory_worker_tone5:` |
+| 📫 | `:mailbox:` | 👩🏻‍💻 | `:woman_technologist_tone1:` |
+| 📪 | `:mailbox_closed:` | 👩🏼‍💻 | `:woman_technologist_tone2:` |
+| 📬 | `:mailbox_with_mail:` | 👩🏽‍💻 | `:woman_technologist_tone3:` |
+| 📭 | `:mailbox_with_no_mail:` | 👩🏾‍💻 | `:woman_technologist_tone4:` |
+| 👨 | `:man:` | 👩🏿‍💻 | `:woman_technologist_tone5:` |
+| 🕺 | `:man_dancing:` | 👨🏻‍💻 | `:man_technologist_tone1:` |
+| 🕺🏻 | `:man_dancing_tone1:` | 👨🏼‍💻 | `:man_technologist_tone2:` |
+| 🕺🏼 | `:man_dancing_tone2:` | 👨🏽‍💻 | `:man_technologist_tone3:` |
+| 🕺🏽 | `:man_dancing_tone3:` | 👨🏾‍💻 | `:man_technologist_tone4:` |
+| 🕺🏾 | `:man_dancing_tone4:` | 👨🏿‍💻 | `:man_technologist_tone5:` |
+| 🕺🏿 | `:man_dancing_tone5:` | 👩🏻‍💼 | `:woman_office_worker_tone1:` |
+| 🤵 | `:man_in_tuxedo:` | 👩🏼‍💼 | `:woman_office_worker_tone2:` |
+| 🤵🏻 | `:man_in_tuxedo_tone1:` | 👩🏽‍💼 | `:woman_office_worker_tone3:` |
+| 🤵🏼 | `:man_in_tuxedo_tone2:` | 👩🏾‍💼 | `:woman_office_worker_tone4:` |
+| 🤵🏽 | `:man_in_tuxedo_tone3:` | 👩🏿‍💼 | `:woman_office_worker_tone5:` |
+| 🤵🏾 | `:man_in_tuxedo_tone4:` | 👨🏻‍💼 | `:man_office_worker_tone1:` |
+| 🤵🏿 | `:man_in_tuxedo_tone5:` | 👨🏼‍💼 | `:man_office_worker_tone2:` |
+| 👨🏻 | `:man_tone1:` | 👨🏽‍💼 | `:man_office_worker_tone3:` |
+| 👨🏼 | `:man_tone2:` | 👨🏾‍💼 | `:man_office_worker_tone4:` |
+| 👨🏽 | `:man_tone3:` | 👨🏿‍💼 | `:man_office_worker_tone5:` |
+| 👨🏾 | `:man_tone4:` | 👩🏻‍🔧 | `:woman_mechanic_tone1:` |
+| 👨🏿 | `:man_tone5:` | 👩🏼‍🔧 | `:woman_mechanic_tone2:` |
+| 👲 | `:man_with_gua_pi_mao:` | 👩🏽‍🔧 | `:woman_mechanic_tone3:` |
+| 👲🏻 | `:man_with_gua_pi_mao_tone1:` | 👩🏾‍🔧 | `:woman_mechanic_tone4:` |
+| 👲🏼 | `:man_with_gua_pi_mao_tone2:` | 👩🏿‍🔧 | `:woman_mechanic_tone5:` |
+| 👲🏽 | `:man_with_gua_pi_mao_tone3:` | 👨🏻‍🔧 | `:man_mechanic_tone1:` |
+| 👲🏾 | `:man_with_gua_pi_mao_tone4:` | 👨🏼‍🔧 | `:man_mechanic_tone2:` |
+| 👲🏿 | `:man_with_gua_pi_mao_tone5:` | 👨🏽‍🔧 | `:man_mechanic_tone3:` |
+| 👳 | `:man_with_turban:` | 👨🏾‍🔧 | `:man_mechanic_tone4:` |
+| 👳🏻 | `:man_with_turban_tone1:` | 👨🏿‍🔧 | `:man_mechanic_tone5:` |
+| 👳🏼 | `:man_with_turban_tone2:` | 👩🏻‍🔬 | `:woman_scientist_tone1:` |
+| 👳🏽 | `:man_with_turban_tone3:` | 👩🏼‍🔬 | `:woman_scientist_tone2:` |
+| 👳🏾 | `:man_with_turban_tone4:` | 👩🏽‍🔬 | `:woman_scientist_tone3:` |
+| 👳🏿 | `:man_with_turban_tone5:` | 👩🏾‍🔬 | `:woman_scientist_tone4:` |
+| 👞 | `:mans_shoe:` | 👩🏿‍🔬 | `:woman_scientist_tone5:` |
+| 🗺 | `:map:` | 👨🏻‍🔬 | `:man_scientist_tone1:` |
+| 🍁 | `:maple_leaf:` | 👨🏼‍🔬 | `:man_scientist_tone2:` |
+| 🥋 | `:martial_arts_uniform:` | 👨🏽‍🔬 | `:man_scientist_tone3:` |
+| 😷 | `:mask:` | 👨🏾‍🔬 | `:man_scientist_tone4:` |
+| 💆 | `:massage:` | 👨🏿‍🔬 | `:man_scientist_tone5:` |
+| 💆🏻 | `:massage_tone1:` | 👩🏻‍🎨 | `:woman_artist_tone1:` |
+| 💆🏼 | `:massage_tone2:` | 👩🏼‍🎨 | `:woman_artist_tone2:` |
+| 💆🏽 | `:massage_tone3:` | 👩🏽‍🎨 | `:woman_artist_tone3:` |
+| 💆🏾 | `:massage_tone4:` | 👩🏾‍🎨 | `:woman_artist_tone4:` |
+| 💆🏿 | `:massage_tone5:` | 👩🏿‍🎨 | `:woman_artist_tone5:` |
+| 🍖 | `:meat_on_bone:` | 👨🏻‍🎨 | `:man_artist_tone1:` |
+| 🏅 | `:medal:` | 👨🏼‍🎨 | `:man_artist_tone2:` |
+| 📣 | `:mega:` | 👨🏽‍🎨 | `:man_artist_tone3:` |
+| 🍈 | `:melon:` | 👨🏾‍🎨 | `:man_artist_tone4:` |
+| 🕎 | `:menorah:` | 👨🏿‍🎨 | `:man_artist_tone5:` |
+| 🚹 | `:mens:` | 👩🏻‍🚒 | `:woman_firefighter_tone1:` |
+| 🤘 | `:metal:` | 👩🏼‍🚒 | `:woman_firefighter_tone2:` |
+| 🤘🏻 | `:metal_tone1:` | 👩🏽‍🚒 | `:woman_firefighter_tone3:` |
+| 🤘🏼 | `:metal_tone2:` | 👩🏾‍🚒 | `:woman_firefighter_tone4:` |
+| 🤘🏽 | `:metal_tone3:` | 👩🏿‍🚒 | `:woman_firefighter_tone5:` |
+| 🤘🏾 | `:metal_tone4:` | 👨🏻‍🚒 | `:man_firefighter_tone1:` |
+| 🤘🏿 | `:metal_tone5:` | 👨🏼‍🚒 | `:man_firefighter_tone2:` |
+| 🚇 | `:metro:` | 👨🏽‍🚒 | `:man_firefighter_tone3:` |
+| 🎤 | `:microphone:` | 👨🏾‍🚒 | `:man_firefighter_tone4:` |
+| 🎙 | `:microphone2:` | 👨🏿‍🚒 | `:man_firefighter_tone5:` |
+| 🔬 | `:microscope:` | 👩🏻‍✈️ | `:woman_pilot_tone1:` |
+| 🖕 | `:middle_finger:` | 👩🏼‍✈️ | `:woman_pilot_tone2:` |
+| 🖕🏻 | `:middle_finger_tone1:` | 👩🏽‍✈️ | `:woman_pilot_tone3:` |
+| 🖕🏼 | `:middle_finger_tone2:` | 👩🏾‍✈️ | `:woman_pilot_tone4:` |
+| 🖕🏽 | `:middle_finger_tone3:` | 👩🏿‍✈️ | `:woman_pilot_tone5:` |
+| 🖕🏾 | `:middle_finger_tone4:` | 👨🏻‍✈️ | `:man_pilot_tone1:` |
+| 🖕🏿 | `:middle_finger_tone5:` | 👨🏼‍✈️ | `:man_pilot_tone2:` |
+| 🎖 | `:military_medal:` | 👨🏽‍✈️ | `:man_pilot_tone3:` |
+| 🥛 | `:milk:` | 👨🏾‍✈️ | `:man_pilot_tone4:` |
+| 🌌 | `:milky_way:` | 👨🏿‍✈️ | `:man_pilot_tone5:` |
+| 🚐 | `:minibus:` | 👩🏻‍🚀 | `:woman_astronaut_tone1:` |
+| 💽 | `:minidisc:` | 👩🏼‍🚀 | `:woman_astronaut_tone2:` |
+| 📴 | `:mobile_phone_off:` | 👩🏽‍🚀 | `:woman_astronaut_tone3:` |
+| 🤑 | `:money_mouth:` | 👩🏾‍🚀 | `:woman_astronaut_tone4:` |
+| 💸 | `:money_with_wings:` | 👩🏿‍🚀 | `:woman_astronaut_tone5:` |
+| 💰 | `:moneybag:` | 👨🏻‍🚀 | `:man_astronaut_tone1:` |
+| 🐒 | `:monkey:` | 👨🏼‍🚀 | `:man_astronaut_tone2:` |
+| 🐵 | `:monkey_face:` | 👨🏽‍🚀 | `:man_astronaut_tone3:` |
+| 🚝 | `:monorail:` | 👨🏾‍🚀 | `:man_astronaut_tone4:` |
+| 🎓 | `:mortar_board:` | 👨🏿‍🚀 | `:man_astronaut_tone5:` |
+| 🕌 | `:mosque:` | 👩🏻‍⚖️ | `:woman_judge_tone1:` |
+| 🛵 | `:motor_scooter:` | 👩🏼‍⚖️ | `:woman_judge_tone2:` |
+| 🛥 | `:motorboat:` | 👩🏽‍⚖️ | `:woman_judge_tone3:` |
+| 🏍 | `:motorcycle:` | 👩🏾‍⚖️ | `:woman_judge_tone4:` |
+| 🛣 | `:motorway:` | 👩🏿‍⚖️ | `:woman_judge_tone5:` |
+| 🗻 | `:mount_fuji:` | 👨🏻‍⚖️ | `:man_judge_tone1:` |
+| ⛰ | `:mountain:` | 👨🏼‍⚖️ | `:man_judge_tone2:` |
+| 🚵 | `:mountain_bicyclist:` | 👨🏽‍⚖️ | `:man_judge_tone3:` |
+| 🚵🏻 | `:mountain_bicyclist_tone1:` | 👨🏾‍⚖️ | `:man_judge_tone4:` |
+| 🚵🏼 | `:mountain_bicyclist_tone2:` | 👨🏿‍⚖️ | `:man_judge_tone5:` |
+| 🚵🏽 | `:mountain_bicyclist_tone3:` | 🦸 | `:superhero:` |
+| 🚵🏾 | `:mountain_bicyclist_tone4:` | 🦸🏻 | `:superhero_tone1:` |
+| 🚵🏿 | `:mountain_bicyclist_tone5:` | 🦸🏼 | `:superhero_tone2:` |
+| 🚠 | `:mountain_cableway:` | 🦸🏽 | `:superhero_tone3:` |
+| 🚞 | `:mountain_railway:` | 🦸🏾 | `:superhero_tone4:` |
+| 🏔 | `:mountain_snow:` | 🦸🏿 | `:superhero_tone5:` |
+| 🐭 | `:mouse:` | 🦸‍♀️ | `:woman_superhero:` |
+| 🐁 | `:mouse2:` | 🦸🏻‍♀️ | `:woman_superhero_tone1:` |
+| 🖱 | `:mouse_three_button:` | 🦸🏼‍♀️ | `:woman_superhero_tone2:` |
+| 🎥 | `:movie_camera:` | 🦸🏽‍♀️ | `:woman_superhero_tone3:` |
+| 🗿 | `:moyai:` | 🦸🏾‍♀️ | `:woman_superhero_tone4:` |
+| 🤶 | `:mrs_claus:` | 🦸🏿‍♀️ | `:woman_superhero_tone5:` |
+| 🤶🏻 | `:mrs_claus_tone1:` | 🦸‍♂️ | `:man_superhero:` |
+| 🤶🏼 | `:mrs_claus_tone2:` | 🦸🏻‍♂️ | `:man_superhero_tone1:` |
+| 🤶🏽 | `:mrs_claus_tone3:` | 🦸🏼‍♂️ | `:man_superhero_tone2:` |
+| 🤶🏾 | `:mrs_claus_tone4:` | 🦸🏽‍♂️ | `:man_superhero_tone3:` |
+| 🤶🏿 | `:mrs_claus_tone5:` | 🦸🏾‍♂️ | `:man_superhero_tone4:` |
+| 💪 | `:muscle:` | 🦸🏿‍♂️ | `:man_superhero_tone5:` |
+| 💪🏻 | `:muscle_tone1:` | 🦹 | `:supervillain:` |
+| 💪🏼 | `:muscle_tone2:` | 🦹🏻 | `:supervillain_tone1:` |
+| 💪🏽 | `:muscle_tone3:` | 🦹🏼 | `:supervillain_tone2:` |
+| 💪🏾 | `:muscle_tone4:` | 🦹🏽 | `:supervillain_tone3:` |
+| 💪🏿 | `:muscle_tone5:` | 🦹🏾 | `:supervillain_tone4:` |
+| 🍄 | `:mushroom:` | 🦹🏿 | `:supervillain_tone5:` |
+| 🎹 | `:musical_keyboard:` | 🦹🏻‍♀️ | `:woman_supervillain_tone1:` |
+| 🎵 | `:musical_note:` | 🦹‍♀️ | `:woman_supervillain:` |
+| 🎼 | `:musical_score:` | 🦹🏼‍♀️ | `:woman_supervillain_tone2:` |
+| 🔇 | `:mute:` | 🦹🏽‍♀️ | `:woman_supervillain_tone3:` |
+| 💅 | `:nail_care:` | 🦹🏾‍♀️ | `:woman_supervillain_tone4:` |
+| 💅🏻 | `:nail_care_tone1:` | 🦹🏿‍♀️ | `:woman_supervillain_tone5:` |
+| 💅🏼 | `:nail_care_tone2:` | 🦹‍♂️ | `:man_supervillain:` |
+| 💅🏽 | `:nail_care_tone3:` | 🦹🏻‍♂️ | `:man_supervillain_tone1:` |
+| 💅🏾 | `:nail_care_tone4:` | 🦹🏼‍♂️ | `:man_supervillain_tone2:` |
+| 💅🏿 | `:nail_care_tone5:` | 🦹🏽‍♂️ | `:man_supervillain_tone3:` |
+| 📛 | `:name_badge:` | 🦹🏾‍♂️ | `:man_supervillain_tone4:` |
+| 🤢 | `:nauseated_face:` | 🦹🏿‍♂️ | `:man_supervillain_tone5:` |
+| 👔 | `:necktie:` | 🧙 | `:mage:` |
+| ❎ | `:negative_squared_cross_mark:` | 🧙🏻 | `:mage_tone1:` |
+| 🤓 | `:nerd:` | 🧙🏼 | `:mage_tone2:` |
+| 😐 | `:neutral_face:` | 🧙🏽 | `:mage_tone3:` |
+| 🆕 | `:new:` | 🧙🏾 | `:mage_tone4:` |
+| 🌑 | `:new_moon:` | 🧙🏿 | `:mage_tone5:` |
+| 🌚 | `:new_moon_with_face:` | 🧙‍♀️ | `:woman_mage:` |
+| 📰 | `:newspaper:` | 🧙🏻‍♀️ | `:woman_mage_tone1:` |
+| 🗞 | `:newspaper2:` | 🧙🏼‍♀️ | `:woman_mage_tone2:` |
+| 🆖 | `:ng:` | 🧙🏽‍♀️ | `:woman_mage_tone3:` |
+| 🌃 | `:night_with_stars:` | 🧙🏾‍♀️ | `:woman_mage_tone4:` |
+| 9️⃣ | `:nine:` | 🧙🏿‍♀️ | `:woman_mage_tone5:` |
+| 🔕 | `:no_bell:` | 🧙‍♂️ | `:man_mage:` |
+| 🚳 | `:no_bicycles:` | 🧙🏻‍♂️ | `:man_mage_tone1:` |
+| ⛔ | `:no_entry:` | 🧙🏼‍♂️ | `:man_mage_tone2:` |
+| 🚫 | `:no_entry_sign:` | 🧙🏽‍♂️ | `:man_mage_tone3:` |
+| 🙅 | `:no_good:` | 🧙🏾‍♂️ | `:man_mage_tone4:` |
+| 🙅🏻 | `:no_good_tone1:` | 🧙🏿‍♂️ | `:man_mage_tone5:` |
+| 🙅🏼 | `:no_good_tone2:` | 🧝 | `:elf:` |
+| 🙅🏽 | `:no_good_tone3:` | 🧝🏻 | `:elf_tone1:` |
+| 🙅🏾 | `:no_good_tone4:` | 🧝🏼 | `:elf_tone2:` |
+| 🙅🏿 | `:no_good_tone5:` | 🧝🏽 | `:elf_tone3:` |
+| 📵 | `:no_mobile_phones:` | 🧝🏾 | `:elf_tone4:` |
+| 😶 | `:no_mouth:` | 🧝🏿 | `:elf_tone5:` |
+| 🚷 | `:no_pedestrians:` | 🧝‍♀️ | `:woman_elf:` |
+| 🚭 | `:no_smoking:` | 🧝🏻‍♀️ | `:woman_elf_tone1:` |
+| 🚱 | `:non-potable_water:` | 🧝🏼‍♀️ | `:woman_elf_tone2:` |
+| 👃 | `:nose:` | 🧝🏽‍♀️ | `:woman_elf_tone3:` |
+| 👃🏻 | `:nose_tone1:` | 🧝🏾‍♀️ | `:woman_elf_tone4:` |
+| 👃🏼 | `:nose_tone2:` | 🧝🏿‍♀️ | `:woman_elf_tone5:` |
+| 👃🏽 | `:nose_tone3:` | 🧝‍♂️ | `:man_elf:` |
+| 👃🏾 | `:nose_tone4:` | 🧝🏻‍♂️ | `:man_elf_tone1:` |
+| 👃🏿 | `:nose_tone5:` | 🧝🏼‍♂️ | `:man_elf_tone2:` |
+| 📓 | `:notebook:` | 🧝🏽‍♂️ | `:man_elf_tone3:` |
+| 📔 | `:notebook_with_decorative_cover:` | 🧝🏾‍♂️ | `:man_elf_tone4:` |
+| 🗒 | `:notepad_spiral:` | 🧝🏿‍♂️ | `:man_elf_tone5:` |
+| 🎶 | `:notes:` | 🧛 | `:vampire:` |
+| 🔩 | `:nut_and_bolt:` | 🧛🏻 | `:vampire_tone1:` |
+| ⭕ | `:o:` | 🧛🏼 | `:vampire_tone2:` |
+| 🅾 | `:o2:` | 🧛🏽 | `:vampire_tone3:` |
+| 🌊 | `:ocean:` | 🧛🏾 | `:vampire_tone4:` |
+| 🛑 | `:octagonal_sign:` | 🧛🏿 | `:vampire_tone5:` |
+| 🐙 | `:octopus:` | 🧛‍♀️ | `:woman_vampire:` |
+| 🍢 | `:oden:` | 🧛🏻‍♀️ | `:woman_vampire_tone1:` |
+| 🏢 | `:office:` | 🧛🏼‍♀️ | `:woman_vampire_tone2:` |
+| 🛢 | `:oil:` | 🧛🏽‍♀️ | `:woman_vampire_tone3:` |
+| 🆗 | `:ok:` | 🧛🏾‍♀️ | `:woman_vampire_tone4:` |
+| 👌 | `:ok_hand:` | 🧛🏿‍♀️ | `:woman_vampire_tone5:` |
+| 👌🏻 | `:ok_hand_tone1:` | 🧛‍♂️ | `:man_vampire:` |
+| 👌🏼 | `:ok_hand_tone2:` | 🧛🏻‍♂️ | `:man_vampire_tone1:` |
+| 👌🏽 | `:ok_hand_tone3:` | 🧛🏼‍♂️ | `:man_vampire_tone2:` |
+| 👌🏾 | `:ok_hand_tone4:` | 🧛🏽‍♂️ | `:man_vampire_tone3:` |
+| 👌🏿 | `:ok_hand_tone5:` | 🧛🏾‍♂️ | `:man_vampire_tone4:` |
+| 🙆 | `:ok_woman:` | 🧛🏿‍♂️ | `:man_vampire_tone5:` |
+| 🙆🏻 | `:ok_woman_tone1:` | 🧟 | `:zombie:` |
+| 🙆🏼 | `:ok_woman_tone2:` | 🧟‍♀️ | `:woman_zombie:` |
+| 🙆🏽 | `:ok_woman_tone3:` | 🧟‍♂️ | `:man_zombie:` |
+| 🙆🏾 | `:ok_woman_tone4:` | 🧞 | `:genie:` |
+| 🙆🏿 | `:ok_woman_tone5:` | 🧞‍♀️ | `:woman_genie:` |
+| 👴 | `:older_man:` | 🧞‍♂️ | `:man_genie:` |
+| 👴🏻 | `:older_man_tone1:` | 🧜 | `:merperson:` |
+| 👴🏼 | `:older_man_tone2:` | 🧜🏻 | `:merperson_tone1:` |
+| 👴🏽 | `:older_man_tone3:` | 🧜🏼 | `:merperson_tone2:` |
+| 👴🏾 | `:older_man_tone4:` | 🧜🏽 | `:merperson_tone3:` |
+| 👴🏿 | `:older_man_tone5:` | 🧜🏾 | `:merperson_tone4:` |
+| 👵 | `:older_woman:` | 🧜🏿 | `:merperson_tone5:` |
+| 👵🏻 | `:older_woman_tone1:` | 🧜‍♀️ | `:mermaid:` |
+| 👵🏼 | `:older_woman_tone2:` | 🧜🏻‍♀️ | `:mermaid_tone1:` |
+| 👵🏽 | `:older_woman_tone3:` | 🧜🏼‍♀️ | `:mermaid_tone2:` |
+| 👵🏾 | `:older_woman_tone4:` | 🧜🏽‍♀️ | `:mermaid_tone3:` |
+| 👵🏿 | `:older_woman_tone5:` | 🧜🏾‍♀️ | `:mermaid_tone4:` |
+| 🕉 | `:om_symbol:` | 🧜🏿‍♀️ | `:mermaid_tone5:` |
+| 🔛 | `:on:` | 🧜‍♂️ | `:merman:` |
+| 🚘 | `:oncoming_automobile:` | 🧜🏻‍♂️ | `:merman_tone1:` |
+| 🚍 | `:oncoming_bus:` | 🧜🏼‍♂️ | `:merman_tone2:` |
+| 🚔 | `:oncoming_police_car:` | 🧜🏽‍♂️ | `:merman_tone3:` |
+| 🚖 | `:oncoming_taxi:` | 🧜🏾‍♂️ | `:merman_tone4:` |
+| 1️⃣ | `:one:` | 🧜🏿‍♂️ | `:merman_tone5:` |
+| 📂 | `:open_file_folder:` | 🧚 | `:fairy:` |
+| 👐 | `:open_hands:` | 🧚🏻 | `:fairy_tone1:` |
+| 👐🏻 | `:open_hands_tone1:` | 🧚🏼 | `:fairy_tone2:` |
+| 👐🏼 | `:open_hands_tone2:` | 🧚🏽 | `:fairy_tone3:` |
+| 👐🏽 | `:open_hands_tone3:` | 🧚🏾 | `:fairy_tone4:` |
+| 👐🏾 | `:open_hands_tone4:` | 🧚🏿 | `:fairy_tone5:` |
+| 👐🏿 | `:open_hands_tone5:` | 🧚‍♀️ | `:woman_fairy:` |
+| 😮 | `:open_mouth:` | 🧚🏻‍♀️ | `:woman_fairy_tone1:` |
+| ⛎ | `:ophiuchus:` | 🧚🏼‍♀️ | `:woman_fairy_tone2:` |
+| 📙 | `:orange_book:` | 🧚🏽‍♀️ | `:woman_fairy_tone3:` |
+| ☦ | `:orthodox_cross:` | 🧚🏾‍♀️ | `:woman_fairy_tone4:` |
+| 📤 | `:outbox_tray:` | 🧚🏿‍♀️ | `:woman_fairy_tone5:` |
+| 🦉 | `:owl:` | 🧚‍♂️ | `:man_fairy:` |
+| 🐂 | `:ox:` | 🧚🏻‍♂️ | `:man_fairy_tone1:` |
+| 📦 | `:package:` | 🧚🏼‍♂️ | `:man_fairy_tone2:` |
+| 📄 | `:page_facing_up:` | 🧚🏽‍♂️ | `:man_fairy_tone3:` |
+| 📃 | `:page_with_curl:` | 🧚🏾‍♂️ | `:man_fairy_tone4:` |
+| 📟 | `:pager:` | 🧚🏿‍♂️ | `:man_fairy_tone5:` |
+| 🖌 | `:paintbrush:` | 🤱 | `:breast_feeding:` |
+| 🌴 | `:palm_tree:` | 🤱🏻 | `:breast_feeding_tone1:` |
+| 🥞 | `:pancakes:` | 🤱🏼 | `:breast_feeding_tone2:` |
+| 🐼 | `:panda_face:` | 🤱🏽 | `:breast_feeding_tone3:` |
+| 📎 | `:paperclip:` | 🤱🏾 | `:breast_feeding_tone4:` |
+| 🖇 | `:paperclips:` | 🤱🏿 | `:breast_feeding_tone5:` |
+| 🏞 | `:park:` | 🙇‍♀️ | `:woman_bowing:` |
+| 🅿 | `:parking:` | 🙇🏻‍♀️ | `:woman_bowing_tone1:` |
+| 〽 | `:part_alternation_mark:` | 🙇🏼‍♀️ | `:woman_bowing_tone2:` |
+| ⛅ | `:partly_sunny:` | 🙇🏽‍♀️ | `:woman_bowing_tone3:` |
+| 🛂 | `:passport_control:` | 🙇🏾‍♀️ | `:woman_bowing_tone4:` |
+| ⏸ | `:pause_button:` | 🙇🏿‍♀️ | `:woman_bowing_tone5:` |
+| ☮ | `:peace:` | 🙇‍♂️ | `:man_bowing:` |
+| 🍑 | `:peach:` | 🙇🏻‍♂️ | `:man_bowing_tone1:` |
+| 🥜 | `:peanuts:` | 🙇🏼‍♂️ | `:man_bowing_tone2:` |
+| 🍐 | `:pear:` | 🙇🏽‍♂️ | `:man_bowing_tone3:` |
+| 🖊 | `:pen_ballpoint:` | 🙇🏾‍♂️ | `:man_bowing_tone4:` |
+| 🖋 | `:pen_fountain:` | 🙇🏿‍♂️ | `:man_bowing_tone5:` |
+| 📝 | `:pencil:` | 💁‍♀️ | `:woman_tipping_hand:` |
+| ✏ | `:pencil2:` | 💁🏻‍♀️ | `:woman_tipping_hand_tone1:` |
+| 🐧 | `:penguin:` | 💁🏼‍♀️ | `:woman_tipping_hand_tone2:` |
+| 😔 | `:pensive:` | 💁🏽‍♀️ | `:woman_tipping_hand_tone3:` |
+| 🎭 | `:performing_arts:` | 💁🏾‍♀️ | `:woman_tipping_hand_tone4:` |
+| 😣 | `:persevere:` | 💁🏿‍♀️ | `:woman_tipping_hand_tone5:` |
+| 🙍 | `:person_frowning:` | 💁‍♂️ | `:man_tipping_hand:` |
+| 🙍🏻 | `:person_frowning_tone1:` | 💁🏻‍♂️ | `:man_tipping_hand_tone1:` |
+| 🙍🏼 | `:person_frowning_tone2:` | 💁🏼‍♂️ | `:man_tipping_hand_tone2:` |
+| 🙍🏽 | `:person_frowning_tone3:` | 💁🏽‍♂️ | `:man_tipping_hand_tone3:` |
+| 🙍🏾 | `:person_frowning_tone4:` | 💁🏾‍♂️ | `:man_tipping_hand_tone4:` |
+| 🙍🏿 | `:person_frowning_tone5:` | 💁🏿‍♂️ | `:man_tipping_hand_tone5:` |
+| 👱 | `:person_with_blond_hair:` | 🙅‍♀️ | `:woman_gesturing_no:` |
+| 👱🏻 | `:person_with_blond_hair_tone1:` | 🙅🏻‍♀️ | `:woman_gesturing_no_tone1:` |
+| 👱🏼 | `:person_with_blond_hair_tone2:` | 🙅🏼‍♀️ | `:woman_gesturing_no_tone2:` |
+| 👱🏽 | `:person_with_blond_hair_tone3:` | 🙅🏽‍♀️ | `:woman_gesturing_no_tone3:` |
+| 👱🏾 | `:person_with_blond_hair_tone4:` | 🙅🏾‍♀️ | `:woman_gesturing_no_tone4:` |
+| 👱🏿 | `:person_with_blond_hair_tone5:` | 🙅🏿‍♀️ | `:woman_gesturing_no_tone5:` |
+| 🙎 | `:person_with_pouting_face:` | 🙅‍♂️ | `:man_gesturing_no:` |
+| 🙎🏻 | `:person_with_pouting_face_tone1:` | 🙅🏻‍♂️ | `:man_gesturing_no_tone1:` |
+| 🙎🏼 | `:person_with_pouting_face_tone2:` | 🙅🏼‍♂️ | `:man_gesturing_no_tone2:` |
+| 🙎🏽 | `:person_with_pouting_face_tone3:` | 🙅🏽‍♂️ | `:man_gesturing_no_tone3:` |
+| 🙎🏾 | `:person_with_pouting_face_tone4:` | 🙅🏾‍♂️ | `:man_gesturing_no_tone4:` |
+| 🙎🏿 | `:person_with_pouting_face_tone5:` | 🙅🏿‍♂️ | `:man_gesturing_no_tone5:` |
+| ⛏ | `:pick:` | 🙆‍♀️ | `:woman_gesturing_ok:` |
+| 🐷 | `:pig:` | 🙆🏻‍♀️ | `:woman_gesturing_ok_tone1:` |
+| 🐖 | `:pig2:` | 🙆🏼‍♀️ | `:woman_gesturing_ok_tone2:` |
+| 🐽 | `:pig_nose:` | 🙆🏽‍♀️ | `:woman_gesturing_ok_tone3:` |
+| 💊 | `:pill:` | 🙆🏾‍♀️ | `:woman_gesturing_ok_tone4:` |
+| 🍍 | `:pineapple:` | 🙆🏿‍♀️ | `:woman_gesturing_ok_tone5:` |
+| 🏓 | `:ping_pong:` | 🙆‍♂️ | `:man_gesturing_ok:` |
+| ♓ | `:pisces:` | 🙆🏻‍♂️ | `:man_gesturing_ok_tone1:` |
+| 🍕 | `:pizza:` | 🙆🏼‍♂️ | `:man_gesturing_ok_tone2:` |
+| 🛐 | `:place_of_worship:` | 🙆🏽‍♂️ | `:man_gesturing_ok_tone3:` |
+| ⏯ | `:play_pause:` | 🙆🏾‍♂️ | `:man_gesturing_ok_tone4:` |
+| 👇 | `:point_down:` | 🙆🏿‍♂️ | `:man_gesturing_ok_tone5:` |
+| 👇🏻 | `:point_down_tone1:` | 🙋‍♀️ | `:woman_raising_hand:` |
+| 👇🏼 | `:point_down_tone2:` | 🙋🏻‍♀️ | `:woman_raising_hand_tone1:` |
+| 👇🏽 | `:point_down_tone3:` | 🙋🏼‍♀️ | `:woman_raising_hand_tone2:` |
+| 👇🏾 | `:point_down_tone4:` | 🙋🏽‍♀️ | `:woman_raising_hand_tone3:` |
+| 👇🏿 | `:point_down_tone5:` | 🙋🏾‍♀️ | `:woman_raising_hand_tone4:` |
+| 👈 | `:point_left:` | 🙋🏿‍♀️ | `:woman_raising_hand_tone5:` |
+| 👈🏻 | `:point_left_tone1:` | 🙋‍♂️ | `:man_raising_hand:` |
+| 👈🏼 | `:point_left_tone2:` | 🙋🏻‍♂️ | `:man_raising_hand_tone1:` |
+| 👈🏽 | `:point_left_tone3:` | 🙋🏼‍♂️ | `:man_raising_hand_tone2:` |
+| 👈🏾 | `:point_left_tone4:` | 🙋🏽‍♂️ | `:man_raising_hand_tone3:` |
+| 👈🏿 | `:point_left_tone5:` | 🙋🏾‍♂️ | `:man_raising_hand_tone4:` |
+| 👉 | `:point_right:` | 🙋🏿‍♂️ | `:man_raising_hand_tone5:` |
+| 👉🏻 | `:point_right_tone1:` | 🤦🏻‍♀️ | `:woman_facepalming_tone1:` |
+| 👉🏼 | `:point_right_tone2:` | 🤦🏼‍♀️ | `:woman_facepalming_tone2:` |
+| 👉🏽 | `:point_right_tone3:` | 🤦🏽‍♀️ | `:woman_facepalming_tone3:` |
+| 👉🏾 | `:point_right_tone4:` | 🤦🏾‍♀️ | `:woman_facepalming_tone4:` |
+| 👉🏿 | `:point_right_tone5:` | 🤦🏿‍♀️ | `:woman_facepalming_tone5:` |
+| ☝ | `:point_up:` | 🤦🏻‍♂️ | `:man_facepalming_tone1:` |
+| 👆 | `:point_up_2:` | 🤦🏼‍♂️ | `:man_facepalming_tone2:` |
+| 👆🏻 | `:point_up_2_tone1:` | 🤦🏽‍♂️ | `:man_facepalming_tone3:` |
+| 👆🏼 | `:point_up_2_tone2:` | 🤦🏾‍♂️ | `:man_facepalming_tone4:` |
+| 👆🏽 | `:point_up_2_tone3:` | 🤦🏿‍♂️ | `:man_facepalming_tone5:` |
+| 👆🏾 | `:point_up_2_tone4:` | 🤷🏻‍♀️ | `:woman_shrugging_tone1:` |
+| 👆🏿 | `:point_up_2_tone5:` | 🤷🏼‍♀️ | `:woman_shrugging_tone2:` |
+| ☝🏻 | `:point_up_tone1:` | 🤷🏽‍♀️ | `:woman_shrugging_tone3:` |
+| ☝🏼 | `:point_up_tone2:` | 🤷🏾‍♀️ | `:woman_shrugging_tone4:` |
+| ☝🏽 | `:point_up_tone3:` | 🤷🏿‍♀️ | `:woman_shrugging_tone5:` |
+| ☝🏾 | `:point_up_tone4:` | 🤷🏻‍♂️ | `:man_shrugging_tone1:` |
+| ☝🏿 | `:point_up_tone5:` | 🤷🏼‍♂️ | `:man_shrugging_tone2:` |
+| 🚓 | `:police_car:` | 🤷🏽‍♂️ | `:man_shrugging_tone3:` |
+| 🐩 | `:poodle:` | 🤷🏾‍♂️ | `:man_shrugging_tone4:` |
+| 💩 | `:poop:` | 🤷🏿‍♂️ | `:man_shrugging_tone5:` |
+| 🍿 | `:popcorn:` | 🙎‍♀️ | `:woman_pouting:` |
+| 🏣 | `:post_office:` | 🙎🏻‍♀️ | `:woman_pouting_tone1:` |
+| 📯 | `:postal_horn:` | 🙎🏼‍♀️ | `:woman_pouting_tone2:` |
+| 📮 | `:postbox:` | 🙎🏽‍♀️ | `:woman_pouting_tone3:` |
+| 🚰 | `:potable_water:` | 🙎🏾‍♀️ | `:woman_pouting_tone4:` |
+| 🥔 | `:potato:` | 🙎🏿‍♀️ | `:woman_pouting_tone5:` |
+| 👝 | `:pouch:` | 🙎‍♂️ | `:man_pouting:` |
+| 🍗 | `:poultry_leg:` | 🙎🏻‍♂️ | `:man_pouting_tone1:` |
+| 💷 | `:pound:` | 🙎🏼‍♂️ | `:man_pouting_tone2:` |
+| 😾 | `:pouting_cat:` | 🙎🏽‍♂️ | `:man_pouting_tone3:` |
+| 🙏 | `:pray:` | 🙎🏾‍♂️ | `:man_pouting_tone4:` |
+| 🙏🏻 | `:pray_tone1:` | 🙎🏿‍♂️ | `:man_pouting_tone5:` |
+| 🙏🏼 | `:pray_tone2:` | 🙍‍♀️ | `:woman_frowning:` |
+| 🙏🏽 | `:pray_tone3:` | 🙍🏻‍♀️ | `:woman_frowning_tone1:` |
+| 🙏🏾 | `:pray_tone4:` | 🙍🏼‍♀️ | `:woman_frowning_tone2:` |
+| 🙏🏿 | `:pray_tone5:` | 🙍🏽‍♀️ | `:woman_frowning_tone3:` |
+| 📿 | `:prayer_beads:` | 🙍🏾‍♀️ | `:woman_frowning_tone4:` |
+| 🤰 | `:pregnant_woman:` | 🙍🏿‍♀️ | `:woman_frowning_tone5:` |
+| 🤰🏻 | `:pregnant_woman_tone1:` | 🙍‍♂️ | `:man_frowning:` |
+| 🤰🏼 | `:pregnant_woman_tone2:` | 🙍🏻‍♂️ | `:man_frowning_tone1:` |
+| 🤰🏽 | `:pregnant_woman_tone3:` | 🙍🏼‍♂️ | `:man_frowning_tone2:` |
+| 🤰🏾 | `:pregnant_woman_tone4:` | 🙍🏽‍♂️ | `:man_frowning_tone3:` |
+| 🤰🏿 | `:pregnant_woman_tone5:` | 🙍🏾‍♂️ | `:man_frowning_tone4:` |
+| 🤴 | `:prince:` | 🙍🏿‍♂️ | `:man_frowning_tone5:` |
+| 🤴🏻 | `:prince_tone1:` | 💇‍♀️ | `:woman_getting_haircut:` |
+| 🤴🏼 | `:prince_tone2:` | 💇🏻‍♀️ | `:woman_getting_haircut_tone1:` |
+| 🤴🏽 | `:prince_tone3:` | 💇🏼‍♀️ | `:woman_getting_haircut_tone2:` |
+| 🤴🏾 | `:prince_tone4:` | 💇🏽‍♀️ | `:woman_getting_haircut_tone3:` |
+| 🤴🏿 | `:prince_tone5:` | 💇🏾‍♀️ | `:woman_getting_haircut_tone4:` |
+| 👸 | `:princess:` | 💇🏿‍♀️ | `:woman_getting_haircut_tone5:` |
+| 👸🏻 | `:princess_tone1:` | 💇‍♂️ | `:man_getting_haircut:` |
+| 👸🏼 | `:princess_tone2:` | 💇🏻‍♂️ | `:man_getting_haircut_tone1:` |
+| 👸🏽 | `:princess_tone3:` | 💇🏼‍♂️ | `:man_getting_haircut_tone2:` |
+| 👸🏾 | `:princess_tone4:` | 💇🏽‍♂️ | `:man_getting_haircut_tone3:` |
+| 👸🏿 | `:princess_tone5:` | 💇🏾‍♂️ | `:man_getting_haircut_tone4:` |
+| 🖨 | `:printer:` | 💇🏿‍♂️ | `:man_getting_haircut_tone5:` |
+| 📽 | `:projector:` | 💆‍♀️ | `:woman_getting_face_massage:` |
+| 👊 | `:punch:` | 💆🏻‍♀️ | `:woman_getting_face_massage_tone1:` |
+| 👊🏻 | `:punch_tone1:` | 💆🏼‍♀️ | `:woman_getting_face_massage_tone2:` |
+| 👊🏼 | `:punch_tone2:` | 💆🏽‍♀️ | `:woman_getting_face_massage_tone3:` |
+| 👊🏽 | `:punch_tone3:` | 💆🏾‍♀️ | `:woman_getting_face_massage_tone4:` |
+| 👊🏾 | `:punch_tone4:` | 💆🏿‍♀️ | `:woman_getting_face_massage_tone5:` |
+| 👊🏿 | `:punch_tone5:` | 💆‍♂️ | `:man_getting_face_massage:` |
+| 💜 | `:purple_heart:` | 💆🏻‍♂️ | `:man_getting_face_massage_tone1:` |
+| 👛 | `:purse:` | 💆🏼‍♂️ | `:man_getting_face_massage_tone2:` |
+| 📌 | `:pushpin:` | 💆🏽‍♂️ | `:man_getting_face_massage_tone3:` |
+| 🚮 | `:put_litter_in_its_place:` | 💆🏾‍♂️ | `:man_getting_face_massage_tone4:` |
+| ❓ | `:question:` | 💆🏿‍♂️ | `:man_getting_face_massage_tone5:` |
+| 🐰 | `:rabbit:` | 🧖 | `:person_in_steamy_room:` |
+| 🐇 | `:rabbit2:` | 🧖🏻 | `:person_in_steamy_room_tone1:` |
+| 🏎 | `:race_car:` | 🧖🏼 | `:person_in_steamy_room_tone2:` |
+| 🐎 | `:racehorse:` | 🧖🏽 | `:person_in_steamy_room_tone3:` |
+| 📻 | `:radio:` | 🧖🏾 | `:person_in_steamy_room_tone4:` |
+| 🔘 | `:radio_button:` | 🧖🏿 | `:person_in_steamy_room_tone5:` |
+| ☢ | `:radioactive:` | 🧖‍♀️ | `:woman_in_steamy_room:` |
+| 😡 | `:rage:` | 🧖🏻‍♀️ | `:woman_in_steamy_room_tone1:` |
+| 🚃 | `:railway_car:` | 🧖🏼‍♀️ | `:woman_in_steamy_room_tone2:` |
+| 🛤 | `:railway_track:` | 🧖🏽‍♀️ | `:woman_in_steamy_room_tone3:` |
+| 🌈 | `:rainbow:` | 🧖🏾‍♀️ | `:woman_in_steamy_room_tone4:` |
+| 🤚 | `:raised_back_of_hand:` | 🧖🏿‍♀️ | `:woman_in_steamy_room_tone5:` |
+| 🤚🏻 | `:raised_back_of_hand_tone1:` | 🧖‍♂️ | `:man_in_steamy_room:` |
+| 🤚🏼 | `:raised_back_of_hand_tone2:` | 🧖🏻‍♂️ | `:man_in_steamy_room_tone1:` |
+| 🤚🏽 | `:raised_back_of_hand_tone3:` | 🧖🏼‍♂️ | `:man_in_steamy_room_tone2:` |
+| 🤚🏾 | `:raised_back_of_hand_tone4:` | 🧖🏽‍♂️ | `:man_in_steamy_room_tone3:` |
+| 🤚🏿 | `:raised_back_of_hand_tone5:` | 🧖🏾‍♂️ | `:man_in_steamy_room_tone4:` |
+| ✋ | `:raised_hand:` | 🧖🏿‍♂️ | `:man_in_steamy_room_tone5:` |
+| ✋🏻 | `:raised_hand_tone1:` | 👯‍♀️ | `:women_with_bunny_ears_partying:` |
+| ✋🏼 | `:raised_hand_tone2:` | 👯‍♂️ | `:men_with_bunny_ears_partying:` |
+| ✋🏽 | `:raised_hand_tone3:` | 🕴🏻 | `:levitate_tone1:` |
+| ✋🏾 | `:raised_hand_tone4:` | 🕴🏼 | `:levitate_tone2:` |
+| ✋🏿 | `:raised_hand_tone5:` | 🕴🏽 | `:levitate_tone3:` |
+| 🙌 | `:raised_hands:` | 🕴🏾 | `:levitate_tone4:` |
+| 🙌🏻 | `:raised_hands_tone1:` | 🕴🏿 | `:levitate_tone5:` |
+| 🙌🏼 | `:raised_hands_tone2:` | 🚶‍♀️ | `:woman_walking:` |
+| 🙌🏽 | `:raised_hands_tone3:` | 🚶🏻‍♀️ | `:woman_walking_tone1:` |
+| 🙌🏾 | `:raised_hands_tone4:` | 🚶🏼‍♀️ | `:woman_walking_tone2:` |
+| 🙌🏿 | `:raised_hands_tone5:` | 🚶🏽‍♀️ | `:woman_walking_tone3:` |
+| 🙋 | `:raising_hand:` | 🚶🏾‍♀️ | `:woman_walking_tone4:` |
+| 🙋🏻 | `:raising_hand_tone1:` | 🚶🏿‍♀️ | `:woman_walking_tone5:` |
+| 🙋🏼 | `:raising_hand_tone2:` | 🚶‍♂️ | `:man_walking:` |
+| 🙋🏽 | `:raising_hand_tone3:` | 🚶🏻‍♂️ | `:man_walking_tone1:` |
+| 🙋🏾 | `:raising_hand_tone4:` | 🚶🏼‍♂️ | `:man_walking_tone2:` |
+| 🙋🏿 | `:raising_hand_tone5:` | 🚶🏽‍♂️ | `:man_walking_tone3:` |
+| 🐏 | `:ram:` | 🚶🏾‍♂️ | `:man_walking_tone4:` |
+| 🍜 | `:ramen:` | 🚶🏿‍♂️ | `:man_walking_tone5:` |
+| 🐀 | `:rat:` | 🏃‍♀️ | `:woman_running:` |
+| ⏺ | `:record_button:` | 🏃🏻‍♀️ | `:woman_running_tone1:` |
+| ♻ | `:recycle:` | 🏃🏼‍♀️ | `:woman_running_tone2:` |
+| 🚗 | `:red_car:` | 🏃🏽‍♀️ | `:woman_running_tone3:` |
+| 🔴 | `:red_circle:` | 🏃🏾‍♀️ | `:woman_running_tone4:` |
+| ® | `:registered:` | 🏃🏿‍♀️ | `:woman_running_tone5:` |
+| ☺ | `:relaxed:` | 🏃‍♂️ | `:man_running:` |
+| 😌 | `:relieved:` | 🏃🏻‍♂️ | `:man_running_tone1:` |
+| 🎗 | `:reminder_ribbon:` | 🏃🏼‍♂️ | `:man_running_tone2:` |
+| 🔁 | `:repeat:` | 🏃🏽‍♂️ | `:man_running_tone3:` |
+| 🔂 | `:repeat_one:` | 🏃🏾‍♂️ | `:man_running_tone4:` |
+| 🚻 | `:restroom:` | 🏃🏿‍♂️ | `:man_running_tone5:` |
+| 💞 | `:revolving_hearts:` | 👩‍❤️‍👨 | `:couple_with_heart_woman_man:` |
+| ⏪ | `:rewind:` | 👩‍❤️‍💋‍👨 | `:kiss_woman_man:` |
+| 🦏 | `:rhino:` | 👨‍👩‍👦 | `:family_man_woman_boy:` |
+| 🎀 | `:ribbon:` | 🧥 | `:coat:` |
+| 🍚 | `:rice:` | 🥼 | `:lab_coat:` |
+| 🍙 | `:rice_ball:` | 🥾 | `:hiking_boot:` |
+| 🍘 | `:rice_cracker:` | 🥿 | `:womans_flat_shoe:` |
+| 🎑 | `:rice_scene:` | 🧦 | `:socks:` |
+| 🤜 | `:right_facing_fist:` | 🧤 | `:gloves:` |
+| 🤜🏻 | `:right_facing_fist_tone1:` | 🧣 | `:scarf:` |
+| 🤜🏼 | `:right_facing_fist_tone2:` | 🧢 | `:billed_cap:` |
+| 🤜🏽 | `:right_facing_fist_tone3:` | 🥽 | `:goggles:` |
+| 🤜🏾 | `:right_facing_fist_tone4:` | 🦰 | `:red_haired:` |
+| 🤜🏿 | `:right_facing_fist_tone5:` | 🦱 | `:curly_haired:` |
+| 💍 | `:ring:` | 🦳 | `:white_haired:` |
+| 🤖 | `:robot:` | 🦲 | `:bald:` |
+| 🚀 | `:rocket:` | 🇿 | `:regional_indicator_z:` |
+| 🤣 | `:rofl:` | 🇾 | `:regional_indicator_y:` |
+| 🎢 | `:roller_coaster:` | 🇽 | `:regional_indicator_x:` |
+| 🙄 | `:rolling_eyes:` | 🇼 | `:regional_indicator_w:` |
+| 🐓 | `:rooster:` | 🇻 | `:regional_indicator_v:` |
+| 🌹 | `:rose:` | 🇺 | `:regional_indicator_u:` |
+| 🏵 | `:rosette:` | 🇹 | `:regional_indicator_t:` |
+| 🚨 | `:rotating_light:` | 🇸 | `:regional_indicator_s:` |
+| 📍 | `:round_pushpin:` | 🇷 | `:regional_indicator_r:` |
+| 🚣 | `:rowboat:` | 🇶 | `:regional_indicator_q:` |
+| 🚣🏻 | `:rowboat_tone1:` | 🇵 | `:regional_indicator_p:` |
+| 🚣🏼 | `:rowboat_tone2:` | 🇴 | `:regional_indicator_o:` |
+| 🚣🏽 | `:rowboat_tone3:` | 🇳 | `:regional_indicator_n:` |
+| 🚣🏾 | `:rowboat_tone4:` | 🇲 | `:regional_indicator_m:` |
+| 🚣🏿 | `:rowboat_tone5:` | 🇱 | `:regional_indicator_l:` |
+| 🏉 | `:rugby_football:` | 🇰 | `:regional_indicator_k:` |
+| 🏃 | `:runner:` | 🇯 | `:regional_indicator_j:` |
+| 🏃🏻 | `:runner_tone1:` | 🇮 | `:regional_indicator_i:` |
+| 🏃🏼 | `:runner_tone2:` | 🇭 | `:regional_indicator_h:` |
+| 🏃🏽 | `:runner_tone3:` | 🇬 | `:regional_indicator_g:` |
+| 🏃🏾 | `:runner_tone4:` | 🇫 | `:regional_indicator_f:` |
+| 🏃🏿 | `:runner_tone5:` | 🇪 | `:regional_indicator_e:` |
+| 🎽 | `:running_shirt_with_sash:` | 🇩 | `:regional_indicator_d:` |
+| 🈂 | `:sa:` | 🇨 | `:regional_indicator_c:` |
+| ♐ | `:sagittarius:` | 🇧 | `:regional_indicator_b:` |
+| ⛵ | `:sailboat:` | 🇦 | `:regional_indicator_a:` |
+| 🍶 | `:sake:` | 🧳 | `:luggage:` |
+| 🥗 | `:salad:` | 🛸 | `:flying_saucer:` |
+| 👡 | `:sandal:` | 🧨 | `:firecracker:` |
+| 🎅 | `:santa:` | 🏴‍☠️ | `:pirate_flag:` |
+| 🎅🏻 | `:santa_tone1:` | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 | `:england:` |
+| 🎅🏼 | `:santa_tone2:` | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 | `:scotland:` |
+| 🎅🏽 | `:santa_tone3:` | 🏴󠁧󠁢󠁷󠁬󠁳󠁿 | `:wales:` |
+| | | 🇺🇳 | `:united_nations:` |
