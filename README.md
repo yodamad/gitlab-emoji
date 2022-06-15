@@ -1467,4 +1467,4 @@ If you want some standarization in your commit messages there is [gitmoji](https
 | 🎅🏻 | `:santa_tone1:` | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 | `:england:` |
 | 🎅🏼 | `:santa_tone2:` | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 | `:scotland:` |
 | 🎅🏽 | `:santa_tone3:` | 🏴󠁧󠁢󠁷󠁬󠁳󠁿 | `:wales:` |
-| 🇺🇳 | `:united_nations:` |
+| | | 🇺🇳 | `:united_nations:` |
