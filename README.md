@@ -964,7 +964,7 @@ If you want some standarization in your commit messages there is [gitmoji](https
 | 🐨 | `:koala:` | 👨🏾‍🌾 | `:man_farmer_tone4:` |
 | 🈁 | `:koko:` | 👨🏿‍🌾 | `:man_farmer_tone5:` |
 | 🏷 | `:label:` | 👩🏻‍🍳 | `:woman_cook_tone1:` |
-| 🔵 | `:blue_circle:` | 👩🏼‍🍳 | `:woman_cook_tone2:` |
+| 🔵 | `:large_blue_circle:` | 👩🏼‍🍳 | `:woman_cook_tone2:` |
 | 🔷 | `:large_blue_diamond:` | 👩🏽‍🍳 | `:woman_cook_tone3:` |
 | 🔶 | `:large_orange_diamond:` | 👩🏾‍🍳 | `:woman_cook_tone4:` |
 | 🌗 | `:last_quarter_moon:` | 👩🏿‍🍳 | `:woman_cook_tone5:` |
