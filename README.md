@@ -1,6 +1,8 @@
 # You love emojis :smile: ? You love [Gitlab](https://www.gitlab.com) ?
 This sheet if for you !
 
+:mag: **[Search the whole list](https://yodamad.github.io/gitlab-emoji/)** — type to filter, click to copy. It reads this very `README.md`, so it is never out of date.
+
 You'll get magnificient pipelines & commits such like this one :
 
 ![pipeline](https://github.com/yodamad/gitlab-emoji/raw/master/pipeline.png)

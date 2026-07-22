@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>:gitlab-emoji: — searchable GitLab emoji shortcodes</title>
+<meta name="description" content="Search 2865 emoji shortcodes that actually render on GitLab. Click to copy the :code: for commits or the emoji for pipelines.">
+<script>
+  // Applied before first paint so a stored theme never flashes.
+  try {
+    var t = localStorage.getItem('ge-theme');
+    if (t) document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<style>
+:root {
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, "JetBrains Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --emoji: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+
+  --bg: #f2f0f8;
+  --surface: #ffffff;
+  --surface-2: #fbfaff;
+  --line: #e0dcf0;
+  --line-strong: #cec8e6;
+  --ink: #1b1733;
+  --muted: #5d5578;
+  --accent: #fc6d26;
+  --accent-ink: #c2410c;
+  --accent-wash: #fde7d8;
+  --violet: #6e49cb;
+  --veil: rgba(242, 240, 248, .82);
+  --shadow: 0 1px 2px rgba(27, 23, 51, .05);
+  --shadow-lift: 0 6px 18px rgba(27, 23, 51, .12);
+}
+:root[data-theme="dark"] {
+  --bg: #141127;
+  --surface: #1e1a35;
+  --surface-2: #262146;
+  --line: #2e2951;
+  --line-strong: #3d3768;
+  --ink: #edeaf7;
+  --muted: #9a93bd;
+  --accent: #fc6d26;
+  --accent-ink: #ff8a4c;
+  --accent-wash: #3a2416;
+  --violet: #a88bff;
+  --veil: rgba(20, 17, 39, .82);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  --shadow-lift: 0 6px 18px rgba(0, 0, 0, .45);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141127;
+    --surface: #1e1a35;
+    --surface-2: #262146;
+    --line: #2e2951;
+    --line-strong: #3d3768;
+    --ink: #edeaf7;
+    --muted: #9a93bd;
+    --accent: #fc6d26;
+    --accent-ink: #ff8a4c;
+    --accent-wash: #3a2416;
+    --violet: #a88bff;
+    --veil: rgba(20, 17, 39, .82);
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    --shadow-lift: 0 6px 18px rgba(0, 0, 0, .45);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
+
+/* ── masthead ─────────────────────────────────────────── */
+.masthead {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--veil);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.mast-top {
+  display: flex; align-items: baseline; gap: 14px;
+  padding: 16px 0 12px;
+}
+.wordmark {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: clamp(1.15rem, 3.4vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+}
+.wordmark .colon { color: var(--accent-ink); }
+.tagline {
+  margin: 0; flex: 1;
+  color: var(--muted);
+  font-size: .8rem;
+  letter-spacing: -.01em;
+}
+.mast-actions { display: flex; align-items: center; gap: 8px; }
+.iconbtn, .srclink {
+  display: inline-flex; align-items: center; gap: 5px;
+  height: 30px; padding: 0 10px;
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--surface); color: var(--muted);
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .02em;
+  text-decoration: none; cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.iconbtn:hover, .srclink:hover { color: var(--ink); border-color: var(--accent); }
+.iconbtn { font-size: .85rem; padding: 0 9px; }
+
+.searchbar { position: relative; display: block; }
+.searchbar input {
+  width: 100%; height: 52px;
+  padding: 0 56px 0 42px;
+  appearance: none; -webkit-appearance: none;
+  border: 1px solid var(--line-strong); border-radius: 12px;
+  background: var(--surface); color: var(--ink);
+  font-family: var(--mono); font-size: 1rem; letter-spacing: -.01em;
+  box-shadow: var(--shadow);
+  transition: border-color .15s, box-shadow .15s;
+}
+.searchbar input::placeholder { color: var(--muted); opacity: .75; }
+.searchbar input::-webkit-search-decoration,
+.searchbar input::-webkit-search-cancel-button { appearance: none; -webkit-appearance: none; }
+.searchbar input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-wash);
+}
+.searchbar .lens {
+  position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+  color: var(--muted); font-family: var(--mono); font-size: 1rem;
+  pointer-events: none;
+}
+.searchbar .slash {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  padding: 2px 7px; border: 1px solid var(--line-strong); border-radius: 5px;
+  color: var(--muted); font-family: var(--mono); font-size: .68rem;
+  pointer-events: none;
+}
+.searchbar input:not(:placeholder-shown) ~ .slash { opacity: 0; }
+
+.controls {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px;
+  padding: 11px 0 13px;
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .04em;
+  color: var(--muted);
+}
+.count { text-transform: uppercase; letter-spacing: .12em; }
+.count b { color: var(--ink); font-weight: 700; }
+.toneswitch {
+  display: inline-flex; align-items: center; gap: 7px;
+  cursor: pointer; user-select: none;
+}
+.toneswitch input { accent-color: var(--accent); margin: 0; cursor: pointer; }
+.toneswitch:hover { color: var(--ink); }
+
+.seg { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.seg-label { text-transform: uppercase; letter-spacing: .12em; }
+.seg-group {
+  display: flex; padding: 2px;
+  border: 1px solid var(--line-strong); border-radius: 9px;
+  background: var(--surface);
+}
+.seg-btn {
+  display: flex; align-items: baseline; gap: 6px;
+  padding: 4px 10px; border: 0; border-radius: 7px;
+  background: transparent; color: var(--muted);
+  font-family: var(--mono); font-size: .72rem; cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.seg-btn .dest { font-size: .62rem; letter-spacing: .05em; opacity: .8; }
+.seg-btn:hover { color: var(--ink); }
+.seg-btn[aria-checked="true"] { background: var(--accent-wash); color: var(--accent-ink); }
+.seg-btn[aria-checked="true"] .dest { opacity: 1; }
+
+/* ── grid ─────────────────────────────────────────────── */
+main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-bottom)); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+  gap: 6px;
+  animation: rise .35s ease-out both;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.tile {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 5px; height: 84px; padding: 4px 5px; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 11px;
+  background: var(--surface); color: var(--muted);
+  font-family: var(--mono); cursor: pointer;
+  content-visibility: auto; contain-intrinsic-size: 84px;
+  transition: border-color .13s, transform .13s, box-shadow .13s, background .13s;
+}
+.tile:hover {
+  border-color: var(--accent); background: var(--surface-2);
+  transform: translateY(-2px); box-shadow: var(--shadow-lift);
+}
+.tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tile .glyph {
+  font-family: var(--emoji); font-size: 1.75rem; line-height: 1.15;
+  transition: transform .13s;
+}
+.tile:hover .glyph { transform: scale(1.1); }
+.tile .code {
+  max-width: 100%; font-size: .6rem; letter-spacing: -.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.tile.is-copied { border-color: var(--accent); background: var(--accent-wash); }
+.tile.is-copied .code { color: var(--accent-ink); }
+.tile.is-copied .glyph { animation: pop .42s ease-out; }
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+.notice {
+  padding: 56px 0; text-align: center;
+  font-family: var(--mono); font-size: .82rem; color: var(--muted);
+}
+.notice b { display: block; margin-bottom: 6px; color: var(--ink); font-size: .95rem; }
+.notice button {
+  margin-top: 14px; padding: 7px 14px;
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--surface); color: var(--ink);
+  font-family: var(--mono); font-size: .75rem; cursor: pointer;
+}
+.notice button:hover { border-color: var(--accent); }
+
+.credits {
+  margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line);
+  font-family: var(--mono); font-size: .68rem; line-height: 1.9; color: var(--muted);
+}
+.credits a { color: var(--muted); text-underline-offset: 3px; }
+.credits a:hover { color: var(--accent-ink); }
+
+/* ── console (fixed status line) ──────────────────────── */
+.console {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  border-top: 1px solid var(--line);
+  background: var(--veil);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.console .wrap { display: flex; align-items: center; gap: 14px; padding-top: 11px; padding-bottom: 11px; }
+.chip {
+  flex: none; padding: 3px 8px; border-radius: 6px;
+  border: 1px solid var(--line-strong); background: var(--surface);
+  font-family: var(--mono); font-size: .58rem; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--muted);
+}
+.chip[data-state="copied"] {
+  border-color: var(--accent); background: var(--accent-wash); color: var(--accent-ink);
+}
+.lines { min-width: 0; font-family: var(--mono); font-size: .78rem; line-height: 1.55; }
+.lines .l1, .lines .l2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lines .l2 { color: var(--muted); font-size: .72rem; }
+.lines .dim { color: var(--muted); }
+.lines .str { color: var(--violet); }
+.lines .tok { color: var(--accent-ink); font-weight: 700; }
+.em { font-family: var(--emoji); }
+
+@media (max-width: 640px) {
+  .mast-top { flex-wrap: wrap; gap: 8px 12px; padding-top: 13px; }
+  .tagline { order: 3; flex-basis: 100%; }
+  .mast-actions { margin-left: auto; }
+  .seg { margin-left: 0; }
+  .seg-label { display: none; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)); }
+  .tile { height: 76px; contain-intrinsic-size: 76px; }
+  .tile .glyph { font-size: 1.55rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .tile:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-top">
+      <h1 class="wordmark"><span class="colon">:</span>gitlab-emoji<span class="colon">:</span></h1>
+      <p class="tagline">Every shortcode that actually renders on GitLab</p>
+      <div class="mast-actions">
+        <button class="iconbtn" id="theme" type="button" aria-label="Switch to dark theme">◐</button>
+        <a class="srclink" href="https://github.com/yodamad/gitlab-emoji">source ↗</a>
+      </div>
+    </div>
+
+    <label class="searchbar">
+      <span class="sr-only">Filter shortcodes</span>
+      <span class="lens" aria-hidden="true">⌕</span>
+      <input id="q" type="search" placeholder="filter shortcodes, or paste an emoji…"
+             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <span class="slash" aria-hidden="true">/</span>
+    </label>
+
+    <div class="controls">
+      <span class="count" id="count">loading…</span>
+      <label class="toneswitch">
+        <input type="checkbox" id="tones"> skin tone variants
+      </label>
+      <div class="seg">
+        <span class="seg-label">copy</span>
+        <div class="seg-group" role="radiogroup" aria-label="What clicking a tile copies">
+          <button class="seg-btn" type="button" role="radio" aria-checked="true" data-mode="code">
+            :code: <span class="dest">for commits</span>
+          </button>
+          <button class="seg-btn" type="button" role="radio" aria-checked="false" data-mode="char">
+            <span class="em">🚀</span> <span class="dest">for pipelines</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid" id="grid" hidden></div>
+
+  <div class="notice" id="notice">Parsing README.md…</div>
+
+  <footer class="credits">
+    Parsed live from <a href="https://github.com/yodamad/gitlab-emoji/blob/master/README.md">README.md</a> — the list in this repo is the single source of truth.<br>
+    List adapted from the <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">webfx cheat sheet</a>, keeping only what GitLab renders.
+    For a commit-message convention, see <a href="https://gitmoji.dev">gitmoji</a>.
+  </footer>
+</main>
+
+<aside class="console">
+  <div class="wrap">
+    <span class="chip" id="chip">tip</span>
+    <div class="lines">
+      <div class="l1" id="l1"></div>
+      <div class="l2" id="l2"></div>
+    </div>
+  </div>
+</aside>
+
+<div class="sr-only" role="status" aria-live="polite" id="live"></div>
+
+<noscript>
+  <p style="padding:24px;font-family:monospace">
+    This page needs JavaScript to search the list.
+    The full table is in <a href="https://github.com/yodamad/gitlab-emoji#emoji-in-commits">README.md</a>.
+  </p>
+</noscript>
+
+<script>
+(function () {
+  'use strict';
+
+  var REPO = 'https://github.com/yodamad/gitlab-emoji';
+  var RAW = 'https://raw.githubusercontent.com/yodamad/gitlab-emoji/master/README.md';
+  var CODE_RE = /^`:([a-z0-9_+-]+):`$/;
+  var TONE_RE = /_tone[1-5]$/;
+
+  var el = {
+    q: document.getElementById('q'),
+    tones: document.getElementById('tones'),
+    grid: document.getElementById('grid'),
+    notice: document.getElementById('notice'),
+    count: document.getElementById('count'),
+    chip: document.getElementById('chip'),
+    l1: document.getElementById('l1'),
+    l2: document.getElementById('l2'),
+    live: document.getElementById('live'),
+    theme: document.getElementById('theme')
+  };
+
+  var ALL = [];          // every parsed entry
+  var BY_NAME = {};      // name -> entry
+  var base = [];         // ALL after the skin-tone filter
+  var view = [];         // current results, in rank order
+  var mode = 'code';     // 'code' | 'char'
+  var lastCopied = null; // tile element showing the copied flash
+  var flashTimer = 0;
+  var copiedUntil = 0;   // hover previews stand down while a copy is on screen
+  var previewName = '';
+
+  /* ── parsing ───────────────────────────────────────── */
+
+  // The README table is `| emoji | `:code:` | emoji | `:code:` |`. Requiring the
+  // backticks rejects the tab-separated header, the `| :--: |` alignment row and
+  // the one row with an empty first pair, so no line offsets are needed.
+  function parse(text) {
+    var out = [];
+    var lines = text.split('\n');
+    for (var i = 0; i < lines.length; i++) {
+      if (lines[i].charAt(0) !== '|') continue;
+      var c = lines[i].split('|');
+      for (var p = 1; p <= 3; p += 2) {
+        var glyph = (c[p] || '').trim();
+        var m = CODE_RE.exec((c[p + 1] || '').trim());
+        if (!glyph || !m) continue;
+        out.push({ char: glyph, name: m[1], tone: TONE_RE.test(m[1]) });
+      }
+    }
+    return out;
+  }
+
+  function load() {
+    el.notice.textContent = 'Parsing README.md…';
+    el.notice.hidden = false;
+    el.grid.hidden = true;
+
+    fetch(new URL('README.md', location.href), { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .catch(function () {
+        // Pages source misconfigured, or opened over file:// — fall back to raw.
+        return fetch(RAW).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.text();
+        });
+      })
+      .then(function (text) {
+        ALL = parse(text);
+        if (!ALL.length) throw new Error('empty');
+        for (var i = 0; i < ALL.length; i++) BY_NAME[ALL[i].name] = ALL[i];
+        el.notice.hidden = true;
+        el.grid.hidden = false;
+        readURL();
+        update();
+      })
+      .catch(function () {
+        el.grid.hidden = true;
+        el.notice.hidden = false;
+        el.notice.innerHTML =
+          '<b>Could not load the emoji list.</b>' +
+          'README.md did not come back from this site or from GitHub.' +
+          '<br><button type="button" id="retry">Try again</button>';
+        document.getElementById('retry').addEventListener('click', load);
+      });
+  }
+
+  /* ── search ────────────────────────────────────────── */
+
+  function normalize(raw) {
+    return raw.toLowerCase().trim().replace(/^:+/, '').replace(/:+$/, '');
+  }
+
+  // Rank so that short, exact-ish hits win: `fire` puts :fire: above
+  // :fire_engine: and :campfire:, which plain alphabetical order would not.
+  function search(q) {
+    if (!q) return base.slice();
+
+    var hits = [];
+    var i;
+
+    // Pasted an emoji. Exact first, then sequences that embed it (🚀 must beat
+    // 👩‍🚀), then the parts of a pasted sequence.
+    if (/[^\x00-\x7F]/.test(q)) {
+      for (i = 0; i < base.length; i++) {
+        var ch = base[i].char, r = -1;
+        if (ch === q) r = 0;
+        else if (ch.indexOf(q) !== -1) r = 1;
+        else if (q.indexOf(ch) !== -1) r = 2;
+        if (r >= 0) hits.push([r, base[i]]);
+      }
+      hits.sort(function (a, b) { return a[0] - b[0] || a[1].char.length - b[1].char.length; });
+      return hits.map(function (h) { return h[1]; });
+    }
+
+    var tokens = q.split(/[\s_]+/).filter(Boolean);
+    for (i = 0; i < base.length; i++) {
+      var n = base[i].name, rank = -1;
+      if (n === q) rank = 0;
+      else if (n.indexOf(q) === 0) rank = 1;
+      else if (('_' + n).indexOf('_' + q) !== -1) rank = 2;   // starts a word
+      else if (n.indexOf(q) !== -1) rank = 3;
+      else if (tokens.length > 1 && tokens.every(function (t) { return n.indexOf(t) !== -1; })) rank = 4;
+      if (rank >= 0) hits.push([rank, base[i]]);
+    }
+    hits.sort(function (a, b) {
+      return a[0] - b[0] ||
+             a[1].name.length - b[1].name.length ||
+             (a[1].name < b[1].name ? -1 : 1);
+    });
+    return hits.map(function (h) { return h[1]; });
+  }
+
+  /* ── rendering ─────────────────────────────────────── */
+
+  function esc(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function render() {
+    var html = '';
+    for (var i = 0; i < view.length; i++) {
+      var e = view[i];
+      html += '<button class="tile" type="button" data-n="' + e.name + '" title=":' + e.name + ':">' +
+              '<span class="glyph">' + esc(e.char) + '</span>' +
+              '<span class="code">' + e.name + '</span></button>';
+    }
+    el.grid.innerHTML = html;
+    lastCopied = null;
+  }
+
+  function update() {
+    var q = normalize(el.q.value);
+    base = el.tones.checked ? ALL : ALL.filter(function (e) { return !e.tone; });
+    view = search(q);
+
+    el.count.innerHTML = q
+      ? '<b>' + view.length + '</b> of ' + base.length
+      : '<b>' + base.length + '</b> shortcodes';
+
+    if (view.length) {
+      el.grid.hidden = false;
+      el.notice.hidden = true;
+      render();
+    } else {
+      el.grid.hidden = true;
+      el.grid.innerHTML = '';
+      el.notice.hidden = false;
+      el.notice.innerHTML = '<b>Nothing matches “' + esc(el.q.value.trim()) + '”</b>' +
+        'Try a shorter word, or paste the emoji itself.';
+    }
+    syncURL(q);
+  }
+
+  /* ── console ───────────────────────────────────────── */
+
+  var HINTS = {
+    code: ['Click any tile to copy its <span class="tok">:shortcode:</span> for a commit message.',
+           'Alt-click copies the emoji character instead. Press <span class="dim">/</span> to search.'],
+    char: ['Click any tile to copy the <span class="em">🚀</span> character for a pipeline stage.',
+           'Alt-click copies the <span class="tok">:shortcode:</span> instead. Press <span class="dim">/</span> to search.']
+  };
+
+  function showHint() {
+    previewName = '';
+    el.chip.dataset.state = 'idle';
+    el.chip.textContent = 'tip';
+    el.l1.innerHTML = HINTS[mode][0];
+    el.l2.innerHTML = HINTS[mode][1];
+  }
+
+  function preview(tile) {
+    if (!tile || Date.now() < copiedUntil || previewName === tile.dataset.n) return;
+    previewName = tile.dataset.n;
+    showEntry(BY_NAME[previewName], mode === 'code', 'preview');
+  }
+
+  // Shows the entry where it is actually used: a commit message for shortcodes,
+  // a .gitlab-ci.yml stage for the raw character.
+  function showEntry(entry, asCode, state) {
+    el.chip.dataset.state = state;
+    el.chip.textContent = state;
+    if (asCode) {
+      el.l1.innerHTML = '<span class="dim">$</span> git commit -m <span class="str">"</span>' +
+                        '<span class="tok">:' + entry.name + ':</span><span class="str"> ship it"</span>';
+      el.l2.innerHTML = '→ <span class="em">' + esc(entry.char) + '</span> ship it';
+    } else {
+      el.l1.innerHTML = '<span class="dim">-</span> <span class="em">' + esc(entry.char) + '</span> deploy';
+      el.l2.innerHTML = '→ .gitlab-ci.yml <span class="dim">stages:</span>';
+    }
+  }
+
+  /* ── copying ───────────────────────────────────────── */
+
+  function toClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(
+        function () { return true; },
+        function () { return legacy(text); }   // insecure context, or no permission
+      );
+    }
+    return Promise.resolve(legacy(text));
+  }
+
+  function legacy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.parentNode.removeChild(ta);
+    return ok;
+  }
+
+  function copyEntry(entry, tile, flip) {
+    var asCode = flip ? mode !== 'code' : mode === 'code';
+    var payload = asCode ? ':' + entry.name + ':' : entry.char;
+
+    // Confirm straight away rather than waiting on the clipboard round trip,
+    // then correct the console if the write actually failed.
+    copiedUntil = Date.now() + 2500;
+    previewName = '';
+    showEntry(entry, asCode, 'copied');
+    el.live.textContent = 'Copied ' + payload;
+    if (tile) flash(tile);
+
+    toClipboard(payload).then(function (ok) {
+      if (ok) return;
+      el.chip.dataset.state = 'idle';
+      el.chip.textContent = 'blocked';
+      el.l1.innerHTML = 'The browser blocked the clipboard. Copy it by hand: ' +
+                        '<span class="tok">' + esc(payload) + '</span>';
+      el.l2.textContent = '';
+      el.live.textContent = 'Copy blocked. The value is ' + payload;
+    });
+  }
+
+  function flash(tile) {
+    if (lastCopied) lastCopied.classList.remove('is-copied');
+    clearTimeout(flashTimer);
+    tile.classList.add('is-copied');
+    lastCopied = tile;
+    flashTimer = setTimeout(function () {
+      tile.classList.remove('is-copied');
+      if (lastCopied === tile) lastCopied = null;
+    }, 900);
+  }
+
+  /* ── URL + theme state ─────────────────────────────── */
+
+  function syncURL(q) {
+    var p = new URLSearchParams();
+    if (q) p.set('q', q);
+    if (el.tones.checked) p.set('tones', '1');
+    if (mode === 'char') p.set('copy', 'emoji');
+    var s = p.toString();
+    history.replaceState(null, '', s ? '?' + s : location.pathname);
+  }
+
+  function readURL() {
+    var p = new URLSearchParams(location.search);
+    if (p.get('q')) el.q.value = p.get('q');
+    el.tones.checked = p.get('tones') === '1';
+    if (p.get('copy') === 'emoji') setMode('char');
+  }
+
+  function setMode(next) {
+    mode = next;
+    var btns = document.querySelectorAll('.seg-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-checked', String(btns[i].dataset.mode === mode));
+    }
+    showHint();
+  }
+
+  function currentTheme() {
+    if (document.documentElement.dataset.theme) return document.documentElement.dataset.theme;
+    return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function paintThemeButton() {
+    var dark = currentTheme() === 'dark';
+    el.theme.textContent = dark ? '◑' : '◐';
+    el.theme.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+
+  /* ── wiring ────────────────────────────────────────── */
+
+  // A timer, not requestAnimationFrame: rAF is paused entirely while the tab is
+  // occluded, which would leave the grid stale until the next paint.
+  var typing = 0;
+  el.q.addEventListener('input', function () {
+    clearTimeout(typing);
+    typing = setTimeout(update, 60);
+  });
+
+  el.tones.addEventListener('change', update);
+
+  el.grid.addEventListener('click', function (e) {
+    var tile = e.target.closest('.tile');
+    if (tile) copyEntry(BY_NAME[tile.dataset.n], tile, e.altKey);
+  });
+
+  el.grid.addEventListener('mouseover', function (e) {
+    preview(e.target.closest('.tile'));
+  });
+
+  el.grid.addEventListener('focusin', function (e) {
+    preview(e.target.closest('.tile'));
+  });
+
+  el.grid.addEventListener('mouseleave', function () {
+    if (Date.now() >= copiedUntil) showHint();
+  });
+
+  document.querySelector('.seg-group').addEventListener('click', function (e) {
+    var btn = e.target.closest('.seg-btn');
+    if (!btn) return;
+    setMode(btn.dataset.mode);
+    syncURL(normalize(el.q.value));
+  });
+
+  el.theme.addEventListener('click', function () {
+    var next = currentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('ge-theme', next); } catch (err) {}
+    paintThemeButton();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target === el.q) {
+      if (e.key === 'Escape') { el.q.value = ''; update(); }
+      if (e.key === 'Enter' && view.length) { e.preventDefault(); copyEntry(view[0], null, e.altKey); }
+      return;
+    }
+    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey &&
+        !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) {
+      e.preventDefault();
+      el.q.focus();
+      el.q.select();
+    }
+  });
+
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paintThemeButton);
+
+  paintThemeButton();
+  showHint();
+  load();
+})();
+</script>
+</body>
+</html>
