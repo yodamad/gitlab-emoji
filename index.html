@@ -127,6 +127,14 @@ body {
 .iconbtn:hover, .srclink:hover { color: var(--ink); border-color: var(--accent); }
 .iconbtn { font-size: .85rem; padding: 0 9px; }
 
+.starlink .star { font-size: .8rem; line-height: 1; transition: color .15s, transform .15s; }
+.starlink:hover .star, .starlink:focus-visible .star { color: #e3a008; transform: scale(1.18); }
+.starcount {
+  margin-left: 2px; padding-left: 7px;
+  border-left: 1px solid var(--line-strong);
+  font-variant-numeric: tabular-nums;
+}
+
 .searchbar { position: relative; display: block; }
 .searchbar input {
   width: 100%; height: 52px;
@@ -283,6 +291,10 @@ main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-botto
   .mast-actions { margin-left: auto; }
   .seg { margin-left: 0; }
   .seg-label { display: none; }
+  /* The star pill points at the same repo, so the source link is the one that
+     goes when the masthead runs out of room. */
+  .starword { display: none; }
+  .srclink:not(.starlink) { display: none; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)); }
   .tile { height: 76px; contain-intrinsic-size: 76px; }
   .tile .glyph { font-size: 1.55rem; }
@@ -303,6 +315,10 @@ main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-botto
       <p class="tagline">Every shortcode that actually renders on GitLab</p>
       <div class="mast-actions">
         <button class="iconbtn" id="theme" type="button" aria-label="Switch to dark theme">◐</button>
+        <a class="srclink starlink" id="star" href="https://github.com/yodamad/gitlab-emoji"
+           aria-label="Star gitlab-emoji on GitHub">
+          <span class="star" aria-hidden="true">★</span><span class="starword">star</span><span class="starcount" id="starcount" hidden></span>
+        </a>
         <a class="srclink" href="https://github.com/yodamad/gitlab-emoji">source ↗</a>
       </div>
     </div>
@@ -371,6 +387,7 @@ main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-botto
   'use strict';
 
   var REPO = 'https://github.com/yodamad/gitlab-emoji';
+  var API = REPO.replace('//github.com/', '//api.github.com/repos/');
   var RAW = 'https://raw.githubusercontent.com/yodamad/gitlab-emoji/master/README.md';
   var CODE_RE = /^`:([a-z0-9_+-]+):`$/;
   var TONE_RE = /_tone[1-5]$/;
@@ -385,7 +402,8 @@ main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-botto
     l1: document.getElementById('l1'),
     l2: document.getElementById('l2'),
     live: document.getElementById('live'),
-    theme: document.getElementById('theme')
+    theme: document.getElementById('theme'),
+    stars: document.getElementById('starcount')
   };
 
   var ALL = [];          // every parsed entry
@@ -675,6 +693,37 @@ main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-botto
     el.theme.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   }
 
+  /* ── star count ────────────────────────────────────── */
+
+  // api.github.com allows 60 unauthenticated calls an hour per IP, shared with
+  // every other tab behind the same address, so the count is cached and only
+  // refreshed twice a day. A miss leaves the button without a number, no error.
+  var STARS_TTL = 12 * 3600 * 1000;
+
+  function paintStars(n) {
+    if (typeof n !== 'number' || n < 0) return;
+    el.stars.textContent = n < 1000 ? String(n) : (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    el.stars.hidden = false;
+  }
+
+  function loadStars() {
+    var now = Date.now();
+    var cached = null;
+    try { cached = JSON.parse(localStorage.getItem('ge-stars') || 'null'); } catch (err) {}
+    if (cached) paintStars(cached.n);
+    if (cached && now - cached.t < STARS_TTL) return;
+
+    fetch(API)
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (repo) {
+        paintStars(repo.stargazers_count);
+        try {
+          localStorage.setItem('ge-stars', JSON.stringify({ n: repo.stargazers_count, t: now }));
+        } catch (err) {}
+      })
+      .catch(function () {});
+  }
+
   /* ── wiring ────────────────────────────────────────── */
 
   // A timer, not requestAnimationFrame: rAF is paused entirely while the tab is
@@ -737,6 +786,7 @@ main { padding-top: 18px; padding-bottom: calc(104px + env(safe-area-inset-botto
   paintThemeButton();
   showHint();
   load();
+  loadStars();
 })();
 </script>
 </body>
